@@ -1,0 +1,18 @@
+Name;Alias;Nativ;Typ;essenziell
+Notizen;notizen;Notizen;Memo;
+Flags;flags;mysql.flags;Standard;
+Letzter Statuswechsel;last_status_change;Auftragszusatzfeld;Datetime;*
+JobStatus;status;status;Standard;*
+Webcenter Projekt ID;wec_prj_id;Auftragszusatzfeld;Standard;*
+Status;webstatus;webstatus;Integer;*
+Jobnr;jobnr;JobNr;Standard;*
+ULS;apl;Auftragszusatzfeld;Integer;*
+Ländervariante;laendervariante;Land;(Pickliste);
+Projekt Briefing;project_briefing;;Richtext;
+Stichwort;stichw;Stichw1;Standard;*
+Projekt Verantwortlicher;per_prj_verantwortlich;Auftragszusatzfeld;(User Selection);*
+Projektname;project_name;Auftragszusatzfeld;Standard;*
+Projektnummer;project_nr;Auftragszusatzfeld;Standard;*
+Auftragstyp;src;Auftragszusatzfeld;Standard;*
+Kundennummer;net_knr;knr;Standard;*
+Job Notifications;notfications;;Integer;

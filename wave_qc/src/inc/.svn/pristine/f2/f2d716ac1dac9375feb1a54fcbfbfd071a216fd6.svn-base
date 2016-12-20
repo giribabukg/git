@@ -1,0 +1,15 @@
+<?php
+/**
+ * Archiv: Tra - Files - Controller
+ *
+ * @package    ARC
+ * @subpackage    Tra
+ * @subsubpackage  Fil
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CArc_Tra_Fil_Cnt extends CCust_Arc_Tra_Fil_Cnt {
+
+}

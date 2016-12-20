@@ -1,0 +1,4 @@
+<div class="th1"><a href="javascript:cpl('frm.des','cpl.{src}.des')" class="db w700">{bez.zusatzabsprachen}</a></div>
+<div id="frm.des" style="display:{display}" class="frm p8 w700">
+{val.zusatzabsprachen}
+</div>

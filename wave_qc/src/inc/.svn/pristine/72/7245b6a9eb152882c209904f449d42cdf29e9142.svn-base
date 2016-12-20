@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - SystemLogger: Controller
+ *
+ *  Description
+ *
+ * @package    LOG
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Log_Cnt extends CInc_Log_Cnt {
+
+}

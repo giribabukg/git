@@ -1,0 +1,16 @@
+<?php
+/**
+ * Home: Fla - Fla
+ *
+ *  Description
+ *
+ * @package    HOM
+ * @subpackage    Cc
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CHom_Fla_Fla extends CCust_Hom_Fla_Fla {
+
+}

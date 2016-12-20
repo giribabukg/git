@@ -1,0 +1,14 @@
+<?php
+/**
+ * Customer - Events: List
+ *
+ *
+ * @package    EVE
+ * @copyright  Copyright (c) 2004-2012 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Eve_List extends CInc_Eve_List {
+
+}

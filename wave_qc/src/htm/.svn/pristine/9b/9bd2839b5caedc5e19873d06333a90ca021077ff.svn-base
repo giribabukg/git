@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{pg.utilcss}" />
+<link rel="stylesheet" type="text/css" href="{pg.stylecss}" />
+<script type="text/javascript" src="{pg.prototypejs}"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,controls,dragdrop"></script>
+<link rel="shortcut icon" type="image/png" href="{pg.favicon}" />
+</head>
+<body 
+	style="background-color: #333">
+<div style="background-color: #000; text-align: right"><img
+	src="img/login/mig.png" height="66" alt="Matthews International" /></div>
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

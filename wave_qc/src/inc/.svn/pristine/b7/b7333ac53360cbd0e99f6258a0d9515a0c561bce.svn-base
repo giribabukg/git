@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Repro - Tabs
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Repro
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Rep_Tabs extends CCust_Job_Rep_Tabs {
+
+}

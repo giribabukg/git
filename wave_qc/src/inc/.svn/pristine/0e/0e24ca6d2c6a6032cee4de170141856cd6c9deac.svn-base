@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - App: Event - Action - Email - Role
+ *
+ * @package    APP
+ * @subpackage Event
+ * @subsubpackage Action - Email
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_App_Event_Action_Email_Role extends CInc_App_Event_Action_Email_Role {
+
+}

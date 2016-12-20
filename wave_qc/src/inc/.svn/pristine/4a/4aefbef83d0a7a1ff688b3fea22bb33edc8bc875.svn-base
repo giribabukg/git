@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Leadtimes: Modification
+ *
+ *  Description
+ *
+ * @package    LDT
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Ldt_Mod extends CInc_Ldt_Mod {
+
+}

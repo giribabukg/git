@@ -1,0 +1,13 @@
+<?php
+/**
+ * Customer - Archiv: Daten
+ *
+ * @package    ARC
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Arc_Dat extends CInc_Arc_Dat {
+
+}

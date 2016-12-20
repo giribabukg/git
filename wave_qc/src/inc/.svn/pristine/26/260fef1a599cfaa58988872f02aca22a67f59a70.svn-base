@@ -1,0 +1,16 @@
+<?php
+/**
+ * Pickliste: Items - Formular - Base
+ *
+ * Description
+ *
+ * @package    PCK
+ * @subpackage    Items
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CPck_Itm_Form_Base extends CCust_Pck_Itm_Form_Base {
+
+}

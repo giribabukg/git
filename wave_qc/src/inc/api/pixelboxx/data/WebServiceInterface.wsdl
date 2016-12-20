@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pub.web.webservice.mod.pb.pixelboxx.de" xmlns:ns2="http://soap.web.webservice.mod.pb.pixelboxx.de" xmlns:ns1="http://www.pixelboxx.de/ns/webservice/1.0" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="http://pub.web.webservice.mod.pb.pixelboxx.de" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pb="http://www.pixelboxx.de/ns/webservice/1.0" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" elementFormDefault="qualified" targetNamespace="http://www.pixelboxx.de/ns/webservice/1.0">
+    
+    <xs:simpleType name="DOIType">
+      <xs:annotation>
+        <xs:documentation>
+          Data Object Identification Value.
+          See IDType for possible id types.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\S+"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LocaleType">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+          Locale in the format xx_YY, where xx is the lowercase ISO 639 2-letter language code
+          and YY the uppercase ISO 3166 2-letter country code.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[a-z]{2}(_[A-Z]{2})?"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ActionIdType">
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="MimeType">
+      <xs:restriction base="xs:token"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="XLinkType">
+      <xs:restriction base="xs:token"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="XLinkRelationType">
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="child"/>
+        <xs:enumeration value="parent"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IDType">
+        <xs:annotation>
+          <xs:documentation>
+              Identificator type used to locate object.
+              All Services support identification by Object ID (Value: oid)
+              or by Data Object ID (Value: doi).
+              Default id type is 'doi'.
+              Id types other than doi are used in responses only
+              when request id type differs from doi.
+              Some services may support custom identification types.
+              Please see service documentation for details.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="doi"/>
+            <xs:enumeration value="oid"/>
+            <xs:enumeration value="filename"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ValueType">
+      <xs:annotation>
+        <xs:documentation>
+          Der Wert, den ein Multilanguage-Attribut
+          für die Sprache "lang" hat.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" type="xs:language" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="MLAttributeType">
+      <xs:annotation>
+        <xs:documentation>
+          Multilanguage-Attribut mit Namen "n" (Attribut)
+          und Liste von Werten "V" (Element)
+          für jeweilige Sprache "lang" (Attribut von V).
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="V" type="pb:ValueType"/>
+      </xs:sequence>
+      <xs:attribute name="n" type="xs:token" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="DisplayNameType">
+      <xs:annotation>
+        <xs:documentation>
+           Display-Name für einen Attributwert in einer Sprache.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" type="xs:language" use="required"/>
+          <xs:attribute name="forValue" type="xs:string" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="DisplayableAttributeType">
+      <xs:annotation>
+        <xs:documentation>
+           Attribut, das einen Display-Namen für jede Sprahce für seine Werte haben kann
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="value" type="xs:string"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="displayName" type="pb:DisplayNameType"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:token" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="AttributeType">
+      <xs:annotation>
+        <xs:documentation>
+          Attribut mit Namen "n" und dem Attributwert als Inhalt.
+          
+          Dabei kann "lang" die Sprache angeben, in der
+          der Attributwert tatsächlich zurückgegeben wurde.
+          Diese Angabe kann nur entfallen, wenn der Wert in
+          der einzigen gewünschten Sprache ausgeliefert werden
+          konnte oder sprachunabhängig ist oder keine
+          Anforderung an die Sprache gestellt wurde.
+          
+          Wenn "ml" den Wert "true" hat, könnte dieses
+          Attribut für andere Sprachen andere Werte haben (Multilanguage).
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>  
+        <xs:extension base="xs:string">
+          <xs:attribute name="n" type="xs:token" use="required"/>
+          <xs:attribute name="lang" type="xs:language" use="optional"/>
+          <xs:attribute default="false" name="ml" type="xs:boolean" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AttributeListType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste von Attributen, bestehend aus einfachen Attributen "A" und Multilanguage-Attributen "MLA".
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="A" type="pb:AttributeType"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="MLA" type="pb:MLAttributeType"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="DA" type="pb:DisplayableAttributeType"/>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Attributes" type="pb:AttributeListType"/>
+    
+    <xs:complexType name="AttributeReqType">
+      <xs:annotation>
+        <xs:documentation>
+          Typ für ein Attributsanforderung, mandatory (default false) bedeutet,
+          es gibt einen Fehler wenn das Attribut nicht vorhanden ist.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+      	<xs:extension base="xs:token">
+      	  <xs:attribute default="false" name="mandatory" type="xs:boolean" use="optional"/>
+      	</xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="ACAttributeType">
+      <xs:annotation>
+        <xs:documentation>
+          Typ für ein Access Control Attribut.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:token"/>
+    </xs:simpleType>
+
+    <xs:complexType name="ACAttributeListType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste von Access Controll Attributen "ACA".
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="ACA" type="pb:ACAttributeType"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="AttributeUsageType">
+      <xs:annotation>
+        <xs:documentation>
+          Informationen zu Verwendung eines Attributs (lesbar/schreibbar).
+          Auf Wunsch erfolgt die Angabe des Attribut-Typs (wie in cmis:enumPropertyType)
+          und ggf. die Attribut-Typ-ID (Zur Abfrage der zulässigen Werte mit dem entsprechenden
+          anderen Webservice über GetPropertyTypeDefinition)
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:token" use="required"/>
+      <xs:attribute default="true" name="read" type="xs:boolean" use="optional"/>
+      <xs:attribute default="true" name="write" type="xs:boolean" use="optional"/>
+      <xs:attribute name="typeid" type="xs:string" use="optional"/>
+      <xs:attribute name="type" type="xs:string" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="TypeInfoType">
+      <xs:annotation>
+        <xs:documentation>
+          Informationen zu einem Objekt-Typ.
+          Zur Zeit eine Liste mit den Namen aller Attribute.
+          Der Mime-Type steht im Attribut "name".
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Attribute" type="pb:AttributeUsageType"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="RDType">
+      <xs:annotation>
+        <xs:documentation>
+          Typ für Rohdaten, Möglichkeiten: Feindaten, Layoutdaten, Thumbnails oder freie Definition (custom).
+          Bei einem Datenimport werden grundsätzlich die Feindaten importiert,
+          dies ist stets die unskalierte unmodifizierte Form der Rohdaten.
+          Layoutdaten und Thumbnaildaten entstehen durch Umwandlung der Rohdaten
+          in JPEG und Skalierung auf eine feste Größe.
+          Alle anderen Konvertierungen oder Skalierungen sind als "custom" anzugeben.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="thumb"/>
+        <xs:enumeration value="layout"/>
+        <xs:enumeration value="fine"/>
+        <xs:enumeration value="custom"/>
+        <xs:enumeration value="lowres"/>
+<!-- VariantType.LowResImage -->
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LocReqType">
+      <xs:annotation>
+        <xs:documentation>
+          Anforderung, wie die Feindaten zurückgeliefert werden sollen.
+          Möglichkeiten: Attachment, im Filesystem, als abrufbare URL oder direkt als base64Binary eingeschlossen.
+          Einschränkungen:
+          - Abruf per URL ist z.Zt. nicht für Custom-Skalierungen möglich
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="attach"/>
+        <xs:enumeration value="writeto"/>
+        <xs:enumeration value="url"/>
+        <xs:enumeration value="include"/>
+       </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CIDType">
+      <xs:annotation>
+        <xs:documentation>
+          Typ für Content-Ids.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+        <xs:pattern value="cid:.*"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LanguageRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste der gewünschten bzw. akzeptierten Sprachen.
+          Ist "multilang" auf "true" gesetzt,
+          werden von mehrsprachigen Attributen alle
+          gewünschten Sprachen als Multilanguage-Attribut ausgeliefert,
+          ansonsten werden sie wie gewöhnliche Attribute behandelt.
+          In diesem Fall wird nur der Attributwert
+          der ersten verfügbaren gewünschten Sprache
+          als einfaches Attribut geliefert.
+        </xs:documentation>
+      </xs:annotation>  
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="Language" type="xs:language"/>
+      </xs:sequence>
+      <xs:attribute default="false" name="multilang" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="RawDataLocationType">
+      <xs:annotation>
+        <xs:documentation>
+          Ort, an dem die Rohdaten zu finden sind.
+          Attachment: Daten sind im Attachment mit der angegebenen Content-Id zu finden.
+          URL: Daten sind an der angegebenen URL abzurufen.
+          IncludedData: Daten sind direkt hier als base64Binary eingeschlossen.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:choice>
+        <xs:element name="Attachment" type="pb:CIDType"/>
+        <xs:element name="URL" type="xs:anyURI"/>
+        <xs:element name="IncludedData" type="xs:base64Binary"/>
+        <xs:element name="AttachedData" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="ImageAttributesType">
+      <xs:annotation>
+        <xs:documentation>
+          Attribute für Bilder.
+          Zwingend notwendig sind nur xsize und ysize.
+        </xs:documentation>
+      </xs:annotation>    
+      <xs:sequence>
+        <xs:element name="xsize" type="xs:integer"/>
+        <xs:element name="ysize" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RawDataType">
+      <xs:annotation>
+        <xs:documentation>
+          Container für Rohdaten.
+          Wird sowohl für Import wie auch für Abfrage der Daten verwendet.
+          Beim Import ist nur "Location" Pflicht.
+          Damit wird der Ort angegeben, an dem sich die Rohdaten befinden,
+          davon wird mindestens "IncludedData" in der ersten Version unterstützt.
+          Bei der Abfrage hingegen wird in jedem Fall auch der ContentType der gelieferten Daten angegeben,
+          soweit er ermittelbar ist, und bei nicht erkannten Formaten "application/ocetet-stream".
+	      Handelt es sich um Bilddaten, werden noch ImageAttributes mitgeliefert,
+	      die mindestens die Angaben xsize und ysize enthalten.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="ContentType" type="pb:MimeType"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="ImageAttributes" type="pb:ImageAttributesType"/>
+        <xs:element name="Location" type="pb:RawDataLocationType"/>
+      </xs:sequence>
+      <xs:attribute default="custom" name="type" type="pb:RDType" use="optional"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="RawDataListType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste von Rohdaten.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="RawData" type="pb:RawDataType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType abstract="true" name="AbstractObjectType">
+      <xs:annotation>
+        <xs:documentation>
+          Gemeinsamkeiten von Objekten und Foldern.
+          Beide haben Attribute, Access-Control-Attribute, eine DOI und einen Namen.
+
+          oid - wird gesetzt, wenn Id-Typ OID angefordert wird. 
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="AccessControl" type="pb:ACAttributeListType"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="ParentFolders" type="pb:IDListType"/>
+      </xs:sequence>
+      <xs:attribute name="doi" type="pb:DOIType" use="required"/>
+      <xs:attribute name="oid" type="pb:DOIType" use="optional"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ObjectType">
+      <xs:annotation>
+        <xs:documentation>
+          Einfaches Objekt. Kann Rohdaten (z.B. Bild) enthalten.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+        <xs:extension base="pb:AbstractObjectType">
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="RawDataList" type="pb:RawDataListType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="XLinks" type="pb:XLinkListObjectsType"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Object" type="pb:ObjectType"/>
+
+    <xs:complexType name="ItemType">
+      <xs:annotation>
+        <xs:documentation>
+          Inhaltselement eines Folders, kann ein Objekt oder ein Folder sein.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:choice>
+        <xs:element ref="pb:Object"/>
+        <xs:element ref="pb:Folder"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="Item" type="pb:ItemType"/>
+    
+    <xs:complexType name="FolderType">
+      <xs:annotation>
+        <xs:documentation>
+          Folder, kann mehrere Objekte oder Folder enthalten.
+          Dabei gibt "size" die Anzahl der Inhaltselement an, die der Folder wirklich enthält,
+          die Anzahl der zurückgelieferten Objekte kann geringer sein.
+          Wenn ein Ausschnitt geliefert wird, so gibt "Range" den tatsächlich gelieferten Ausschnitt an.
+          Folder werden nicht rekursiv abgerufen, d.h. von den Foldern, die in einem Folder enthalten
+          sind, wird nicht der Inhalt mitgeliefert.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+        <xs:extension base="pb:AbstractObjectType">
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Range" type="pb:RangeType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Content">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" ref="pb:Item"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute default="0" name="size" type="xs:nonNegativeInteger" use="optional"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="Folder" type="pb:FolderType"/>
+    
+    <xs:complexType name="FolderStructureType">
+      <xs:annotation>
+        <xs:documentation>
+          Mappenstruktur der Mappe mit DOI "doi" und Namen "name".
+          Gibt alle Untermappen "F" rekursiv an.
+          Attribute und Access-Controll-Attribute können ebenfalls auf Anfrage angegeben sein.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="AccessControl" type="pb:ACAttributeListType"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="F" type="pb:FolderStructureType"/>
+      </xs:sequence>
+      <xs:attribute name="doi" type="pb:DOIType" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:element name="FolderStructure" type="pb:FolderStructureType"/>
+    
+    <xs:complexType name="CommonRequestParamType">
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="ActionId" type="pb:ActionIdType"/>
+        <xs:element name="User" type="xs:string"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="AccessRole" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Language" type="xs:language"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataSpecificationType">
+        <xs:annotation>
+            <xs:documentation>
+                Spezifikation von angeforderten Daten zu einem Objekt/Mappe.
+
+                idtype - ids als doi oder oid verwenden und zurückgeben
+                subfolders - Bei Mappenabfragen Untermappen im Inhalt mit zurückliefern.
+                parentfolders - Mappen, in denen sich das Objekt befindet, zurückliefern.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute default="doi" name="idtype" type="pb:IDType" use="optional"/>
+        <xs:attribute default="false" name="subfolders" type="xs:boolean" use="optional"/>
+        <xs:attribute default="false" name="parentfolders" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="MetadataRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Anforderung von Metadaten.
+          Spezifiziert, welche Metadaten bei einer Anfrage zurückgeliefert werden sollen.
+          Dabei ist es möglich, keine Attribute ("none"), alle Attribute ("all"),
+          eine Serverseitig vorkonfigurierte Liste der am häufigsten benötigten
+          Attribute ("basic") oder explizit vorgegebene bestimmte Attribute ("explicit") auszuliefern.
+          Nur in letzterem Fall hat die mitgelieferte Liste der gewünschten Attribute Relevanz.
+          Attribute können u.U. sprachabhängig verschiedene Werte enthalten,
+          mittels "Languages" lässt sich spezifizieren, wie die Ausgabe in diesem Fall zu erfolgen hat.
+          "accesscontrol" gibt an, ob die Access-Control-Attribute mit ausgeliefert werden sollen.
+          
+          Ist mandatory true, so läst jedes nicht vorhandene, explizit angeforderte Attribut
+          einen Fehler aus (ansonsten fehlt das Attribut in der Antwort, default-Verhalten).
+          Der hier angegebene Wert wird für jede einzelne Attributanforderung verwendet,
+          wenn dort nichts anderes angegeben ist.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="Languages" type="pb:LanguageRequestType"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Attribute" type="pb:AttributeReqType"/>
+      </xs:sequence>
+      <xs:attribute default="none" name="attributes" use="optional">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="none"/>
+            <xs:enumeration value="basic"/>
+            <xs:enumeration value="all"/>
+            <xs:enumeration value="explicit"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute default="false" name="accesscontrol" type="xs:boolean" use="optional"/>
+      <xs:attribute default="false" name="mandatory" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="ConversionType">
+      <xs:annotation>
+        <xs:documentation>
+          Angaben zur Konvertierung,
+          z.Zt. nur das gewünschte Zielformat.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="ContentType" type="pb:MimeType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="ScalingBehaviourType">
+      <xs:annotation>
+        <xs:documentation>
+          clip = Abschneiden (Ergebnis füllt BoundingBox aus,
+                 was wegen Propertional-Skalierung übersteht wird abgeschnitten)
+          fit = Einpassen (Ergebnis kann kleiner sein als BoundingBox,
+                mindestens eine der beiden Seiten ist so lang wie gewünscht)
+          scale = Skalieren, notfalls ohne Wahrung des Seitenverhältnisses
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="clip"/>
+        <xs:enumeration value="fit"/>
+        <xs:enumeration value="scale"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ScalingType">
+      <xs:annotation>
+        <xs:documentation>
+          Angaben zur Skalierung,
+          z.Zt. nur die gewünschte Größe.
+          Wird nur XSize oder nur YSize angegeben, so wird der andere Wert
+          unter Annahme quadratischer Pixel so berechnet,
+          dass das Seitenverhältnis beibehalten bleibt.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="XSize" type="xs:integer"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="YSize" type="xs:integer"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Resolution" type="xs:integer"/> 
+      </xs:sequence>
+      <xs:attribute default="fit" name="behaviour" type="pb:ScalingBehaviourType" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="ImageOpParamType">
+        <xs:annotation>
+            <xs:documentation>
+                Image Processor Operation Parameter. See ImageProcessParamsType for details.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="value" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ImageOpType">
+        <xs:annotation>
+            <xs:documentation>
+                Image Processor Operation. See ImageProcessParamsType for details.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ImageOpParam" type="pb:ImageOpParamType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ImageProcessorParamsType">
+        <xs:annotation>
+            <xs:documentation>
+                Image processor parameters as described by chapter 'Image Operations in detail'
+                of 'Intermedia Fotoficient - The First Book' (im-first_book.pdf).
+                (http://intermedia.pixelboxx.com/svn/trunk/intermedia-fotoficient/doc/manuals; for
+                registration see http://intermedia.pixelboxx.com/)
+
+                Please set attribute "type" of RawDataRequest to 'custom'.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="1" name="ImageOp" type="pb:ImageOpType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RawDataRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Anforderung daran, welche Rohdaten wie geliefert werden sollen.
+          Ausgeliefert werden können die unveränderten Feindaten (type="fine"),
+          vorskalierte Ansichten als JPG in zwei verschiedenen größen ("layout" und "thumbnail"),
+          sowie ein selbstdefiniertes Format ("custom"), das
+          durch "Conversion" und "Skaling" näher spezifiziert werden kann.
+          Mit "location" wird festgelegt, wie die Ausgabe der Rohdaten erfolgen soll.
+          Möglich sind "attach" (wird als Attachment hinzugefügt), "url" (es wird eine Url geliefert,
+          an der die Daten abrufbar sind), "writeto" (Daten werden an definierter Stelle im Filesystem abgelegt)
+          und "include" (Daten werden direkt an Ort und Stelle als binär-Block eingefügt).
+          
+          In der ersten Version sind als type nur "fine", "layout", "thumb
+          und als location nur "include" und "url" implementiert.
+          
+          Ist mandatory true, so führt es zu einem Fehler, wenn die angeforderten Daten
+          nicht existieren, ansonsten fehlen sie in der Antwort (default).
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="Conversion" type="pb:ConversionType"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Scaling" type="pb:ScalingType"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="ImageProcessorParams" type="pb:ImageProcessorParamsType"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="pb:RDType" use="required"/>
+      <xs:attribute default="include" name="location" type="pb:LocReqType" use="optional"/>
+      <xs:attribute default="false" name="mandatory" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="RawDataListRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste von Rohdatenanforderungen.
+          Ist mandatory true, führen nicht vorhandene geforderte Daten zu einem Fehler,
+          ansonsten fehlen sie nur in der Antwort (default). Der hier gesetzte Wert
+          wird für jede einzelne Rohdatenanforderung verwendet, wenn dort nichts
+          anderes angegeben ist.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="WantedRawData" type="pb:RawDataRequestType"/>
+      </xs:sequence>
+      <xs:attribute default="false" name="mandatory" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="XLinkObjectsRequestType">
+      <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithRawData" type="pb:RawDataListRequestType"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="pb:XLinkType" use="required"/>
+      <xs:attribute default="child" name="rel" type="pb:XLinkRelationType" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="XLinkListObjectsRequestType">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="WantedXLinks" type="pb:XLinkObjectsRequestType"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="XLinkObjectsType">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="pb:Object"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="pb:XLinkType" use="required"/>
+      <xs:attribute default="child" name="rel" type="pb:XLinkRelationType" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="XLinkListObjectsType">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="XLink" type="pb:XLinkObjectsType"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="OrderDirectionType">
+      <xs:annotation>
+        <xs:documentation>
+          Sortierkriterium für Suchanfragen.
+          Es kann nach dem angegeben Attribut in aufsteigender oder absteigender Reihenfolge sortiert werden.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="ascending"/>
+        <xs:enumeration value="descending"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="OrderAttributeType">
+      <xs:annotation>
+        <xs:documentation>
+          Ein Attribut nach dem sortiert werden soll.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">      
+          <xs:attribute name="direction" type="pb:OrderDirectionType" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="OrderAttributesType">
+      <xs:annotation>
+        <xs:documentation>
+          Eine Liste von Attributen nach denen sortiert werden soll.
+          Dieses Element überschreibt das Element "Order"
+        </xs:documentation>
+      </xs:annotation>    
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="OrderAttribute" type="pb:OrderAttributeType"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="OrderType">
+      <xs:annotation>
+        <xs:documentation>
+          Sortierkriterium für Suchanfragen.
+          Es kann nach dem angegeben Attribut in aufsteigender oder absteigender Reihenfolge sortiert werden.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="ascending"/>
+        <xs:enumeration value="descending"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="RangeType">
+      <xs:annotation>
+        <xs:documentation>
+          Ausschnitt, der von einem Folder geliefert wurde oder geliefert werden soll.
+          Dabei ist "firstPos" die Nummer des ersten Elements, beginnend bei 0, und
+          "size" die Anzahl der Elemente.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+      </xs:sequence>
+      <xs:attribute default="0" name="firstPos" type="xs:nonNegativeInteger" use="optional"/>
+      <xs:attribute name="size" type="xs:nonNegativeInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="CommonSearchParamType">
+      <xs:annotation>
+        <xs:documentation>
+          Parameter für Suchanfragen, die sowohl bei einfacher Suche wie auch erweiterter Suche
+          verwendet werden können.
+          Dazu gehören FolderId (Mappe, in der gesucht werden soll),
+          Order (Sortierreihenfolge), Range (Teilergebnis das geliefert werden soll),
+          WithMetadata (Metadaten die zu jedem Ergebnisobjekt geliefert werden sollen)
+          WithRawData (Rohdaten die zu jedem Ergebnisobjekt geliefert werden sollen).
+          Die maximale Anzahl gelieferter Ergebnisse ist serverseitig begrenzt,
+          die Obergrenze für Anfragen ohne Daten, mit Metadaten und mit Rohdaten kann unterschiedlich sein,
+          ist jedoch mindestens 1.
+        </xs:documentation>
+      </xs:annotation>   
+       <xs:sequence>
+         <xs:element maxOccurs="1" minOccurs="0" name="FolderId" type="pb:DOIType"/>         
+         <xs:element maxOccurs="1" minOccurs="0" name="OrderAttributes" type="pb:OrderAttributesType"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="Order" type="pb:OrderType"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="Range" type="pb:RangeType"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+         <xs:element maxOccurs="1" minOccurs="0" name="WithRawData" type="pb:RawDataListRequestType"/>
+       </xs:sequence>
+      <xs:attribute default="false" name="withFolders" type="xs:boolean" use="optional"/>
+      <xs:attribute default="true" name="withObjects" type="xs:boolean" use="optional"/> 
+    </xs:complexType>
+
+    <xs:complexType name="SimpleSearchParamType">
+      <xs:annotation>
+        <xs:documentation>
+          Eine einfache Suchanfrage.
+          Wesentlicher Bestandteil ist der Suchtext, aus dem die Suchanfrage je nach ParserPolicy generiert wird.
+          Üblicherweise wird der Text in einzelne Worte zerlegt, nach denen AND-verknüpft gesucht wird.
+          Es sind mindestens die ParserPolicies "AND" und "OR" definiert,
+          ist keine ParserPolicy angegeben so wird "AND" angenommen.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="SearchParams" type="pb:CommonSearchParamType"/>
+        <xs:element name="Text" type="xs:string"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="ParserPolicy" type="xs:token"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="SearchOpType">
+      <xs:annotation>
+        <xs:documentation>
+          Suchoperator.
+          Möglichkeiten sind "eq" (gleich), "neq" (ungleich), "lt" (kleiner), "gt" (größer),
+          "le" (kleiner oder gleich), "ge" (größer oder gleich), "like" (SQL Operator LIKE)
+          und "matches" (case-insensitiv, einfache Wildcards "*" und "?", sind keine Wildcards
+          vorhanden wird ein "*" davor und danach angenommen).
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="eq"/>
+        <xs:enumeration value="neq"/>
+        <xs:enumeration value="lt"/>
+        <xs:enumeration value="gt"/>
+        <xs:enumeration value="le"/>
+        <xs:enumeration value="ge"/>
+        <xs:enumeration value="like"/>
+        <xs:enumeration value="matches"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="SearchInFolderType">
+      <xs:annotation>
+         <xs:documentation>
+          recursive - Include subfolders
+         </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="Folder" type="pb:DOIType"/>
+      </xs:sequence>
+      <xs:attribute name="ref" type="xs:token" use="optional"/>
+      <xs:attribute name="recursive" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+    <xs:element name="InFolderTerm" type="pb:SearchInFolderType"/>
+        
+    <xs:complexType name="SearchXLinkType">
+      <xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="sourceRef" type="xs:token" use="optional"/>
+      <xs:attribute name="targetRef" type="xs:token" use="required"/>
+      <xs:attribute name="type" type="pb:XLinkType" use="required"/>
+    </xs:complexType>
+    <xs:element name="XLinkTerm" type="pb:SearchXLinkType"/>
+        
+    <xs:complexType name="SearchAttributeType">
+      <xs:annotation>
+        <xs:documentation>
+          Suche nach einem Attribut.
+          Dabei ist "name" der Attributname, "op" der Suchoperator und der Elementwert der Wert,
+          mit dem verglichen werden soll. Der Attributwert steht links vom Operator, der Vergleichswert rechts davon.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="ref" type="xs:token" use="optional"/>
+          <xs:attribute name="name" type="xs:token" use="required"/>
+          <xs:attribute default="eq" name="op" type="pb:SearchOpType" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="AttributeTerm" type="pb:SearchAttributeType"/>
+    
+    <xs:complexType name="SearchStringType">
+      <xs:annotation>
+        <xs:documentation>
+          Suche nach einem String.
+          Dabei ist "op" der Suchoperator und der Elementwert der Wert,
+          mit dem verglichen werden soll. Der Attributwert steht links vom Operator, der Vergleichswert rechts davon.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="eq" name="op" type="pb:SearchOpType" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="StringTerm" type="pb:SearchStringType"/>
+    
+    <xs:element name="AndTerm">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="2" ref="pb:SearchTerm"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="OrTerm">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="2" ref="pb:SearchTerm"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="NotTerm">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="pb:SearchTerm"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="SearchTerm">
+      <xs:complexType>
+        <xs:choice>
+          <xs:element ref="pb:AndTerm"/>
+          <xs:element ref="pb:OrTerm"/>
+          <xs:element ref="pb:NotTerm"/>
+          <xs:element ref="pb:AttributeTerm"/>
+          <xs:element ref="pb:StringTerm"/>
+          <xs:element ref="pb:XLinkTerm"/>
+          <xs:element ref="pb:InFolderTerm"/>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="ExtendedSearchParamType">
+      <xs:annotation>
+        <xs:documentation>
+          Parameter für eine erweiterte Suche.
+        </xs:documentation>
+      </xs:annotation>   
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="SearchParams" type="pb:CommonSearchParamType"/>
+        <xs:element ref="pb:SearchTerm"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MessageType">
+      <xs:annotation>
+        <xs:documentation>
+          Eine einfache Nachricht. In "lang" kann die Sprache angegeben sein, in der die Nachricht vorliegt.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" type="xs:language" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="Message" type="pb:MessageType"/>
+    
+    <xs:complexType name="IDListType">
+      <xs:annotation>
+        <xs:documentation>
+          Liste von object ids.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="id" type="pb:DOIType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UpdateXLinkType">
+      <xs:annotation>
+        <xs:documentation>
+            Definiert eine Verknüpfung zu einem Ziel-Objekt.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="targetid" type="pb:DOIType"/>
+        <xs:element maxOccurs="1" minOccurs="1" name="type" type="pb:XLinkType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UpdateXLinkListType">
+      <xs:annotation>
+        <xs:documentation>
+            Faßt Verknüpfungen zusammen.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="xlinks" type="pb:UpdateXLinkType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UpdateXLink">
+      <xs:annotation>
+        <xs:documentation>
+            Führt ein Update von Objektverknüpfungen durch.
+            set:    ersetzt alle vorhandenen Verknüpfungen durch die übergebenen Verknüpfungen
+            add:    fügt die Verknüpfungen hinzu
+            remove: entfernt die übergebenen Verknüpfungen
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" name="set" type="pb:UpdateXLinkListType"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="add" type="pb:UpdateXLinkListType"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="remove" type="pb:UpdateXLinkListType"/>
+      </xs:sequence>      
+    </xs:complexType>
+
+    <xs:element name="GetFolderStructureRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Abfrage der Mappenstruktur.
+          Ist eine TopFolderId angegeben, so wird der Untermappenbaum dieser Mappe geliefert,
+          ansonsten der vollständige Mappenbaum beginnend mit der Rootmappe.
+          WithMetadata ist zur Zeit nur zur Spezifizierung der gewünschten
+          Sprachen gültig (wirkt sich also nur auf das Attribut "name" aus,
+          weitere Attribute können damit zur Zeit nicht abgefragt werden).
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="TopFolderId" type="pb:DOIType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreateFolderRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Erzeugt eine Untermappe in der Mappe "ParentFolderId".
+          Von der Mappe ist zumindest der Name anzugeben.
+          (Ist von der zu erzeugenden Mappe eine DOI angegeben, so wird sie ignoriert).
+          Es ist möglich, Attribute und Access-Control-Attribute bei dem Aufruf in der Mappe mit zu übergeben.
+          In zukünftigen Versionen wird es möglich sein, auf diese Art schon
+          bei der Erstellung Attribute und Zugriffsrechte festzulegen.
+
+          inheritACAttributes - die Rechte der Obermappe werden vererbt auf die Untermappe (Ab V615)
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ParentFolderId" type="pb:DOIType"/>
+          <xs:element ref="pb:Folder"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+        <xs:attribute default="false" name="inheritACAttributes" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DeleteFolderRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Löscht die Mappe mit der angegebenen Id.
+          Rekursive Löschaufrufe sind möglich ab V581.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="FolderId" type="pb:DOIType"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="recursive" type="xs:boolean"/>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetFolderRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Abfrage des Inhalts der Mappe "FolderId".
+          Mittels "Range" kann auch ein Teil der Mappe abgefragt werden (z.B. Objekte 50-99).
+          Abfragen können mit Metadaten und/oder Rohdaten der Objekte erfolgen.
+          Der Aufruf ist simulierbar (nur Ergebnis, ob er erfolgreich wäre, ohne tatsächliche Änderung).
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="FolderId" type="pb:DOIType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="Range" type="pb:RangeType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithRawData" type="pb:RawDataListRequestType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="DataSpec" type="pb:DataSpecificationType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="AddObjectToFolderRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Fügt das Objekt mit der angegebenen ObjectId dem Folder mit der angegebenen FolderId hinzu.
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="FolderId" type="pb:DOIType"/>
+        <xs:element name="ObjectId" type="pb:DOIType"/>
+      </xs:sequence>
+      <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="MoveObjectRequestType">
+      <xs:annotation>
+        <xs:documentation>
+          Verschiebt das Objekt "ObjectId" aus der Mappe "FromFolderId" in die Mappe "ToFolderId".
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="FromFolderId" type="pb:DOIType"/>
+        <xs:element name="ToFolderId" type="pb:DOIType"/>
+        <xs:element name="ObjectId" type="pb:DOIType"/>
+      </xs:sequence>
+      <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+
+    <xs:element name="MoveObjectRequest" type="pb:MoveObjectRequestType"/>
+
+    <xs:element name="AddObjectToFolderRequest" type="pb:AddObjectToFolderRequestType"/>
+
+    <xs:element name="ImportFileRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Import einer Datei in die Mappe "TargetFolderId".
+          Mittels "Data" werden die zu importierenden Daten angegeben, diese MÜSSEN vom Typ "fine" sein.
+          z.Zt. ist es nur möglich, die Daten direkt mit zu übergeben (location "include").
+          In zukünftigen Versionen können die Attribute und Zugriffsrechte/Access-Control-Attribute
+          schon bei Erstellung festgelegt werden.
+          Der Aufruf ist simulierbar,
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="TargetFolderId" type="pb:DOIType"/>
+          <xs:element name="Data" type="pb:RawDataType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="AccessControl" type="pb:ACAttributeListType"/>
+          <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="DataSpec" type="pb:DataSpecificationType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DeleteObjectRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Löscht das Objekt "ObjectId" vollständig.
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ObjectId" type="pb:DOIType"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="RemoveObjectFromFolderRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Entfernt das Objekt "ObjectId" aus der Mappe "FolderId".
+          Das Objekt kann danach noch in anderen Mappen oder auch mappenlos vorhanden sein.
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="FolderId" type="pb:DOIType"/>
+          <xs:element name="ObjectId" type="pb:DOIType"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetObjectRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Holt das Objekt (oder die Mappe bei VC) mit der angegebenen ObjectId.
+          Dabei können sowohl Metadaten (Attribute, Zugriffsrechte..)
+          wie auch Rohdaten angefordert werden.
+          Keins von beidem anzufordern ist nicht sehr sinnvoll, wenn auch zulässig.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ObjectId" type="pb:DOIType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="DataSpec" type="pb:DataSpecificationType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithMetadata" type="pb:MetadataRequestType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithRawData" type="pb:RawDataListRequestType"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="WithXLinks" type="pb:XLinkListObjectsRequestType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="UpdateObjectRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Ändert Objektattribute für das Objekt mit der angegebenen ObjectId.
+          Dabei enthält "Attributes" die Liste der Attribute mit ihren neuen Inhalten.
+          Es werden nur die Attribute geändert, die angegeben sind.
+          Ist/sind Sprachvarianten angegeben, so werden bei mehrsprachigen Attributen
+          nur die angegebenen Varianten geändert.
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ObjectId" type="pb:DOIType"/>
+          <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="XLinks" type="pb:UpdateXLink"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+        <xs:attribute default="false" name="createnewversion" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ImportFileNewVersionRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Erstellt eine neue Version von dem Objekt "ObjectId" mit den neuen Daten "Data".
+          Restliche Parameter: Siehe Dateiimport.
+          Der Aufruf ist simulierbar.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ObjectId" type="pb:DOIType"/>
+          <xs:element name="Data" type="pb:RawDataType"/>
+          <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SearchRequest" type="pb:SimpleSearchParamType"/>
+
+    <xs:element name="ExtendedSearchRequest" type="pb:ExtendedSearchParamType"/>
+    
+    <xs:element name="GetTypeInfoRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Abfrage der Informationen zu allen Objekt-Typen.
+          (wird möglicherweise so erweitert,
+          dass man die Abfrage für einzelne Typen durchführen kann).
+          Ist "includeattrtype" auf true gesetzt, werden zu den Attributen die Attribut-Typen (und ggf. Type-IDs) hinzugefügt.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+        </xs:sequence>
+        <xs:attribute default="false" name="includeattrtype" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreateObjectRequest">
+      <xs:annotation>
+        <xs:documentation>
+          Erzeugt ein neues Pixelobjekt mit dem angegebenen Mimetype und Attributen
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="ContentType" type="pb:MimeType"/>
+          <xs:element maxOccurs="1" minOccurs="0" ref="pb:Attributes"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SuccessMessageResponse">
+      <xs:annotation>
+        <xs:documentation>
+          Erfolgsmeldung, wird zurückgegeben, wenn die Operation erfolgreich war,
+          jedoch keinen eigenen Rückgabewert hat.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="pb:Message"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FolderStructureResponse">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="pb:FolderStructure"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="FolderResponse">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="pb:Folder"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="ObjectResponse">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="pb:Object"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="GetTypeInfoResponse">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Type" type="pb:TypeInfoType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="RenameFolderRequest">
+      <xs:annotation>
+        <xs:documentation>
+			This functionality manages the multilanguage attributes of a folder. The valid attributes are: name and headline.          
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="FolderId" type="pb:DOIType"/>
+          <xs:element maxOccurs="1" minOccurs="1" ref="pb:Attributes"/>
+        </xs:sequence>
+        <xs:attribute default="false" name="simulate" type="xs:boolean" use="optional"/>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://soap.web.webservice.mod.pb.pixelboxx.de">
+<xsd:complexType name="WSAuthorizationFault"/>
+<xsd:complexType name="WSObjectNotFoundFault"/>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://pub.web.webservice.mod.pb.pixelboxx.de">
+<xsd:element name="WSAuthorizationFault" type="ns2:WSAuthorizationFault"/>
+<xsd:element name="WSObjectNotFoundFault" type="ns2:WSObjectNotFoundFault"/>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WSAuthorizationFault">
+    <wsdl:part name="WSAuthorizationFault" element="tns:WSAuthorizationFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extendedSearchResponse">
+    <wsdl:part name="FolderResponse" element="ns1:FolderResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="importFileResponse">
+    <wsdl:part name="ObjectResponse" element="ns1:ObjectResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObjectResponse">
+    <wsdl:part name="ObjectResponse" element="ns1:ObjectResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTypeInfoRequest">
+    <wsdl:part name="GetTypeInfoRequest" element="ns1:GetTypeInfoRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createFolderResponse">
+    <wsdl:part name="FolderResponse" element="ns1:FolderResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createObjectRequest">
+    <wsdl:part name="CreateObjectRequest" element="ns1:CreateObjectRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateObjectRequest">
+    <wsdl:part name="UpdateObjectRequest" element="ns1:UpdateObjectRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addObjectToFolderResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeObjectFromFolderResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addObjectToFolderRequest">
+    <wsdl:part name="AddObjectToFolderRequest" element="ns1:AddObjectToFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extendedSearchRequest">
+    <wsdl:part name="ExtendedSearchRequest" element="ns1:ExtendedSearchRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createFolderRequest">
+    <wsdl:part name="CreateFolderRequest" element="ns1:CreateFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteObjectRequest">
+    <wsdl:part name="DeleteObjectRequest" element="ns1:DeleteObjectRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteObjectResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTypeInfoResponse">
+    <wsdl:part name="GetTypeInfoResponse" element="ns1:GetTypeInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObjectRequest">
+    <wsdl:part name="GetObjectRequest" element="ns1:GetObjectRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="moveObjectResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createObjectResponse">
+    <wsdl:part name="ObjectResponse" element="ns1:ObjectResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFolderResponse">
+    <wsdl:part name="FolderResponse" element="ns1:FolderResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteFolderResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renameFolderRequest">
+    <wsdl:part name="RenameFolderRequest" element="ns1:RenameFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateObjectResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="moveObjectRequest">
+    <wsdl:part name="MoveObjectRequest" element="ns1:MoveObjectRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSObjectNotFoundFault">
+    <wsdl:part name="WSObjectNotFoundFault" element="tns:WSObjectNotFoundFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeObjectFromFolderRequest">
+    <wsdl:part name="RemoveObjectFromFolderRequest" element="ns1:RemoveObjectFromFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="importFileNewVersionRequest">
+    <wsdl:part name="ImportFileNewVersionRequest" element="ns1:ImportFileNewVersionRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFolderStructureResponse">
+    <wsdl:part name="FolderStructureResponse" element="ns1:FolderStructureResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteFolderRequest">
+    <wsdl:part name="DeleteFolderRequest" element="ns1:DeleteFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFolderStructureRequest">
+    <wsdl:part name="GetFolderStructureRequest" element="ns1:GetFolderStructureRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFolderRequest">
+    <wsdl:part name="GetFolderRequest" element="ns1:GetFolderRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="importFileRequest">
+    <wsdl:part name="ImportFileRequest" element="ns1:ImportFileRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renameFolderResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="importFileNewVersionResponse">
+    <wsdl:part name="SuccessMessageResponse" element="ns1:SuccessMessageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WebServiceInterfacePortType">
+    <wsdl:operation name="getFolderStructure">
+      <wsdl:input name="getFolderStructureRequest" message="tns:getFolderStructureRequest">
+    </wsdl:input>
+      <wsdl:output name="getFolderStructureResponse" message="tns:getFolderStructureResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFile">
+      <wsdl:input name="importFileRequest" message="tns:importFileRequest">
+    </wsdl:input>
+      <wsdl:output name="importFileResponse" message="tns:importFileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTypeInfo">
+      <wsdl:input name="getTypeInfoRequest" message="tns:getTypeInfoRequest">
+    </wsdl:input>
+      <wsdl:output name="getTypeInfoResponse" message="tns:getTypeInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createFolder">
+      <wsdl:input name="createFolderRequest" message="tns:createFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="createFolderResponse" message="tns:createFolderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeObjectFromFolder">
+      <wsdl:input name="removeObjectFromFolderRequest" message="tns:removeObjectFromFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="removeObjectFromFolderResponse" message="tns:removeObjectFromFolderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="moveObject">
+      <wsdl:input name="moveObjectRequest" message="tns:moveObjectRequest">
+    </wsdl:input>
+      <wsdl:output name="moveObjectResponse" message="tns:moveObjectResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createObject">
+      <wsdl:input name="createObjectRequest" message="tns:createObjectRequest">
+    </wsdl:input>
+      <wsdl:output name="createObjectResponse" message="tns:createObjectResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <wsdl:input name="deleteObjectRequest" message="tns:deleteObjectRequest">
+    </wsdl:input>
+      <wsdl:output name="deleteObjectResponse" message="tns:deleteObjectResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addObjectToFolder">
+      <wsdl:input name="addObjectToFolderRequest" message="tns:addObjectToFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="addObjectToFolderResponse" message="tns:addObjectToFolderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFolder">
+      <wsdl:input name="deleteFolderRequest" message="tns:deleteFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="deleteFolderResponse" message="tns:deleteFolderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFileNewVersion">
+      <wsdl:input name="importFileNewVersionRequest" message="tns:importFileNewVersionRequest">
+    </wsdl:input>
+      <wsdl:output name="importFileNewVersionResponse" message="tns:importFileNewVersionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFolder">
+      <wsdl:input name="getFolderRequest" message="tns:getFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="getFolderResponse" message="tns:getFolderResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSAuthorizationFault" message="tns:WSAuthorizationFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extendedSearch">
+      <wsdl:input name="extendedSearchRequest" message="tns:extendedSearchRequest">
+    </wsdl:input>
+      <wsdl:output name="extendedSearchResponse" message="tns:extendedSearchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renameFolder">
+      <wsdl:input name="renameFolderRequest" message="tns:renameFolderRequest">
+    </wsdl:input>
+      <wsdl:output name="renameFolderResponse" message="tns:renameFolderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateObject">
+      <wsdl:input name="updateObjectRequest" message="tns:updateObjectRequest">
+    </wsdl:input>
+      <wsdl:output name="updateObjectResponse" message="tns:updateObjectResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObject">
+      <wsdl:input name="getObjectRequest" message="tns:getObjectRequest">
+    </wsdl:input>
+      <wsdl:output name="getObjectResponse" message="tns:getObjectResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSAuthorizationFault" message="tns:WSAuthorizationFault">
+    </wsdl:fault>
+      <wsdl:fault name="WSObjectNotFoundFault" message="tns:WSObjectNotFoundFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceInterfaceHttpBinding" type="tns:WebServiceInterfacePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getFolderStructure">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getFolderStructureRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFolderStructureResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFile">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="importFileRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importFileResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTypeInfo">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getTypeInfoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTypeInfoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="createFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeObjectFromFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="removeObjectFromFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeObjectFromFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="moveObject">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="moveObjectRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="moveObjectResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createObject">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="createObjectRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createObjectResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="deleteObjectRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteObjectResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addObjectToFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="addObjectToFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addObjectToFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="deleteFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importFileNewVersion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="importFileNewVersionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importFileNewVersionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSAuthorizationFault">
+        <wsdlsoap:fault name="WSAuthorizationFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extendedSearch">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="extendedSearchRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="extendedSearchResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renameFolder">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="renameFolderRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="renameFolderResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateObject">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="updateObjectRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateObjectResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObject">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getObjectRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getObjectResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSAuthorizationFault">
+        <wsdlsoap:fault name="WSAuthorizationFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WSObjectNotFoundFault">
+        <wsdlsoap:fault name="WSObjectNotFoundFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceInterface">
+    <wsdl:port name="WebServiceInterfaceHttpPort" binding="tns:WebServiceInterfaceHttpBinding">
+      <wsdlsoap:address location="http://dam21customer24.demo.pixelboxx.com/servlet/ws/WebServiceInterface"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

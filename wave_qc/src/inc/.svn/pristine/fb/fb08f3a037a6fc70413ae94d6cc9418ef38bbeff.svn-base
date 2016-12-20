@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Pickliste: Items - List
+ *
+ * Description
+ *
+ * @package    PCK
+ * @subpackage    Items
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Pck_Itm_List extends CInc_Pck_Itm_List {
+
+}

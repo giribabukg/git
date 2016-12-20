@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Services: Qty
+ *
+ * Description
+ *
+ * @package    SVC
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Svc_Qty extends CInc_Svc_Qty {
+
+}

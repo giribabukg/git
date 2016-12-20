@@ -1,0 +1,52 @@
+<div class="fl" style="margin-right:16px;">
+<b>Function Filter</b><br />
+<select id="apl_func" class="w300" onchange="Flow.apl.selectFunction(this)">
+  {func.options}
+</select><br /><br />
+
+<b>Available Users</b><br />
+<select id="apl_src" name="usr[]" size="20" class="w300" multiple="multiple">
+{users}
+{groups}
+</select>
+<input type="hidden" id="apl_src_grps" value="" />
+<br />
+<br />
+
+<div id="apl_prefix_div" style="display:{prefix.display.pos}">
+<b>Into Approval Loop Block</b><br />
+<select id="into_apl_prefix" name="prefix" class="w300">
+{prefix}
+</select>
+<br />
+<br />
+</div>
+</div>
+
+<div style="display:{display.pos}">
+<b>At position</b><br />
+<select id="apl_pos" name="pos" class="w200">
+  {pos.options}
+</select>
+<br /><br />
+<b>Days</b><br />
+<select id="apl_days" name="days" class="w200">
+	<option>1</option>
+	<option selected="selected">2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+</select>
+<br />
+</div>
+
+<div class="info" style="margin-right:16px;">
+<br />
+<br />
+<div style="display:{display.info}">
+{buttons.info}
+</div>
+<br />
+</div>

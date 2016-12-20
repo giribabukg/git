@@ -1,0 +1,14 @@
+<?php
+/**
+ * Api: Alink - Response
+ *
+ * @package    API
+ * @subpackage Alink
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Alink_Response extends CCust_Api_Alink_Response {
+
+}

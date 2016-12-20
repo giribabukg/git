@@ -1,0 +1,20 @@
+<?php
+/**
+ * Api: Sql
+ *
+ * Mysql Connection Class for other servers
+ *
+ * This class handles the connection to a MySql Database using the 
+ * php_mysql extension, hiding the connection handle and supporting 
+ * basic logging of queries and errors.
+ *
+ * @package    API
+ * @subpackage Tip
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Sql extends CCust_Api_Sql {
+
+}

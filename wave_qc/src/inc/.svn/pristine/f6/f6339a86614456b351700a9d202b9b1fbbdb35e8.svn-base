@@ -1,0 +1,16 @@
+<?php
+/**
+ * Home: Welcome - Searchbox
+ *
+ *  Description
+ *
+ * @package    HOM
+ * @subpackage    Welcome
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CHom_Wel_Searchbox extends CCust_Hom_Wel_Searchbox {
+
+}

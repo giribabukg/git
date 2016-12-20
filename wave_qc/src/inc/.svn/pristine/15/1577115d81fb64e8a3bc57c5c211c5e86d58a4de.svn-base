@@ -1,0 +1,15 @@
+<?php
+/**
+ * Jobs: Approval Loop Page - Files - Controller
+ *
+ * Description
+ *
+ * @package    Job
+ * @subpackage Approval Loop
+ * @copyright  Copyright (c) 2004-2009 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Apl_Page_Fil_Cnt extends CCust_Job_Apl_Page_Fil_Cnt {
+}

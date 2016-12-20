@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Jobs: Approval Loop - Page - Annotations
+ *
+ * Description
+ *
+ * @package    Job
+ * @subpackage Approval Loop
+ * @copyright  Copyright (c) 2004-2009 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Job_Apl_Page_Annotations extends CInc_Job_Apl_Page_Annotations {
+
+}

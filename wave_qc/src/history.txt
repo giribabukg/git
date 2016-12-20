@@ -1,0 +1,265 @@
+2.14.0.0 (2012-09-06)
+  SuT 23631/1 Archiv alte Bedingungen
+  RSM 23620/3 (PDF) File-List is always sorted by date, can't be sorted by name
+  RSM 23611/1 Additional Tabs in Archive view
+  SuT 23592/1 Fehlender Header Aktuelle PDFs
+  SuT 23588/1 Suche über Drucklieferant Archiv
+  Sut 23656/1 Fehlerhafter Sequentieller Umlauf
+
+2.13.0.1 (2012-07-02)
+2.13.0.0 (2012-06-15)
+  RSM  23377/3 zusätzliche Sprache im Portal / additional language in portal
+ 5Flow 23375/2 Extended user conditions
+  SuT  23379/2 APL page and APL tab should work same way
+  SuT  23398/2 Define a rout cause for amendments
+  SuT  23389/1 CopytoTask change urgent
+  SuT  23386/1 Webcenter Archiv falsche Redirect Seite
+  SuT  23439/1 MyTask-Statuswechsel: Anzeige von Artwork ohne Berechtigung
+  MBS  23459/1 Flag Function not working as requested
+  SuT  23460/1 Führende nullen abspeichern
+  SuT  23458/1 Eingangsdatum im Archiv
+  MBS  23385/1 CSV Export bug
+  RSM  23195/1 Preview images and thumbnails
+new
+ 5Flow 23478/2 APL Page: Infos and report only visible when special permissions were granted to user
+  MBS  23482/1 APL closure procedure
+ 5Flow 23477/2 APL report optimization
+
+2.12.0.0 (2012-03-29)
+  SuT 23275/3 APL Timing
+  RSM 23195/3 Preview images and thumbnails
+  SuT 23276/2 Project Critical Path Icon
+  SuT 23302/2 Get timing from item
+  SuT 23293/1 change timing in item is not working correct
+  SuT 23313/1 Kommentare der Flagbestaetigung kommen nicht in die eMail
+  SuT 23309/1 Anzeige des Namens im Projekt CRP noch falsch
+  SuT 23175/2 SKU - Spezifikation
+  SuT 23356/1 Falsche Spalten zuordnung Flag
+
+2.11.0.0 (2012-03-08)
+ SuT 23229/2 Related menu to show projects, skus and jobs in one overview
+ SuT 23192/3 Status Change request in My Task List
+ SuT 23193/2 Project critical path functionality extension II
+ MBS 23252/1 job-pro.keyw configuration conflict
+ MBS/SuT 23175 SKU specification
+ SuT 23293/1 change timing in item is not working correct
+
+2.10.1.1 (2012-02-08)
+ MBS 23207/1 Picklist problem
+ MBS 23209/1 Ferrero Search Facility
+ MBS/SuT 23196 Missing comma in SQL statement
+ MBS/SuT 23175 SKU specification
+ MBS/SuT 23176 Password forgotten
+ MBS/SuT - EAN8 and EAN16 validator
+ MBS/SuT - HTML bugfixing
+
+2.10.1.0 (2012-01-16)
+ MBS 23132/1 Random people being pulled through to APL
+ SuT 23041/2 Master-Variant Bundle
+ SuT 23174/1 Fehlende Zugriffsrechte fuer Externe Umlaufseite
+ SuT 23165/1 Globales Recht Archiv
+
+2.10.0.0 (2011-12-02)
+ MBS 22979/2 Deleting users from an APL
+ MBS 22858/1 Reminder APL emails: sample configuration
+ SuT 23027/1 Event eMailToGroup mit confirm-all funktioniert nicht korrekt
+ MBS 22851/1 Re-use jobs from archive
+ SuT 23076/3 Add-on zu 'Flags in Critical Path'
+ MBS 23034/1 CSV Export intermittent problem
+ SuT 23094/1 Mistake in Copy Task function
+ MBS 22864/1 CLIENTS UNABLE TO SAVE PDF'S TO DESKTOP
+
+2.9.0.0  (2011-09-28, 2011-10-03)
+ SuT 22784/3 Flags in Critical Path
+ SuT 22942   Get Timing from project- additional order
+ MBS 22928   Time out
+ MBS 22851   Re-use jobs from archive
+ MBS 22926/1 UB 1002 active jobs - project problem
+
+2.8.0.0  (2011-08-30)
+ MBS/SuT 22804/3 Add users or Groups to an existing APL
+ SuT 22823/2     Neues Ereigniss Copy Task
+ SuT 22824/3     Optimisation of information multi status selection
+ SuT 22825/3     Get Timing from project
+ SuT 22829/2     Project Item view in project list
+ SuT 22901/1     Archive table update
+ MBS 22754/2     Additional tabs
+ SuT 22922/3     Optimisation of information multi status selection- additional order
+
+2.7.1.0  (2011-08-02)
+ MBS 22758/1 When reviewing a pdf can it automatically launch into a new window?
+ MBS 22795/2 From and reply-to in email headers editable
+ MBS 22521/1 crp view in Project Items is different to actual crp status
+ SuT 22733/2 Separate storage of thumbnails from Webcenter
+ SuT 22796/2 Optimisation of login and password security
+ SuT 22811/1 Risikofehler beim Datei Upload ins Webportal
+ SuT 22819/2 Optimisation of information about project status
+ SuT 22818/2 Einrichtung SmurfitKappa Goslar
+ SuT 22817/1 Anmerkungen aus Webcenter kommen nicht ins Portal
+ SuT 22690/1 Printing Press database connection between webportal and Networker
+ SuT 22790/1 Einrichtung - ESKO WebCenter Version 10
+ SuT 22718/1 Project Critical Path Functionality: Migration of existing projects
+
+2.7.0.0  (2011-06-27)
+ MBS 22758/3 When reviewing a pdf can it automatically launch into a new window?
+ MBS 22755/2 New Job Button in All Jobs
+ MBS 22753/2 Job Document Files Order
+ MBS 22735/1 Assets not visible in some browsers
+ MBS 22693/1 Roles amendment eMailToGroupAsRole
+ SuT 22720/2 Email Function as action button for all users
+ SuT 22675/2 Einbinduns eines 2. SmurfitKappa-Portals
+ SuT 22690/2 Printing Press database connection between webportal and Networker
+ SuT 22683/2 Erweiterungsauftrag fuer den Anschluss des Projektportals an die MOP-Datenbank
+ SuT 22739/2 Reset Cancel fuer Customer Service
+ SuT 22775/1 Falsche Zuordnung (Icon) bei Zuletzt
+ SuT 22746/1 Cronjob kann Mandanten-Configs nicht auswerten
+ SuT 22817/2 Anmerkungen aus Webcenter kommen nicht ins Portal
+
+2.6.0.0  (2011-05-23)
+ SuT 22651/3 Project Critical Path Functionality
+ SuT 22667/1 Suche ueber Drucklieferant
+ SuT 22659/1 Leserecht und dem Editierrecht bei Auftragsfeldern
+ SuT 22682/1 Rechte beim  Archiv Projektportal
+ SuT 22544/2 Notes field for archive jobs in Webportal - change: use arc-not right instead of arc
+ SuT 22685/1 Amendment: user can only see jobs & menu in all-jobs and search, if he has the right to
+ SuT 22702/2 Aktualisierung v. STAGE-Portal mit LIVE
+ MBS 22686/1 APL in job list in i.e. not showing properly
+ MBS 22693/3 Email to Group as Role
+
+2.5.1.0  (2011-04-18)
+ SuT 22544/2 Notes field for archive jobs in Webportal
+ SuT 22545/2 Sichtbarkeit "monitor_test" job
+ SuT 22592/2 WebCenter Vorlagen Namen muessen geaendert werden
+
+2.5.0.0  (2011-04-07)
+ MBS 22546/2 Add position of APL in APL flags
+ MBS 22611/2 Reports page
+ SuT 22614/1 Korrekturumlauf und Rollenbelegung
+ SuT 22615/3 Copy Job as an event
+ SuT 22624/3 APL - Identify which approval loop is underway
+ SuT 22625/1 Bugs in Projekte
+
+2.4.2.0  (2011-03-25)
+ MBS 22471/2 Implementation of a Ferrero portal for global usage / access by external repro suppliers
+ MBS 22549/2 Implementation of a Ferrero portal for global usage/access by external repro suppliers - Follow-up
+ SuT 22294/1 (3) Approval delegate action / APL - Select a back-up person
+ MBS 22385/2 Mandatory by status
+ SuT 22470/1 Usercondition lassen sich nicht speichern
+ SuT 22514/2 Approval Loop Page should look like Approval Invitation
+ MBS 22554/1 Approval Buttons
+ MBS 22559/2 Webcenter Projects not creating automatically
+ SuT 22579/1 Doppelter Mail Versand
+ SuT 22580/1 User Selektion mit Gruppeneinschraenkung
+ SuT 22587/1 My task list in APL window not working correct
+ SuT 22595/2 My task list on start page
+ MBS A_499 Webcenter Projects not creating automatically
+
+2.4.1.1  (2011-03-09)
+2.4.1.0  (2011-02-26)
+ MBS UK 22385/2 Mandatory by status
+ MBS UK 22467/1 Errors in AkzoNobel Portal
+ MBS UK 22468/1 Cannot select the job tab in the SKU
+  SuT   22475/2 Moeglichkeit der Rechte-Konfiguration furr versteckte WebCenter-Dateien
+ MBS UK 22477/1 Bug in System- For internal users who use multiple clients reporting defaults to Akzonobel
+  SuT   22490/1 Fehleranzeige im History
+ MBS UK 22510/1 Language files not working
+  SuT   22515/2 missing APL and not complete history in WebPortal archive
+  SuT   22516/1 Termin Folienlieferung kann als Suchfeld nicht genutzt werden
+ MBS UK 22517/1 APL not showing all Members
+  SuT   22518/1 Projekt Item Ansicht auf 25 Items begrenzt
+  SuT   22519/1 Termin Folienlieferung kann als Suchfeld nicht genutzt werden
+ MBS UK 22566/1 Error on CRP not saving changes
+ MBS UK 22564/1 Ferrero- 32727 Basamento Kinder Bueno White
+
+2.4.0.0  (2011-01-28)
+Intouch 22380/3 APL - Ability to have parallel or Sequential (or combination) of approval loops
+Intouch 22381/2 APL - Send email to originator on completion of an Approval Loop
+Intouch 22382/3 APL - Ability to send an APL to Group, but signed off by one
+
+2.3.0.0  (2011-01-20)
+Intouch  22383/3 On Status change - trigger a Javascript
+Intouch  22386/3 CSV Export
+Intouch  22318/3 Error Correction: SKU / 3 tier project management
+Intouch  New Client (mand_1009)
+Intouch  Update from LIVE system
+
+2.2.0.0  (2011-01-07)
+ S&  T   22419/1 Datei Vorschau - Korrekturumlaufseite
+Intouch  22415/1 Various SQL Errors since upgrade to version 5
+ S&  T   22413/2 Terminueberwachung - rote Zeilen / Deadline Higlight in der Jobliste
+ S&  T   22333    Versteckte Daten werden vom WEC im ZF portal angezeigt.
+Intouch  22384/3 On Status change - create JDF and/or xml
+Intouch  22387/2 Extended Status Filters
+ S&  T   22392/2 angebrochene Auftraege befinden sich noch in der "Meine Freigaben" bzw. "Meine Aufgaben" Liste
+ S&  T   22368/2 Umlauf Reiter nicht erreichbar
+ S&  T   22371/2 Projekte loeschen nicht moeglich
+ S&  T   22333   Versteckte Daten werden vom WEC im ZF portal angezeigt.
+ S&  T   22399/1 Benutzer Anlage Customer Admin
+ S&  T   22394/1 fehlende Default-Grafik der Benutzer ohne hinterlegte Grafik
+ S&  T   22398/1 the Temp Repro Process, which uses job type 'tra' does not save.
+Intouch  22318/3 Error Correction: SKU / 3 tier project management
+Intouch  22294/3  Error Correction: Approval delegate action / APL - Select a back-up person
+ S&  T   22420/1 Umlauf Reiter - fehlerhafte Korrekturumlaufanzeige
+ S&  T   New Client Luhns (mand_6)
+ S&  T   Update from LIVE system
+Intouch  Update from LIVE system
+
+2.1.1.0  (2010-12-16)
+ S & T   22387/2 ExtendedWebstatusFilter
+ S & T   22368/2 Umlauf Reiter nicht erreichbar
+ S & T   22371/2 Projekte loeschen nicht moeglich
+ S & T   22333   Versteckte Daten werden vom WEC im ZF portal angezeigt.
+ S & T   22399/1 Benutzer Anlage Customer Admin
+ S & T   22394/1 fehlende Default-Grafik der Benutzer ohne hinterlegte Grafik
+ S & T   22398/1 the Temp Repro Process, which uses job type 'tra' does not save.
+ S & T   New Client Luhns (mand_6)
+ S & T   Update from LIVE system
+Intouch  Update from LIVE system
+
+2.1.0.0 (2010-12-07)
+ S & T   22387/2 ExtendedWebstatusFilter
+ S & T   22367/2 E-Mail Zustellungsfehler bei mehreren E-Mailadressen pro User (aus Historie erstellt)
+Intouch  22192/2 Project portal: Activate improved APL (with XFDF parsing) + Documentation
+ S & T   22264/2 File-Tabs: Show the name of the subfolder
+ S & T   22265/1 wrong Statusnumber in Archive Jobs
+ S & T   22291/2 Archive Job - no chance to copy within a job
+ S & T   22294/3 Approval delegate action / APL - Select a back-up person
+ S & T   22314/1 Error on navigating through active jobs
+ S & T   22318/3 3 tier project management
+ S & T   22323/1 Self Learning Fields
+ S & T   22324/2 New Client ZF / Carry archived jobs from Networker to portaldatabase
+ S & T   22332/2 Possibility to show job-icons specific to each client
+ S & T   22344/1 fieldfunction "Copy" works in combination with "CopyFrom" incorrect
+Scholler New Customer Scholler (cust_W00423) for implementation of the new Alink-API/MOP
+Intouch  New Client SCA (mand_1006)
+Intouch  Update from LIVE system (mand_1003)
+
+
+2.0.1.0 (2010-11-24)
+SuT: Update from live-system
+Intouch: Update from live-system
+SuT: (QBF Job-No. 22324/2) Migration of Jobs from Networker into Portaldatabase: Condition: `JobId`<"A" AND `webstatus`=0 AND `Status` IN ("RS","RE")
+Intouch: (QBF Job-No. 22314/1)in projectJoblist the paging fixed
+SuT: (QBF Job-No. 22291/2)Right canCopyJob. Copy Panel und Buttons available in active und archive Jobmasks
+Intouch: Enabling and disabling readonly attribute for picklists
+SuT: (QBF Job-No. 22265/1)Fix incorrect webstatus of archivjobs
+Intouch: Fix - Changes in files directly on the server has changed the code of the file and caused no viewing of the thumbnails for webcenter
+SuT: (QBF Job-No. 22264/2)the Title of the site JobFiles viewes now the "Filetype"/the subfolder.
+Intouch: all job types that use WebCenter need to be mentioned in the variable CCor_Cfg::set('wec.jobs', array('art', 'rep'));
+Intouch: Only moving jobs stored in the project portal database to the Networker database! Not yet going back!
+Intouch: Com/Tra jobs can be stored now either in the project portal database or in the Networker database
+Intouch: Clients - ColorPicklist fix incorrect DivId fuer RGB. c1div1 statt cdiv1
+
+2.0.0.2 (2010-10-22)
+Intouch: Client And Customer Setting Updates
+Missing Column (amned_...) in Shadow Table by new Clients
+
+2.0.0.1 (2010-10-14)
+Last changes before going live.
+APL flags does also appear on second (ans also third, forth etc.) approval loop
+Haribo: Job form template changes
+Communication with Alink with paramter utf8=1. The reason for this is that only one version of Networker Alink is needed for both standard and project portals
+Editing Webcenter annotations bound to an additional user right
+
+2.0.0.0 (2010-10-12)
+Web Portal Alignment between S+T and Intouch

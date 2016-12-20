@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Home: Password - Controller
+ *
+ *  Description
+ *
+ * @package    HOM
+ * @subpackage    Password
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Hom_Pwd_Cnt extends CInc_Hom_Pwd_Cnt {
+
+}

@@ -1,0 +1,20 @@
+<table cellpadding="2" cellspacing="0" class="tbl w100p">
+	<tr>
+    	<td class="cap captxt" colspan="2"><span class="captxt title">{rep.title}</span> Report</td>
+    </tr>
+    <tr id="rep_search" class="sub p0">
+    	<td class="td1 mw200" rowspan="2">{rep.search.opt}</td>
+    	<td class="td1 w100p">{rep.search.form}</td>
+    </tr>
+	<tr class="sub p0">
+		<td class="td1 w100p">{rep.search.filter}</td>
+	</tr>
+	<tr>
+    	<td class="td1 p2" valign="top">
+    		<div id="rep_tree" style="overflow:auto; min-height:150px;">{rep.tree}</div>
+    	</td>
+		<td class="td1 p8" valign="top">
+			<div id="rep_form" class="db fl w100p">{rep.js}</div>
+    	</td>
+    </tr>
+</table>

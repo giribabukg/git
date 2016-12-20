@@ -1,0 +1,15 @@
+<?php
+/**
+ * Core: Query
+ *
+ *  Description
+ *
+ * @package    COR
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCor_Qry extends CCust_Cor_Qry {
+
+}

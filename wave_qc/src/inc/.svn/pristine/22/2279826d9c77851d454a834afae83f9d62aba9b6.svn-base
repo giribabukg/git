@@ -1,0 +1,15 @@
+<?php
+/**
+ * Html-Bausteine: Tags
+ *
+ *  Description
+ *
+ * @package    HTM
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CHtm_Tag extends CCust_Htm_Tag {
+
+}

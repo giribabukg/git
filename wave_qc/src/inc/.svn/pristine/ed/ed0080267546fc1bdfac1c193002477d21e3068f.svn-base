@@ -1,0 +1,17 @@
+<?php
+/**
+ * Jobs: Projects - Subprojects - Wizard
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Projects
+ * @subsubpackage    Subprojects
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Pro_Sub_Wiz extends CCust_Job_Pro_Sub_Wiz {
+
+}

@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Archiv: Tra - Historie - Controller
+ *
+ * @package    ARC
+ * @subpackage    Tra
+ * @subsubpackage  His
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Arc_Tra_His_Cnt extends CInc_Arc_Tra_His_Cnt {
+
+}

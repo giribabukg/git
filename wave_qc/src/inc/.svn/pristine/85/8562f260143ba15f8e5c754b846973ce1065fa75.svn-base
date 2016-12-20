@@ -1,0 +1,16 @@
+<?php
+/**
+ * Api: Excel - Writer
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Excel
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Excel_Writer extends CCust_Api_Excel_Writer {
+
+}

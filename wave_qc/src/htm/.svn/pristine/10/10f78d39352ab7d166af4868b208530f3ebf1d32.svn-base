@@ -1,0 +1,34 @@
+<div class="th1 w740"><a href="javascript:cpl('frm.ids','cpl.{src}.ids')" class="db">Identifikation</a></div>
+<div id="frm.ids" style="display:{display}" class="frm p8">
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+    <table border="0" cellpadding="2" cellspacing="0">
+      <tr>
+        <td class="nw w100">{bez.kunde}</td>
+        <td class="w200">{val.kunde}</td>
+      </tr>
+      <tr>
+        <td class="nw">{bez.marke}</td>
+        <td>{val.marke}</td>
+      </tr>
+    </table>
+    </td>
+    <td class="w16">&nbsp;</td>
+    <td valign="top">
+    <table border="0" cellpadding="2" cellspacing="0">
+      <tr>
+        <td class="nw w100">{bez.projekt_nr}</td>
+        <td class="w200">{val.projekt_nr}</td>
+      </tr>
+      <tr>
+        <td class="nw">{bez.projekt_name}</td>
+        <td>{val.projekt_name}</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<br />
+</div>

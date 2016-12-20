@@ -1,0 +1,17 @@
+<?php
+/**
+ * Customer - Api: Webcenter - Query - Download
+ *
+ * Download a Webcenter file as ZIP
+ *
+ * @package    API
+ * @subpackage Webcenter
+ * @subsubpackage Query
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Api_Wec_Query_Download extends CInc_Api_Wec_Query_Download {
+
+}

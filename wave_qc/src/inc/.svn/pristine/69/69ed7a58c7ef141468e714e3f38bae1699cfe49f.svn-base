@@ -1,0 +1,16 @@
+<?php
+/**
+ * Api: Pdf - Reports
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Pdf
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Pdf_Report extends CCust_Api_Pdf_Report {
+  
+}

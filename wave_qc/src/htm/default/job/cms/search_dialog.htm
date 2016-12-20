@@ -1,0 +1,40 @@
+<style>
+.version, .info {
+    background:white;
+    color: black;
+    border-radius:9px;
+    padding:.1em 1em;
+    opacity: .5;
+    
+}
+
+.suggestion {
+    background-color: #ddd;
+    cursor: pointer;
+}
+.suggestion:hover {
+    background-color: #eee;
+}
+
+.suggestion.active {
+	background-color: #455560;
+}
+.suggestion.active span.content {
+	color: #FFF;
+}
+
+.content p { display: inline-block; }
+</style>
+<p>Please choose a category and/or type a phrase into the search box. Content suggestions wil be shown below.</p>
+
+<input type="hidden" id="item_id" value="{id}" />
+<div>
+    {metadata}
+	<select id="cms_cat" name="cat" class="fl m5 w150" onchange="Flow.cmsSearch.results();">
+	{categories}
+	</select>
+	<input id="cms_search" type="text" name="search" class="fl m5 w350" value="{search}" placeholder="Search..." onkeyup="Flow.cmsSearch.results();" />
+</div><br/><br/>
+<div id="cms_sugg">
+	{suggestions}
+</div>

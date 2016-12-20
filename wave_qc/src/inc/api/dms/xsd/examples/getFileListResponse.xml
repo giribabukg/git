@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files xmlns="https://wave.5flow.net/dms/uploadFile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://wave.5flow.net/dms/uploadFile ../getFileList.xsd ">
+	<file>
+	   <version>
+      <fileid>1</fileid>
+      <fileversionid>2</fileversionid>
+      <filename>filename.ext</filename>
+      <author>Geoffrey Emmans</author>
+      <date>2001-12-31T12:05:00</date>
+      <version>2</version>
+      <webdav>http://tempuri.org</webdav>
+    </version>
+		<version>
+			<fileid>1</fileid>
+			<fileversionid>1</fileversionid>
+			<filename>filename.ext</filename>
+			<author>Geoffrey Emmans</author>
+			<date>2001-12-31T12:00:00</date>
+			<version>1</version>
+			<webdav>http://tempuri.org</webdav>
+		</version>
+	</file>
+	<file>
+		<version>
+			<fileid>2</fileid>
+			<fileversionid>3</fileversionid>
+			<filename>filename2.ext</filename>
+			<author>Robert Mertens</author>
+			<date>2001-12-31T12:00:00</date>
+			<version>1</version>
+			<webdav>http://tempuri.org</webdav>
+		</version>
+	</file>
+</files>

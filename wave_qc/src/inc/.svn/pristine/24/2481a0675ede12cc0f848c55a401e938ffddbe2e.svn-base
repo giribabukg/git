@@ -1,0 +1,16 @@
+<?php
+/**
+ * User: CriticalPath - Step - Controller
+ *
+ *  Description
+ *
+ * @package    USR
+ * @subpackage    CriticalPath
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CUsr_Crp_Step_Cnt extends CCust_Usr_Crp_Step_Cnt {
+
+}

@@ -1,0 +1,15 @@
+<?php
+/**
+ * Pickliste: Formular
+ *
+ * Description
+ *
+ * @package    PCK
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CPck_Form extends CCust_Pck_Form {
+
+}

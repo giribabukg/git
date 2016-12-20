@@ -1,0 +1,13 @@
+<?php
+/**
+ * Archiv: Controller
+ *
+ * @package    ARC
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CArc_Cnt extends CCust_Arc_Cnt {
+
+}

@@ -1,0 +1,39 @@
+<p>Please choose a category you wish to create and their layout type. Along with how many of each layout you wish.</p>
+<div class="w100p dib">
+	<div class="w50 p8 dib"><b>Templates</b></div>
+	<div class="w400 p8 dib">
+		<select id="templates" name="templates" class="cms_lay w100p" onchange="Flow.cmsTemplate.select();">
+	  		{templates}
+		</select>
+	</div>
+</div>
+
+<div class="w100p">
+	<div class="w16 p8 dib">&nbsp;</div>
+	<div class="w200 p8 dib"><b>Category</b></div>
+	<div class="w200 p8 dib"><b>Layout</b></div>
+	<div class="w50 p8 dib"><b>Amount</b></div>
+</div>
+
+<div class="content_item">
+	<div class="w16 p8 dib">{removebtn}</div>
+	<div class="w200 p8 dib">
+		<select id="category1" name="cat" class="cms_cat w100p">
+			{categories}
+		</select>
+	</div>
+	<div class="w200 p8 dib">
+		<select id="layout1" name="layout" class="cms_lay w100p" onchange="Flow.cmsDialog.addItem(this);">
+		  {layout}
+		</select>
+	</div>
+	<div class="w50 p8 dib">
+		<input id="amount1" name="amount" type="number" class="cms_amt w100p" value="1" min="1" />
+	</div>
+	<script>
+		jQuery("#category1").change( function() {
+			Flow.cselect("layout1","layout","pclr",'{"category":"category1"}','');
+			Flow.cmsForm.getAmount("category1", "amount1");
+		});
+	</script>
+</div>

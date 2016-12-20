@@ -1,0 +1,17 @@
+<?php
+/**
+ * Customer - Jobs: Sec - Costs - List
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Sec
+ * @subsubpackage    Costs
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Job_Sec_Cos_List extends CInc_Job_Sec_Cos_List {
+
+}

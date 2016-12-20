@@ -1,0 +1,16 @@
+<?php
+/**
+ * Html-Bausteine: Calendar - Month
+ *
+ *  Description
+ *
+ * @package    HTM
+ * @subpackage    Calendar
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CHtm_Cal_Month extends CCust_Htm_Cal_Month {
+
+}

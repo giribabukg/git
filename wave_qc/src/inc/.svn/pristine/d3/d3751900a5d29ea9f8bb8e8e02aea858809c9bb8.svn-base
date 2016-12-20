@@ -1,0 +1,14 @@
+<?php
+/**
+ * Customer - Archiv: Tra - Formular
+ *
+ * @package    ARC
+ * @subpackage    Tra
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Arc_Tra_Form extends CInc_Arc_Tra_Form {
+
+}

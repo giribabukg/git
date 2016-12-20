@@ -1,0 +1,14 @@
+<?xml version="1.0"?> 
+<applet vspace="0" hspace="0" align="middle" mayscript="true"
+  scriptable="true" code="com.dalim.dialog.DialogView.class"
+  width="100%" height="100%" name="Dialogue">
+  <param name="archive" value="./appletProvider?action=sendApplet&ts=201207142055&archive=WebViewerAppletES" />
+  <param name="EspritDialogServer" value="true" />
+  <param name="progressbar" value="true" />
+  <param name="flatplan" value="true" />
+  <param name="id" value="001" />
+  <param name="user" value="geoffrey" />
+  <param name="language" value="en" />
+  <param name="ESPRiT_externalID" value="0" />
+  <param name="key" value="Dialog.776B8F27271FFBD3ACAAD52D1761B668" />
+</applet>
