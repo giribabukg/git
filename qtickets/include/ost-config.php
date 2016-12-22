@@ -40,7 +40,7 @@ define('ADMIN_EMAIL','hamid.jamal@mbs.co.uk');
 # Mysql Login info
 define('DBTYPE','mysql');
 define('DBHOST','localhost');
-define('DBNAME','Qticketlive2');
+define('DBNAME','Qticketlive');
 define('DBUSER','root');
 define('DBPASS','root');
 
