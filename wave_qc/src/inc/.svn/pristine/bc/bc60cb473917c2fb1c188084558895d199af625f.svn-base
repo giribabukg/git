@@ -1,4 +1,0 @@
-<?php
-class CApi_Pixelboxx_Query_Removeobjectfromfolder extends CCust_Api_Pixelboxx_Query_Removeobjectfromfolder {
-
-}

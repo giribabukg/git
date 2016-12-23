@@ -1,4 +1,0 @@
-<div class="th1"><a href="javascript:cpl('frm.brf','cpl.{src}.brf')" class="db">Comments</a></div>
-<div id="frm.brf" style="display:{display}" class="frm p8 ">
-{val.sku_comment}
-</div>

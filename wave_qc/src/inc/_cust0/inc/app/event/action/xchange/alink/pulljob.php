@@ -1,4 +1,0 @@
-<?php
-class CCust_App_Event_Action_Xchange_Alink_Pulljob extends CInc_App_Event_Action_Xchange_Alink_Pulljob {
-
-}
