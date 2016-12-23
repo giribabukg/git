@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Migration: Differences
+ *
+ * Compare two arbitrary jobs with checkboxes to copy values from one job to
+ * the other
+ *
+ * @package    MIG
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Mig_Diff extends CInc_Mig_Diff {
+
+}

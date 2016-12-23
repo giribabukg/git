@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Fields: Blocks - Modification
+ *
+ *  Description
+ *
+ * @package    FIE
+ * @subpackage    Blocks
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Fie_Blocks_Mod extends CInc_Fie_Blocks_Mod {
+
+}

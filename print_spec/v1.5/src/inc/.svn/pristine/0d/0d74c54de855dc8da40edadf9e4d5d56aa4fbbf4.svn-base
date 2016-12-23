@@ -1,0 +1,15 @@
+<?php
+/**
+ * Archiv: Art - Files - Liste
+ *
+ * @package    ARC
+ * @subpackage    Art
+ * @subsubpackage  Fil
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CArc_Art_Fil_List extends CCust_Arc_Art_Fil_List{
+
+}

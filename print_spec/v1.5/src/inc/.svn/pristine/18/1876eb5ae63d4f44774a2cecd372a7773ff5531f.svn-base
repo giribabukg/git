@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Wizards: Item - Controller
+ *
+ * Description
+ *
+ * @package    WIZ
+ * @subpackage    Item
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Wiz_Itm_Cnt extends CInc_Wiz_Itm_Cnt {
+
+}

@@ -1,0 +1,15 @@
+<?php
+/**
+ * Useradministration: Controller
+ *
+ * Description
+ *
+ * @package    USR
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CUsr_Cnt extends CCust_Usr_Cnt {
+
+}

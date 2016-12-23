@@ -1,0 +1,14 @@
+<?php
+/**
+ * Customer - Check: Formular - Edit
+ *
+ * @package    CHK
+ * @subpackage    Form
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Chk_Form_Edit extends CInc_Chk_Form_Edit {
+
+}

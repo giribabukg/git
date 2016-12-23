@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Leadtimes: FactoryFormular
+ *
+ *  Description
+ *
+ * @package    LDT
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Ldt_Facform extends CInc_Ldt_Facform {
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>{pg.mand.name} :: {pg.title}</title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="{pg.utilcss}" />
+  <link rel="stylesheet" type="text/css" href="{pg.stylecss}" />
+  <!--  Quick fix to avoid blank page at the end -->
+  <style type="text/css">
+    body {height: auto;}
+  </style>
+  <!--  Quick fix to avoid blank page at the end -->
+  <script type="text/javascript" src="{pg.jqueryjs}"></script>
+  <script type="text/javascript">if (typeof jQuery !== 'undefined') {jQuery.noConflict();}</script> 
+  <script type="text/javascript" src="{pg.jqueryuijs}"></script>
+  <script type="text/javascript" src="{pg.flowjs}"></script>
+  <script type="text/javascript" src="{pg.phrasejs}"></script> 
+  <script type="text/javascript" src="{pg.prototypejs}"></script>
+  <script type="text/javascript" src="{pg.stdjs}"></script>
+  {pg.js}
+</head>
+
+<body>
+
+<!--  pgBody start -->
+<div id="pgBody">
+{pg.cont}
+</div>
+<!--  pgBody end -->
+</body>
+</html>

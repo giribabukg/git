@@ -1,0 +1,15 @@
+<?php
+/**
+ * Event: Menue
+ *
+ *  Description
+ *
+ * @package    EVE
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CEve_Menu extends CCust_Eve_Menu {
+
+}

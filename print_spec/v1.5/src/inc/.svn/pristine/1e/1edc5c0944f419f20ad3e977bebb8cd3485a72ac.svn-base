@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - System: Service - List
+ *
+ * Description
+ *
+ * @package    SYS
+ * @subpackage    Sql
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Sys_Svc_List extends CInc_Sys_Svc_List {
+
+}

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Utilities - Qty
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Utilities
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Utl_Qty extends CCust_Job_Utl_Qty {
+
+}

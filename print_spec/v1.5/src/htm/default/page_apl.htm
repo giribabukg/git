@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>{pg.mand.name} :: {pg.title}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="{pg.utilcss}" />
+  <link rel="stylesheet" type="text/css" href="{pg.stylecss}" />
+  <script type="text/javascript" src="{pg.prototypejs}"></script>
+  <script type="text/javascript" src="js/scriptaculous.js?load=effects,controls"></script>
+  <script type="text/javascript" src="{pg.stdjs}"></script>
+  <link rel="shortcut icon" type="image/png" href="{pg.favicon}" />
+  {pg.js}
+</head>
+<body id="htm_body" onclick="hideMenus()" onload="Flow.Std.doInit()" onunload="$('pag_progress').show()">
+<div id="pag_autocomplete" class="autocomplete"></div>
+<div id="pag_tip" style="position: absolute; display:none; z-index: 1000; top: 100px; left: 100px; width:200px; background-color:#FFF; border:1px solid black;"></div>
+<iframe id="myIFrame" width="0px" height="0px" style="display:none"></iframe>
+
+<!--  pgBody start -->
+<div id="pgBody">
+
+<table cellpadding="0" cellspacing="0" border="0" style="border:1px solid; border-color: #CCC #999 #000 #CCC;">
+<tr>
+  <td width="100%" class="pgTh w100p">{pg.mand.name} :: {pg.title}</td>
+  <td class="pgTh nw">&nbsp;{pg.user},&nbsp;{pg.date}</td>
+</tr>
+<!--   ...  -->
+<tr>
+  <td colspan="2" width="100%" style="padding: 5px; background-color:#fff; color:#000; border-bottom:1px solid #ccc;">
+  <div style="float:left">
+  	<img src="{pg.mand.logo}" alt="{pg.mand.name}" />
+  </div>
+  <div style="float:left">
+    <br /><br /><span class="captxt">{pg.versioninfo}</span>
+  </div>
+  <div style="text-align:right">
+  	<img src="{pg.mand.cust}" alt="{pg.cust.name}" />
+  </div>
+  </td>
+</tr>
+
+</table>
+<div id="pgCont">
+<!-- <br />  -->
+<div>
+{pg.msg}
+<div id="pgMsgJs"></div>
+<!-- <br /> -->
+{pg.cont}
+</div>
+<br style="clear:both" /><br /><br /><br /><br /><br />
+</div>
+<!--  pgCont end -->
+<div id="pgFoot">
+  <div class="pgFoot">
+    <a href="#">Back to top</a>  |
+    {pg.bench} sec |
+    {pg.qry} Qry |
+    R{pg.rch}/Z{pg.zch} Cache Hits |
+    M{pg.mem} |
+    <a href="http://www.5flow.eu" target="_blank">Developed by 5Flow GmbH</a> |
+    {pg.revision_nr} {pg.revision_date}
+  </div>
+</div>
+</div>
+<!--  pgBody end -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000; top: -10000px; left: -10000px; background-image: none;"></div>
+<div id="pag_progress" style="display: none">
+		<div class="pag_prog_area">
+			<img src="img/pag/ajx.gif" alt="" style="margin-top: 50px;" /><br />
+			{pg.lib.wait}
+		</div>
+	</div>
+</body>
+</html>

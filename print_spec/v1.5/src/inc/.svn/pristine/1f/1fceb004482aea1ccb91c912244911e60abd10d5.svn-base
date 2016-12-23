@@ -1,0 +1,13 @@
+<?php
+/**
+ * App: Ldt
+ *
+ * @package    APP
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApp_Ldt extends CCust_App_Ldt {
+  
+}

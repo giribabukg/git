@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Groups: Modification
+ *
+ *  Description
+ *
+ * @package    GRU
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Gru_Mod extends CInc_Gru_Mod {
+
+}

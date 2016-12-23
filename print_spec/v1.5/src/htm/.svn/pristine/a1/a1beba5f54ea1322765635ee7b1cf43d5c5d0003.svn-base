@@ -1,0 +1,15 @@
+<form action="index.php" method="post">
+  <input type="hidden" name="act" value="{frm.act}" />
+  <input type="hidden" name="jobid" value="{val.jobid}" />
+  <div style="float:left; margin-right:16px" class="frm">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+  <div>
+    {frm.btn}
+  </div>
+</form>
+<br style="clear:both">

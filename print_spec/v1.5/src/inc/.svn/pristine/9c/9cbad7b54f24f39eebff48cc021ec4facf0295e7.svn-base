@@ -1,0 +1,17 @@
+<?php
+/**
+ * Jobs: Translation - History - Controller
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Tra
+ * @subsubpackage    History
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Tra_His_Cnt extends CCust_Job_Tra_His_Cnt {
+
+}

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Artwork - Approval Loop - Loop - Form
+ *
+ * Description
+ *
+ * @package    JOB
+ * @subpackage Artwork
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Art_Apl_Loop_Form extends CCust_Job_Art_Apl_Loop_Form {
+
+}

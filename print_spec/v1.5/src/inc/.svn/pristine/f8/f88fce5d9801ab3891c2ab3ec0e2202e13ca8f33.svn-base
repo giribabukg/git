@@ -1,0 +1,19 @@
+<?php
+/**
+ * Api: Webcenter - Query - History
+ *
+ * Webcenter Project History Query
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Webcenter
+ * @subsubpackage Query
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Wec_Query_History extends CCust_Api_Wec_Query_History {
+
+}

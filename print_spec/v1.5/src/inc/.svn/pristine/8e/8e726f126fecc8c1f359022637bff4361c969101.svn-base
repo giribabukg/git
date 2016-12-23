@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Jobs: Search - Controller
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Search
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Job_Ser_Cnt extends CInc_Job_Ser_Cnt {
+
+}

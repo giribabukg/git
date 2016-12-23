@@ -1,0 +1,16 @@
+<?php
+/**
+ * Pickliste: Column - Formular - Controller
+ *
+ * Description
+ *
+ * @package    PCK
+ * @subpackage    Column
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CPck_Col_Form_Edit extends CCust_Pck_Col_Form_Edit {
+
+}

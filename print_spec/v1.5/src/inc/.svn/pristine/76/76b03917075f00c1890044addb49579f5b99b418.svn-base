@@ -1,0 +1,17 @@
+<?php
+/**
+ * Jobs: Mis - Files - List
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Mis
+ * @subsubpackage    Files
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Mis_Fil_List extends CCust_Job_Mis_Fil_List {
+
+}

@@ -1,0 +1,41 @@
+<div class="th1"><a href="javascript:cpl('frm.pri','cpl.{src}.pri')" class="db w700">Druckkonzept</a></div>
+<div id="frm.pri" style="display:{display}" class="frm p8 w700">
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.druckverfahren}</td>
+				<td>{val.druckverfahren}</td>
+			</tr>
+      <tr>
+        <td class="nw ar">{bez.materialbez}</td>
+        <td>{val.materialbez}</td>
+      </tr>
+			<tr>
+				<td class="nw ar">{bez.bedruckseite}</td>
+				<td>{val.bedruckseite}</td>
+			</tr>
+		</table>
+		</td>
+		<td class="w16">&nbsp;</td>
+		<td valign="top">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.zylinder_lieferant}</td>
+				<td>{val.zylinder_lieferant}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.druck_lieferant}</td>
+				<td>{val.druck_lieferant}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.druckdurchgang}</td>
+				<td>{val.druckdurchgang}</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</div>

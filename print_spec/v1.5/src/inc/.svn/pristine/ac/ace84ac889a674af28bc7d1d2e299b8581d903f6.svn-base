@@ -1,0 +1,15 @@
+<?php
+/**
+ * Groups: Controller
+ *
+ *  Description
+ *
+ * @package    GRU
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CGru_Cnt extends CCust_Gru_Cnt {
+
+}

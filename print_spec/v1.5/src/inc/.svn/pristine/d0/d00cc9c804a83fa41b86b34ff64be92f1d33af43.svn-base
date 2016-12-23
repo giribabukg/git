@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Utilities: Parameter - Controller
+ *
+ * Description
+ *
+ * @package    UTL
+ * @package    Parameter
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Utl_Par_Cnt extends CInc_Utl_Par_Cnt {
+
+}

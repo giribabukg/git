@@ -1,0 +1,15 @@
+<?php
+/**
+ * CriticalPath: Modification
+ *
+ *  Description
+ *
+ * @package    CRP
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCrp_Mod extends CCust_Crp_Mod {
+
+}

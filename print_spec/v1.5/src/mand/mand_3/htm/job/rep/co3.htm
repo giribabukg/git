@@ -1,0 +1,738 @@
+<div class="th1">
+	<a href="javascript:cpl('frm.co3','cpl.{src}.co3')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co3','cpl.{src}.co3')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co3" style="display:{display}" class="frm p8 w800">
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset}</td>
+			<td>{val.plateset}</td>
+			<td>&nbsp;</td>
+			<td>{val.plateset_manual}</td>
+			<td>{bez.plateset_manual}</td>
+		</tr>
+	</table>
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype}</td>
+				<td>{val.platetype}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for}</td>
+				<td>{val.platetype_for}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth}</td>
+				<td>{val.reliefdepth}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate}</td>
+				<td>{val.dotplate} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal}</td>
+				<td>{val.diganal}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop}</td>
+				<td>{val.flattop}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc}</td>
+				<td>{val.platedgc}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed}</td>
+				<td>{val.filmheightfixed} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen}</td>
+				<td>{val.preferredlinescreen} lpi</td>
+			</tr>
+			<tr>
+				<td class="nw ar">&nbsp;</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high}</td>
+				<td>{val.requested_to_high}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness}</td>
+				<td>{val.platethickness}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet}</td>
+				<td>{val.mountingsheet} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback}</td>
+				<td>{val.stickyback} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam}</td>
+				<td>{val.foam} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh}</td>
+				<td>{val.totalhigh} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion}</td>
+				<td>{val.distortion} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion}</td>
+				<td>{val.expansion} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape}</td>
+				<td>{val.dotshape}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution}</td>
+				<td>{val.resolution}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{val.hidprinting}</td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Printing</button></td>
+			</tr>
+		</table>
+	</div>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+		
+
+		</td>
+	</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+
+
+
+
+
+
+
+<div class="th1 printing1">
+	<a href="javascript:cpl('frm.co31','cpl.{src}.co31')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co31','cpl.{src}.co31')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co31" style="display:{display}" class="frm p8 w800 printing1">
+
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset1}</td>
+			<td>{val.plateset1}</td>
+                        <td>&nbsp;</td>
+                        <td>{val.plateset_manual1}</td>
+                        <td>{bez.plateset_manual1}</td>
+		</tr>
+	</table>
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype1}</td>
+				<td>{val.platetype1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for1}</td>
+				<td>{val.platetype_for1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth1}</td>
+				<td>{val.reliefdepth1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate1}</td>
+				<td>{val.dotplate1} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal1}</td>
+				<td>{val.diganal1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop1}</td>
+				<td>{val.flattop1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc1}</td>
+				<td>{val.platedgc1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed1}</td>
+				<td>{val.filmheightfixed1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen1}</td>
+				<td>{val.preferredlinescreen1} lpi</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high1}</td>
+				<td>{val.requested_to_high1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness1}</td>
+				<td>{val.platethickness1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet1}</td>
+				<td>{val.mountingsheet1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback1}</td>
+				<td>{val.stickyback1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam1}</td>
+				<td>{val.foam1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh1}</td>
+				<td>{val.totalhigh1} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion1}</td>
+				<td>{val.distortion1} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion1}</td>
+				<td>{val.expansion1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape1}</td>
+				<td>{val.dotshape1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution1}</td>
+				<td>{val.resolution1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removeprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Printing</button></td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Printing</button></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+
+
+<div class="th1 printing2">
+	<a href="javascript:cpl('frm.co32','cpl.{src}.co32')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co32','cpl.{src}.co32')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co32" style="display:{display}" class="frm p8 w800 printing2">
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset2}</td>
+			<td>{val.plateset2}</td>
+                        <td>&nbsp;</td>
+                        <td>{val.plateset_manual2}</td>
+                        <td>{bez.plateset_manual2}</td>
+		</tr>
+	</table>
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype2}</td>
+				<td>{val.platetype2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for2}</td>
+				<td>{val.platetype_for2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth2}</td>
+				<td>{val.reliefdepth2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate2}</td>
+				<td>{val.dotplate2} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal2}</td>
+				<td>{val.diganal2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop2}</td>
+				<td>{val.flattop2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc2}</td>
+				<td>{val.platedgc2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed2}</td>
+				<td>{val.filmheightfixed2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen2}</td>
+				<td>{val.preferredlinescreen2} lpi</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high2}</td>
+				<td>{val.requested_to_high2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness2}</td>
+				<td>{val.platethickness2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet2}</td>
+				<td>{val.mountingsheet2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback2}</td>
+				<td>{val.stickyback2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam2}</td>
+				<td>{val.foam2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh2}</td>
+				<td>{val.totalhigh2} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion2}</td>
+				<td>{val.distortion2} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion2}</td>
+				<td>{val.expansion2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape2}</td>
+				<td>{val.dotshape2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution2}</td>
+				<td>{val.resolution2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removeprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Printing</button></td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Printing</button></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+
+
+
+<div class="th1 printing3">
+	<a href="javascript:cpl('frm.co33','cpl.{src}.co33')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co33','cpl.{src}.co33')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co33" style="display:{display}" class="frm p8 w800 printing3">
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset3}</td>
+			<td>{val.plateset3}</td>
+                        <td>&nbsp;</td>
+                        <td>{val.plateset_manual3}</td>
+                        <td>{bez.plateset_manual3}</td>
+		</tr>
+	</table>
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype3}</td>
+				<td>{val.platetype3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for3}</td>
+				<td>{val.platetype_for3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth3}</td>
+				<td>{val.reliefdepth3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate3}</td>
+				<td>{val.dotplate3} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal3}</td>
+				<td>{val.diganal3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop3}</td>
+				<td>{val.flattop3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc3}</td>
+				<td>{val.platedgc3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed3}</td>
+				<td>{val.filmheightfixed3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen3}</td>
+				<td>{val.preferredlinescreen3} lpi</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high3}</td>
+				<td>{val.requested_to_high3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness3}</td>
+				<td>{val.platethickness3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet3}</td>
+				<td>{val.mountingsheet3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback3}</td>
+				<td>{val.stickyback3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam3}</td>
+				<td>{val.foam3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh3}</td>
+				<td>{val.totalhigh3} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion3}</td>
+				<td>{val.distortion3} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion3}</td>
+				<td>{val.expansion3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape3}</td>
+				<td>{val.dotshape3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution3}</td>
+				<td>{val.resolution3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removeprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Printing</button></td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Printing</button></td>
+			</tr>
+		</table>
+	</div>
+	
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+	
+	
+<div class="th1 printing4">
+	<a href="javascript:cpl('frm.co34','cpl.{src}.co34')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co34','cpl.{src}.co34')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co33" style="display:{display}" class="frm p8 w800 printing4">
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset4}</td>
+			<td>{val.plateset4}</td>
+                        <td>&nbsp;</td>
+                        <td>{val.plateset_manual4}</td>
+                        <td>{bez.plateset_manual4}</td>
+		</tr>
+	</table>
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype4}</td>
+				<td>{val.platetype4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for4}</td>
+				<td>{val.platetype_for4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth4}</td>
+				<td>{val.reliefdepth4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate4}</td>
+				<td>{val.dotplate4} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal4}</td>
+				<td>{val.diganal4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop4}</td>
+				<td>{val.flattop4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc4}</td>
+				<td>{val.platedgc4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed4}</td>
+				<td>{val.filmheightfixed4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen4}</td>
+				<td>{val.preferredlinescreen4} lpi</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high4}</td>
+				<td>{val.requested_to_high4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness4}</td>
+				<td>{val.platethickness4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet4}</td>
+				<td>{val.mountingsheet4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback4}</td>
+				<td>{val.stickyback4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam4}</td>
+				<td>{val.foam4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh4}</td>
+				<td>{val.totalhigh4} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion4}</td>
+				<td>{val.distortion4} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion4}</td>
+				<td>{val.expansion4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape4}</td>
+				<td>{val.dotshape4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution4}</td>
+				<td>{val.resolution4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removeprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Printing</button></td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Printing</button></td>
+			</tr>
+		</table>
+	</div>
+	
+
+
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+	
+<div class="th1 printing5">
+	<a href="javascript:cpl('frm.co35','cpl.{src}.co35')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.printingtool}</a>
+	<a href="javascript:cpl('frm.co35','cpl.{src}.co35')" class="db w800" style="display:inline-block;width:47%;">Total High</a>
+</div>
+<div id="frm.co33" style="display:{display}" class="frm p8 w800 printing5">
+	<table border="0" cellpadding="2" cellspacing="0">
+		<tr>
+			<td class="nw ar" style="width:105px">{bez.plateset5}</td>
+			<td>{val.plateset5}</td>
+                        <td>&nbsp;</td>
+                        <td>{val.plateset_manual5}</td>
+                        <td>{bez.plateset_manual5}</td>
+		</tr>
+	</table>
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.platetype5}</td>
+				<td>{val.platetype5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platetype_for5}</td>
+				<td>{val.platetype_for5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.reliefdepth5}</td>
+				<td>{val.reliefdepth5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotplate5}</td>
+				<td>{val.dotplate5} %</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.diganal5}</td>
+				<td>{val.diganal5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.flattop5}</td>
+				<td>{val.flattop5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platedgc5}</td>
+				<td>{val.platedgc5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.filmheightfixed5}</td>
+				<td>{val.filmheightfixed5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.preferredlinescreen5}</td>
+				<td>{val.preferredlinescreen5} lpi</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.requested_to_high5}</td>
+				<td>{val.requested_to_high5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.platethickness5}</td>
+				<td>{val.platethickness5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.mountingsheet5}</td>
+				<td>{val.mountingsheet5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.stickyback5}</td>
+				<td>{val.stickyback5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.foam5}</td>
+				<td>{val.foam5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.totalhigh5}</td>
+				<td>{val.totalhigh5} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.distortion5}</td>
+				<td>{val.distortion5} %</td>
+			</tr>
+			<tr class="flexo">
+				<td class="nw ar">{bez.expansion5}</td>
+				<td>{val.expansion5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.dotshape5}</td>
+				<td>{val.dotshape5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.resolution5}</td>
+				<td>{val.resolution5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removeprinting();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Printing</button></td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+<script type="text/javascript">
+jQuery(function() {
+    var fields = '.field_platetype,.field_platethickness,.field_resolution,.field_platetype_for';
+    var fieldArray = fields.split(',');
+
+    function updatePlateset(aSuffix) {
+        if (jQuery('.field_plateset_manual'+aSuffix).is(':checked')) {
+            return;
+        }
+        var ret = '';
+        var arr = fieldArray;
+        for (var i = 0,l = fieldArray.length; i < l; i++) {
+            var curKey =  fieldArray[i];
+            var val = jQuery(curKey + aSuffix).val();
+            if ('.field_resolution' == curKey) {
+                if ('4000' == val) {
+                    ret += 'HD ';
+                }
+            } else {  
+                if (typeof(val) != 'undefined' && '' != val) {
+                    ret += val + ' ';
+                }
+            }
+        }
+        ret = ret.trim();
+        //console.log('.field_plateset' + aSuffix, ret);   
+        jQuery('.field_plateset' + aSuffix).val(ret.substr(0,30));
+    }
+
+    function registerPlateset(aNum) {
+        for (var i = 0, l = fieldArray.length; i < l; i++) {
+            jQuery(fieldArray[i] + aNum).on('change', function() { updatePlateset(aNum); });
+
+        }
+        jQuery('.field_plateset_manual' + aNum).on('change', function() { updatePlateset(aNum); });
+
+    }
+
+    registerPlateset('');
+    registerPlateset(1);
+    registerPlateset(2);
+    registerPlateset(3);
+    registerPlateset(4);
+    registerPlateset(5);
+});
+</script>
+
+
+
+
+<!--  <div class="frm p8 w800">
+<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td>{val.printingnotes}</td>
+			</tr>
+		</table>
+</div> -->

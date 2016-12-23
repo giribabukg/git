@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - CriticalPath: Wrap
+ *
+ *  Description
+ *
+ * @package    CRP
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Crp_Wrap extends CInc_Crp_Wrap {
+
+ }

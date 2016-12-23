@@ -1,0 +1,24 @@
+<?php
+/**
+ * App: Act - Loop
+ *
+ * @package    APP
+ * @subpackage Act
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+/**
+ * Approval Loop
+ *
+ * Maintain the state of a single approval loop
+ *
+ * @package    Application
+ * @subpackage Approval Loop
+ * @copyright  Copyright (c) 2004-2009 QBF GmbH (http://www.qbf.de)
+ */
+
+class CApp_Apl_Loop extends CCust_App_Apl_Loop {
+
+}

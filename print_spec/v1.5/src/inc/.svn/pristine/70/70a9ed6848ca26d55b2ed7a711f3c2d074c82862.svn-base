@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request xmlns="https://wave.5flow.net/dms/updateMetadata"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://wave.5flow.net/dms/updateMetadata ../updateMetadata.xsd ">
+	<fileid>1</fileid>
+	<metadata>
+		<field name="brand">Lecker Kekse</field>
+		<field name="brand variant">Vollkorn</field>
+	</metadata>
+</request>

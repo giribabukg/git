@@ -1,0 +1,1024 @@
+var jq = jQuery.noConflict();
+
+jq(document).ready( function(){ // When page loads
+	
+	measure();
+	displaySubs();
+	labPrev();
+	labPrevPrint();
+	mTarget();
+	yTarget();
+	bTarget();
+	mSample();
+	ySample();
+	bSample();
+	
+	jq("*[name='val[measuretype]']").change( function(){ measure(); });
+	jq("*[name='val[printingprocess]']").change( function(){ printprocess(); });
+	jq("*[name='val[number_sub]']").change( function(){ displaySubs(); });
+	jq("*[name='val[bwr1]']").change('input', function() {bwr1();});
+	jq("*[name='val[bwr2]']").change('input', function() {bwr2();});
+	jq("*[name='val[bwr3]']").change('input', function() {bwr3();});
+	jq("*[name='val[bwr4]']").change('input', function() {bwr4();});
+	
+	// Hide and show Results
+	jq(".p8").show();
+	jq(".hm").show();
+	jq(".flx").hide();
+	jq(".gra").hide();
+	jq(".lit").hide();
+	jq("#1994G").hide();
+	jq("#1994T").hide();
+	jq("#1976").hide();
+	//jq("#2000").hide();
+	jq("#cmc1").hide();
+	jq("#cmc").hide();
+	
+	//jq("*[name='val[hidbar]']").hide();
+	//jq("*[name='val[hidprinting]']").hide();
+	jq("*[name='val[number_sub]']").hide();
+	
+	addbarcode();
+	addprinting();
+	printprocess();
+
+});
+
+function measure(){
+	var measure_type = jq("*[name='val[measuretype]']").val();
+	jq(".measure span").text(measure_type);
+}
+
+function printprocess(){
+	var print = jq("*[name='val[printingprocess]']").val();
+	
+	if(print == "Flexo Flexible Packaging" || print == "Preprint"){
+		jq( ".flexo" ).show();
+		jq( ".corr" ).hide();
+	}else{
+		jq( ".flexo" ).hide();
+		jq( ".corr" ).hide();
+	}
+	
+	if(print == "Flexo Corrugated"){
+		jq( ".flexo" ).show();
+		jq( ".corr" ).show();
+	}
+	
+	if(print == ""){
+		jq( ".flexo" ).hide();
+		jq( ".corr" ).hide();
+	}
+}
+
+function displaySubs(res){
+	
+	if((typeof res === "undefined") || (typeof res === "NaN")){
+		jq(".sub02").hide();
+		jq(".sub03").hide();
+		jq(".sub04").hide();
+		jq(".sub05").hide();
+		jq(".sub06").hide();
+		jq(".sub07").hide();
+		jq(".sub08").hide();
+		jq(".sub09").hide();
+		jq(".sub10").hide();
+		jq(".sub11").hide();
+		jq(".sub12").hide();
+		jq(".sub13").hide();
+		jq(".sub14").hide();
+		jq(".sub15").hide();
+	}
+	
+	if(res == 2){
+		jq(".sub02").show();
+	}
+	if(res == 3){
+		jq(".sub02").show();jq(".sub03").show();
+	}
+	if(res == 4){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();
+	}
+	if(res == 5){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+	}
+	if(res == 6){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();
+	}
+	if(res == 7){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();
+	}
+	if(res == 8){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();
+	}
+	if(res == 9){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+	}
+	if(res == 10){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();
+	}
+	if(res == 11){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();jq(".sub11").show();
+	}
+	if(res == 12){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();jq(".sub11").show();jq(".sub12").show();
+	}
+	if(res == 13){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();jq(".sub11").show();jq(".sub12").show();jq(".sub13").show();
+	}
+	if(res == 14){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();jq(".sub11").show();jq(".sub12").show();jq(".sub13").show();
+		jq(".sub14").show();
+	}
+	if(res == 15){
+		jq(".sub02").show();jq(".sub03").show();jq(".sub04").show();jq(".sub05").show();
+		jq(".sub06").show();jq(".sub07").show();jq(".sub08").show();jq(".sub09").show();
+		jq(".sub10").show();jq(".sub11").show();jq(".sub12").show();jq(".sub13").show();
+		jq(".sub14").show();jq(".sub15").show();
+	}
+}
+
+function subAdd(){
+	
+	var lang_num = jq("*[name='val[number_sub]']").val();
+	if(lang_num == "NaN"){
+		lang_num = 1;
+	}
+	var res = parseInt(lang_num) + 1; 
+	jq("*[name='val[number_sub]']").val(res);
+	displaySubs(res);
+}
+
+ //Cyan LAB Target
+	labPrev = function() {
+		var LabL1 = jq("*[name='val[chkl]']").val();
+		var Laba1 = jq("*[name='val[chka]']").val();
+		var Labb1 = jq("*[name='val[chkb]']").val();
+		
+		var cleanL = Number(LabL1);
+		var cleanA = Number(Laba1);
+		var cleanB = Number(Labb1);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+		
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R; //* 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+
+		jq("#stand_prev").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+		
+		var result = jq("*[name='val[decyan]']").val();
+		if(result != ""){
+			if(result > 2){
+				jq('#img').attr('src', 'mand/mand_3/img/ico/fail.gif');
+			}
+			if(result < 2){
+				jq('#img').attr('src', 'mand/mand_3/img/ico/pass.gif');
+			}
+		}
+	};
+
+
+//Magenta LAB Target
+	mTarget = function() {
+		var LabL1M = jq("*[name='val[mtl]']").val();
+		var Laba1M = jq("*[name='val[mta]']").val();
+		var Labb1M = jq("*[name='val[mtb]']").val();
+		
+		var cleanL = Number(LabL1M);
+		var cleanA = Number(Laba1M);
+		var cleanB = Number(Labb1M);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+		
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+
+		jq("#magentaTraget").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+		
+		var result = jq("*[name='val[demag]']").val();
+		if(result != ""){
+			if(result > 2){
+				jq('#imgmag').attr('src', 'mand/mand_3/img/ico/fail.gif');
+			}
+			if(result < 2){
+				jq('#imgmag').attr('src', 'mand/mand_3/img/ico/pass.gif');
+			}
+		}
+	};
+
+
+ //Yellow LAB Target
+	yTarget = function() {
+		var LabL1Y = jq("*[name='val[ytl]']").val();
+		var Laba1Y = jq("*[name='val[yta]']").val();
+		var Labb1Y = jq("*[name='val[ytb]']").val();
+		
+		var cleanL = Number(LabL1Y);
+		var cleanA = Number(Laba1Y);
+		var cleanB = Number(Labb1Y);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+		
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+
+		jq("#yellowTraget").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+		
+		var result = jq("*[name='val[deyel]']").val();
+		if(result != ""){
+			if(result > 2){
+				jq('#imgyel').attr('src', 'mand/mand_3/img/ico/fail.gif');
+			}
+			if(result < 2){
+				jq('#imgyel').attr('src', 'mand/mand_3/img/ico/pass.gif');
+			}
+		}
+	};
+
+
+ //Black LAB Target
+	bTarget = function() {
+		var LabL1B = jq("*[name='val[btl]']").val();
+		var Laba1B = jq("*[name='val[bta]']").val();
+		var Labb1B = jq("*[name='val[btb]']").val();
+		
+		var cleanL = Number(LabL1B);
+		var cleanA = Number(Laba1B);
+		var cleanB = Number(Labb1B);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+		
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+
+		jq("#blackTraget").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+		
+		var result = jq("*[name='val[debla]']").val();
+		if(result != ""){
+			if(result > 2){
+				jq('#imgbla').attr('src', 'mand/mand_3/img/ico/fail.gif');
+			}
+			if(result < 2){
+				jq('#imgbla').attr('src', 'mand/mand_3/img/ico/pass.gif');
+			}
+		}
+	};
+
+
+ //Cyan LAB Sample
+	labPrevPrint = function() {
+		var LabL1 = jq("*[name='val[printl]']").val();
+		var Laba1 = jq("*[name='val[printa]']").val();
+		var Labb1 = jq("*[name='val[printb]']").val();
+		
+		var cleanL = Number(LabL1);
+		var cleanA = Number(Laba1);
+		var cleanB = Number(Labb1);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+		
+		var R = var_R; //* 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+		
+		jq("#print_prev").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+	};
+
+
+ //Magenta LAB Sample
+	mSample = function() {
+		var LabL1MS = jq("*[name='val[msl]']").val();
+		var Laba1MS = jq("*[name='val[msa]']").val();
+		var Labb1MS = jq("*[name='val[msb]']").val();
+		
+		var cleanL = Number(LabL1MS);
+		var cleanA = Number(Laba1MS);
+		var cleanB = Number(Labb1MS);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+		
+		jq("#magentaSample").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+	};
+
+
+ //Yellow LAB Sample
+	ySample = function() {
+		var LabL1YS = jq("*[name='val[ysl]']").val();
+		var Laba1YS = jq("*[name='val[ysa]']").val();
+		var Labb1YS = jq("*[name='val[ysb]']").val();
+		
+		var cleanL = Number(LabL1YS);
+		var cleanA = Number(Laba1YS);
+		var cleanB = Number(Labb1YS);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+		
+		jq("#yellowSample").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+	};
+
+
+ //Black LAB Sample
+	bSample = function() {
+		var LabL1BS = jq("*[name='val[bsl]']").val();
+		var Laba1BS = jq("*[name='val[bsa]']").val();
+		var Labb1BS = jq("*[name='val[bsb]']").val();
+		
+		var cleanL = Number(LabL1BS);
+		var cleanA = Number(Laba1BS);
+		var cleanB = Number(Labb1BS);
+		
+		var var_Y = (cleanL + 16) / 116;
+		var var_X = (cleanA / 500) + var_Y;
+		var var_Z = var_Y - cleanB / 200;
+
+		if(var_Y > 0.008856){
+			var_Y = Math.pow(var_Y,(3.0));
+		} else {
+			var_Y = (var_Y - 16 / 116) / 7.787;
+		}
+
+		if(var_X > 0.008856){
+			var_X = Math.pow(var_X,(3.0));
+		} else {
+			var_X = (var_X - 16 / 116) / 7.787;
+		}
+
+		if(var_Z > 0.008856){
+			var_Z = Math.pow(var_Z,(3.0));
+		} else {
+			var_Z = (var_Z - 16 / 116) / 7.787;
+		}
+
+		var X = var_X * 95.047;
+		var Y = var_Y * 100;
+		var Z = var_Z * 108.883;
+
+		//Convert XYZ to RGB
+
+		X = X /100;
+		Y = Y /100;
+		Z = Z /100;
+
+		var var_R = X *  3.2406 + Y * -1.5372 + Z * -0.4986;
+		var var_G = X * -0.9689 + Y *  1.8758 + Z *  0.0415;
+		var var_B = X *  0.0557 + Y * -0.2040 + Z *  1.0570;
+
+		if (var_R > 0.0031308){
+			var_R = 1.055 * (Math.pow(var_R,(1.0/2.4)) - 0.055);
+		} else {
+			var_R = 12.92 * var_R;
+		}
+
+		if (var_G > 0.0031308){
+			var_G = 1.055 * (Math.pow(var_G,(1.0/2.4)) - 0.055);
+		} else {
+			var_G = 12.92 * var_G;
+		}
+
+		if (var_B > 0.0031308){
+			var_B = 1.055 * (Math.pow(var_B,(1.0/2.4)) - 0.055);
+		} else {
+			var_B = 12.92 * var_B;
+		}
+
+		var R = var_R * 255;
+		var G = var_G * 255;
+		var B = var_B * 255;
+		
+		var fR = R.toFixed(0);
+		var fG = G.toFixed(0);
+		var fB = B.toFixed(0);
+		
+		//alert( rgbToHex(46, 64, 41) );
+		 var testR = Number(fR);
+		 var testG = Number(fG);
+		 var testB = Number(fB);
+		 
+		 var doneR =  Math.abs(testR);
+		 var doneG =  Math.abs(testG);
+		 var doneB =  Math.abs(testB);
+		
+		jq("#blackSample").css("background-color", "rgb(" + doneR + "," + doneG +"," + doneB + ")");
+	};
+
+
+//Add Barcode
+	addbarcode = function() {
+	
+		jq(".barcode2").hide();
+		jq(".barcode3").hide();
+		
+		var numberbar = jq("*[name='val[hidbar]']").val();
+
+		if (numberbar == 1) {
+			jq(".barcode2").show();
+		} 
+		
+		if (numberbar == 2) {
+			jq(".barcode2").show();
+			jq(".barcode3").show();
+		} 
+		if (isNaN(numberbar) || typeof(numberbar) == "undefined" || numberbar == null || numberbar == '') {
+			alert('NaN Pruefung setzt 1');
+			jq("*[name='val[hidbar]']").val(1);
+			numberbar = 0;
+		}
+			
+		if (numberbar < 3){
+			numberbar = parseInt(numberbar) + 1;
+			jq("*[name='val[hidbar]']").val(numberbar);
+		} 
+
+		if (numberbar >= 3){
+			alert('Else Bedingung setzt 2');
+			jq("*[name='val[hidbar]']").val(2);
+		}
+				
+
+/*		
+		if (typeof(numberbar) !== "undefined" && numberbar !== null && numberbar !== '') {
+			jq("*[name='val[hidbar]']").val("0");
+		}
+		
+			var sum = parseInt(numberbar) + 1;
+			jq("*[name='val[hidbar]']").val(sum);
+		
+		if(numberbar == "1"){
+			numberbar = parseInt(numberbar) + 1;
+			jq(".barcode2").show();
+			//jq(".barbutton").hide();
+		}
+		if(numberbar == "2"){
+			jq(".barcode2").show();
+			jq(".barcode3").show();
+			//jq(".barbutton").hide();
+		}
+*/		
+	};
+
+
+ //Add Printing
+	addprinting = function() {
+	
+	jq(".flexo1").hide();
+	jq(".flexo2").hide();
+	jq(".flexo3").hide();
+		
+		var numberpri = jq("*[name='val[hidprinting]']").val();
+		if(numberpri == ""){
+			jq("*[name='val[hidprinting]']").val("1");
+		}
+		if(numberpri == "1"){
+			jq("*[name='val[hidprinting]']").val("2");
+			jq(".flexo1").show();
+		}
+		if(numberpri == "2"){
+			jq("*[name='val[hidprinting]']").val("3");
+			jq(".flexo1").show();
+			jq(".flexo2").show();
+		}
+		if(numberpri == "3"){
+			jq(".flexo1").show();
+			jq(".flexo2").show();
+			jq(".flexo3").show();
+		}
+	};
+
+
+ //Number Range Validation - BWR 1
+	bwr1 = function() {
+		var bwr = jq("*[name='val[bwr1]']").val();
+		var number = parseInt(bwr);
+		if((number < 10) || (number > 200)){
+			alert("Please make sure the values are between 10 and 200");
+			jq("*[name='val[bwr1]']").css({ "border": '#FF0000 1px solid'});
+		}else{
+			jq("*[name='val[bwr1]']").css({ "border": '#659D32 1px solid'});
+		}
+	};
+
+
+ //Number Range Validation - BWR 2
+	bwr2 = function() {
+		var bwr = jq("*[name='val[bwr2]']").val();
+		var number = parseInt(bwr);
+		if((number < 10) || (number > 200)){
+			alert("Please make sure the values are between 10 and 200");
+			jq("*[name='val[bwr2]']").css({ "border": '#FF0000 1px solid'});
+		}else{
+			jq("*[name='val[bwr2]']").css({ "border": '#659D32 1px solid'});
+		}
+	};
+
+
+ //Number Range Validation - BWR 3
+	bwr3 = function() {
+		var bwr = jq("*[name='val[bwr3]']").val();
+		var number = parseInt(bwr);
+		if((number < 10) || (number > 200)){
+			alert("Please make sure the values are between 10 and 200");
+			jq("*[name='val[bwr3]']").css({ "border": '#FF0000 1px solid'});
+		}else{
+			jq("*[name='val[bwr3]']").css({ "border": '#659D32 1px solid'});
+		}
+	};
+
+
+ //Number Range Validation - BWR 4
+	bwr4 = function() {
+		var bwr = jq("*[name='val[bwr4]']").val();
+		var number = parseInt(bwr);
+		if((number < 10) || (number > 200)){
+			alert("Please make sure the values are between 10 and 200");
+			jq("*[name='val[bwr4]']").css({ "border": '#FF0000 1px solid'});
+		}else{
+			jq("*[name='val[bwr4]']").css({ "border": '#659D32 1px solid'});
+		}
+	};
+
+
+
+
+
+

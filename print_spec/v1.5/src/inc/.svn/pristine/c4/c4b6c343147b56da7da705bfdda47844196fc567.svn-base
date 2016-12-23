@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: History - Formular
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    History
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_His_Form extends CCust_Job_His_Form {
+
+}

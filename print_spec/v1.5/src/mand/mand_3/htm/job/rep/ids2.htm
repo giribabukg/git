@@ -1,0 +1,94 @@
+<div class="th1">
+	<a href="javascript:cpl('frm.ids2','cpl.{src}.ids2')" class="db w800" style="display:inline-block;width:51%;">Press</a>
+	<a href="javascript:cpl('frm.ids2','cpl.{src}.ids2')" class="db w800" style="display:inline-block;width:47%;">Ink Information</a>
+</div>
+<div id="frm.ids2" style="display:{display}" class="frm p8 w800">
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="ar nw w100">{bez.pressname}</td>
+				<td>{val.pressname}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.printingprocess}</td>
+				<td>{val.printingprocess}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.presstype}</td>
+				<td>{val.presstype}</td>
+			</tr>
+		</table>
+		
+		<div class="corr">
+			<table border="0" cellpadding="2" cellspacing="0">
+				<tr>
+					<td class="ar nw w100"><b>Press Size</b></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.maxprintarea}</td>
+					<td colspan = "2">{val.maxprintarea} {lan.dimension_height} x {val.maxprintarea1} {lan.dimension_width} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.minprintarea}</td>
+					<td colspan = "2">{val.minprintarea} {lan.dimension_height} x {val.minprintarea1} {lan.dimension_width} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.fsclogo}</td>
+					<td>{val.fsclogo}</td>
+					<td class="nw ar">{bez.resinr}</td>
+					<td>{val.resinr}</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="flexo">
+			<table border="0" cellpadding="2" cellspacing="0">
+				<tr>
+					<td class="nw ar w100">&nbsp;</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.mincylinder}</td>
+					<td>{val.mincylinder}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.maxcylinder}</td>
+					<td>{val.maxcylinder}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.maxmatwidth}</td>
+					<td>{val.maxmatwidth}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.printstations}</td>
+				<td>{val.printstations}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.coatingstations}</td>
+				<td>{val.coatingstations}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.inkbase}</td>
+				<td>{val.inkbase}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.inktransfer}</td>
+				<td>{val.inktransfer}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>

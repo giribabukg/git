@@ -1,0 +1,16 @@
+<?php
+/**
+ * App: Act
+ *
+ * Validate a EAN Barcode
+ * Various validation routines
+ *
+ * @package    APP
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApp_Valid extends CCust_App_Valid {
+
+}

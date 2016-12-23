@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Flag - Files - Formular
+ *
+ * Description
+ *
+ * @package    Job
+ * @subpackage Flag
+ * @copyright  Copyright (c) 2004-2009 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Flag_Fil_Form extends CCust_Job_Flag_Fil_Form {
+
+}

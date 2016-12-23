@@ -1,0 +1,16 @@
+<?php
+/**
+ * App: Queue
+ *
+ * Queue Data Object
+ * Insert a new action into the queue
+ *
+ * @package    APP
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApp_Queue extends CCust_App_Queue {
+
+}

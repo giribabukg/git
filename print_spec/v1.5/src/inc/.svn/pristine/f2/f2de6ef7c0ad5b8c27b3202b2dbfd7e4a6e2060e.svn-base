@@ -1,0 +1,16 @@
+<?php
+/**
+ * Rights: Formular - Edit
+ *
+ * Description
+ *
+ * @package    RIG
+ * @subpackage    Formular
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CRig_Form_Edit extends CCust_Rig_Form_Edit {
+
+}

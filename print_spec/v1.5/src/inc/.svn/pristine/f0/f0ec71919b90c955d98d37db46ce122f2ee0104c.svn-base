@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Art - List
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Art
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Art_List extends CCust_Job_Art_List {
+
+}

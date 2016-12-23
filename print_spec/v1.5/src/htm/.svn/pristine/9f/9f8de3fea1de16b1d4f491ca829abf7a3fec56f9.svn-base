@@ -1,0 +1,27 @@
+<table class="w100p">
+	<tr>
+		<th class="w150">&nbsp;</th>
+		<th class="b bar2 nw ac">{lan.perserving}</th>
+		<th class="b bar2 nw ac">{lan.per100}</th>
+	</tr>
+	<tr>
+		<td class="td1 nw">{lan.energykjkcal}</td>
+		<td class="td1 nw">{val.servingenergykjkcal}</td>
+		<td class="td1 nw">{val.energykjkcal}</td>
+	</tr>
+	<tr>
+		<td class="td2 nw">{lan.fat}</td>
+		<td class="td2 nw">{val.servingfat}</td>
+		<td class="td2 nw">{val.fat}</td>
+	</tr>
+	<tr>
+		<td class="td1 nw">{lan.carbs}</td>
+		<td class="td1 nw">{val.servingcarbs}</td>
+		<td class="td1 nw">{val.carbs}</td>
+	</tr>
+	<tr>
+		<td class="td2 nw">{lan.sugars}</td>
+		<td class="td2 nw">{val.servingsugars}</td>
+		<td class="td2 nw">{val.sugars}</td>
+	</tr>
+</table>

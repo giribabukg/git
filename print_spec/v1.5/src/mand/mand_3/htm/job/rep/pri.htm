@@ -1,0 +1,314 @@
+<div class="th1">
+	<a href="javascript:cpl('frm.pri','cpl.{src}.pri')" class="db w800" style="display:inline-block;width:51%;">Code</a>
+	<a href="javascript:cpl('frm.pri','cpl.{src}.pri')" class="db w800" style="display:inline-block;width:47%;">Code</a>
+</div>
+<div id="frm.pri" style="display:{display}" class="frm p8 w800">
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype}</td>
+				<td colspan="3">{val.codetype}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag}</td>
+				<td>{val.minmag}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr1}</td>
+				<td>{val.bwr1}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr2}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution}</td>
+				<td colspan="3">{val.barcoderesolution}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation}</td>
+				<td colspan="3">{val.compensation} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar}</td>
+				<td colspan="3">{val.narrowbar} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio}</td>
+				<td colspan="3">{val.ratio} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote}</td>
+				<td colspan="3">{val.barcodenote}</td>
+			</tr>
+		</table>
+	</div>
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype1}</td>
+				<td colspan="3">{val.codetype1}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag2}</td>
+				<td>{val.minmag2}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr3}</td>
+				<td>{val.bwr3}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr4}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution1}</td>
+				<td colspan="3">{val.barcoderesolution1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation1}</td>
+				<td colspan="3">{val.compensation1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar1}</td>
+				<td colspan="3">{val.narrowbar1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio1}</td>
+				<td colspan="3">{val.ratio1} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote1}</td>
+				<td colspan="3">{val.barcodenote1}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{val.hidbar}</td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addbarcode();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Barcode</button></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+<div class="th1 barcode1">
+	<a href="javascript:cpl('frm.pri2','cpl.{src}.pri2')" class="db w800" style="display:inline-block;width:51%;">Code</a>
+	<a href="javascript:cpl('frm.pri2','cpl.{src}.pri2')" class="db w800" style="display:inline-block;width:47%;">Code</a>
+</div>
+<div id="frm.pri2" style="display: none;" class="frm p8 w800 barcode1">
+
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype2}</td>
+				<td colspan="3">{val.codetype2}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag4}</td>
+				<td>{val.minmag4}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr5}</td>
+				<td>{val.bwr5}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr6}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution2}</td>
+				<td colspan="3">{val.barcoderesolution2}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation2}</td>
+				<td colspan="3">{val.compensation2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar2}</td>
+				<td colspan="3">{val.narrowbar2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio2}</td>
+				<td colspan="3">{val.ratio2} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote2}</td>
+				<td colspan="3">{val.barcodenote2}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype3}</td>
+				<td colspan="3">{val.codetype3}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag6}</td>
+				<td>{val.minmag6}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag7}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr7}</td>
+				<td>{val.bwr7}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr8}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution3}</td>
+				<td colspan="3">{val.barcoderesolution3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation3}</td>
+				<td colspan="3">{val.compensation3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar3}</td>
+				<td colspan="3">{val.narrowbar3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio3}</td>
+				<td colspan="3">{val.ratio3} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote3}</td>
+				<td colspan="3">{val.barcodenote3}</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removebarcode();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Barcode</button></td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="addbarcode();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/plus.gif"> Add Barcode</button></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+<div class="th1 barcode2">
+	<a href="javascript:cpl('frm.pri3','cpl.{src}.pri3')" class="db w800" style="display:inline-block;width:51%;">Code</a>
+	<a href="javascript:cpl('frm.pri3','cpl.{src}.pri3')" class="db w800" style="display:inline-block;width:47%;">Code</a>
+</div>
+<div id="frm.pri3" style="display: none;" class="frm p8 w800 barcode2">
+
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype4}</td>
+				<td colspan="3">{val.codetype4}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag8}</td>
+				<td>{val.minmag8}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag9}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr9}</td>
+				<td>{val.bwr9}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr10}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution4}</td>
+				<td colspan="3">{val.barcoderesolution4}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation4}</td>
+				<td colspan="3">{val.compensation4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar4}</td>
+				<td colspan="3">{val.narrowbar4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio4}</td>
+				<td colspan="3">{val.ratio4} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote4}</td>
+				<td colspan="3">{val.barcodenote4}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.codetype5}</td>
+				<td colspan="3">{val.codetype5}</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><b>{lan.lib.machinedirection}</b></td>
+				<td><b>{lan.lib.transversedirection}</b></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.minmag10}</td>
+				<td>{val.minmag10}</td>
+				<td width="10px" class="nw ar">&nbsp;</td>
+				<td>{val.minmag11}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.bwr11}</td>
+				<td>{val.bwr11}&nbsp;mm</td>
+				<td class="nw ar">&nbsp;</td>
+				<td>{val.bwr12}&nbsp;mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcoderesolution5}</td>
+				<td colspan="3">{val.barcoderesolution5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.compensation5}</td>
+				<td colspan="3">{val.compensation5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.narrowbar5}</td>
+				<td colspan="3">{val.narrowbar5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.ratio5}</td>
+				<td colspan="3">{val.ratio5} mm</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.barcodenote5}</td>
+				<td colspan="3">{val.barcodenote5}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">&nbsp;</td>
+				<td><button style="border-style: solid; border-width: 1px; border-radius: 10px;" class="btn barbutton" onclick="removebarcode();" type="button"><img alt="" height="10px" src="img/wave8/ico/16/ml-8.gif"> Remove Barcode</button></td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>

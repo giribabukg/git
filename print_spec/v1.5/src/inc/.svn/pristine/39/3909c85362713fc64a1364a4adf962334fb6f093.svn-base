@@ -1,0 +1,4 @@
+<?php
+class CApp_Event_Action_Xchange_Alink_Updatejob extends CCust_App_Event_Action_Xchange_Alink_Updatejob {
+
+}

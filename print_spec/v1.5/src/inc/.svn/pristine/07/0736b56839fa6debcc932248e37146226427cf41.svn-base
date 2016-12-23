@@ -1,0 +1,16 @@
+<?php
+/**
+ * Api: Webcenter - Client
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Webcenter
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Wec_Client extends CCust_Api_Wec_Client {
+
+}

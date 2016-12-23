@@ -1,0 +1,16 @@
+<?php
+/**
+ * Jobs: Projects - Header
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Projects
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Pro_Header extends CCust_Job_Pro_Header {
+
+}

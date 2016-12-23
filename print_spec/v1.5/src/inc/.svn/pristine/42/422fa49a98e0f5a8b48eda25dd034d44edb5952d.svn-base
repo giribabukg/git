@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Flags: Basis Formular
+ *
+ *  Description
+ *
+ * @package    FLA
+ * @subpackage   Formular
+ * @copyright  Copyright (c) 2004-2012 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Fla_Form_Base extends CInc_Fla_Form_Base {
+
+}

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Leadtimes: Item - Controller
+ *
+ *  Description
+ *
+ * @package    LDT
+ * @subpackage    Item
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CLdt_Itm_Cnt extends CCust_Ldt_Itm_Cnt {
+
+}

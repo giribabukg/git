@@ -1,0 +1,16 @@
+<?php
+/**
+ * Useradministration: Options - Controller
+ *
+ * Description
+ *
+ * @package    USR
+ * @subpackage    Options
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CUsr_Opt_Cnt extends CCust_Usr_Opt_Cnt {
+
+}

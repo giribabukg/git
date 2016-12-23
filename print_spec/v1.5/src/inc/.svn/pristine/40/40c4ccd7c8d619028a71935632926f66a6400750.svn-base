@@ -1,0 +1,15 @@
+<?php
+/**
+ * Api: Alink - Query - GetWebcenterTemplate
+ *
+ * @package    API
+ * @subpackage Alink
+ * @subsubpackage Query
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Alink_Query_GetWebcenterTemplate extends CCust_Api_Alink_Query_GetWebcenterTemplate {
+
+}

@@ -1,0 +1,15 @@
+<?php
+/**
+ * Customer - Preferences: List
+ *
+ * Description
+ *
+ * @package    PRF
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Prf_List extends CInc_Prf_List {
+
+}

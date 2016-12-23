@@ -1,0 +1,16 @@
+<?php
+/**
+ * Api: Mail - Item
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Mail
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CApi_Mail_Item extends CCust_Api_Mail_Item {
+
+}

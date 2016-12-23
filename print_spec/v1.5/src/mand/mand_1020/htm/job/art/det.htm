@@ -1,0 +1,188 @@
+<style type="text/css">
+.tableHeader{
+	font-weight:bold;
+	background-color:lightgray;
+	text-align:center;
+}
+.boldText{
+	font-weight:bold;
+}
+.subText{
+	font-size:0.8em;
+}
+</style>
+<div class="th1"><a href="javascript:cpl('frm.det','cpl.{src}.det')" class="db w700">Pack Copy</a></div>
+<div id="frm.det" style="display:{display}" class="frm p8">
+<div id="accordion">
+	<div>
+		<h3><a href="#">Marketing Text</a></h3>
+		<div>
+			<table border="1" cellpadding="3" cellspacing="0"width="100%">
+				<tr>
+					<td rowspan="2" class="boldText">5</td>
+					<td rowspan="2"><span class="boldText">FOP claims</span><br/><span class="subText">(if new or amended)</span></td>
+					<td colspan="2">{val.an_fop_claims}
+					</td>
+
+				</tr>
+				<tr>
+					<td class="boldText">Text agreed by legal / R&amp;D</td>
+					<td>{val.an_fop_agreed}					
+					</td>
+				</tr>
+					<tr>
+					<td rowspan="2" class="boldText">6</td>
+					<td rowspan="2"><span class="boldText">BOP Marketing Text</span>
+					<br/><span class="subText">(Must include Substrate(s) for which the<br/>
+					product is intended to be used on, <br/>
+					Exterior / Interior / General purpose<br/>
+					use)</span></td>
+					<td colspan="2">{val.an_bop_text}</td>
+
+				</tr>
+				<tr>
+					<td class="boldText">Text agreed by legal / R&amp;D</td>
+					<td>{val.an_bop_agreed}</td>
+				</tr>
+				<tr>
+					<td class="boldText">7</td>
+					<td class="boldText">Position of Barcode</td>
+					<td colspan="2">{val.an_barcode_pos}</td>		
+				</tr>
+				<tr>
+					<td class="boldText">8</td>
+					<td class="boldText">Confirmed Trade marks</td>
+					<td colspan="2">{val.an_confirm_marks}</td>
+				</tr>
+				<tr>
+					<td class="boldText">9</td>
+					<td class="boldText">Environmental Icons/Table<br/> required</td>
+					<td colspan="2">{val.an_enviro_icons}</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	<div>
+		<h3><a href="#">R&amp;D / Technical text</a></h3>
+		<div>
+			<table border="1" cellpadding="3" cellspacing="0"width="100%">
+				<tr>
+					<td class="boldText" rowspan="2">10</td>
+					<td class="boldText" rowspan="2">Final BOP R&amp;D Product<br/>Technical Text</td>
+					<td colspan="4">{val.an_final_bop_text}</td>
+				</tr>
+				<tr>
+					<td class="boldText">Proof read /<br/>grammer checked</td>	
+					<td class="boldText">{val.an_proof_read}</td>	
+					<td class="boldText">Text agreed by<br/>Legal</td>	
+					<td class="boldText">{val.an_legal_agreed}</td>			
+				</tr>
+				<tr>
+					<td class="boldText">11</td>
+					<td><span class="boldText">Product Type,</span><br/><span class="subText">e.g. water-based</span></td>
+					<td colspan="4">{val.test_field01}</td>
+				</tr>
+				<tr>
+					<td class="boldText">12</td>
+					<td><span class="boldText">Application Method</span></td>
+					<td colspan="4">{val.an_app_method}</td>
+				</tr>
+				<tr>
+					<td class="boldText">13</td>
+					<td><span class="boldText">Thinning Rate if required</span></td>
+					<td colspan="4">{val.an_thinning_rate}</td>
+				</tr>
+				<tr>
+					<td class="boldText">14</td>
+					<td><span class="boldText">Number of coats applied</span></td>
+					<td colspan="4">{val.an_num_coats}</td>
+				</tr>
+				<tr>
+					<td class="boldText">15</td>
+					<td><span class="boldText">Drying Time</span></td>
+					<td colspan="4">{val.an_dry_time}</td>
+				</tr>
+				<tr>
+					<td class="boldText">16</td>
+					<td><span class="boldText">Coverage rate m&sup2; per litre of<br/>product applied</span></td>
+					<td colspan="4">{val.an_cover_rate}</td>
+				</tr>
+				<tr>
+					<td class="boldText">17</td>
+					<td><span class="boldText">Cleaning Up Method</span></td>
+					<td colspan="4">{val.an_clean_method}</td>
+				</tr>
+				<tr>
+					<td class="boldText">18</td>
+					<td><span class="boldText">Full System Information</span><br/><span class="subText">(Which includes primer details if<br/>required / special clauses unique to the<br/>product)</span></td>
+					<td colspan="4">{val.an_system_info}</td>
+				</tr>
+				<tr>
+					<td class="boldText">19</td>
+					<td><span class="boldText">EU VOC: full label phrase</span></td>
+					<td colspan="4">{val.an_eu_voc}</td>
+				</tr>
+				<tr>
+					<td class="boldText">20</td>
+					<td><span class="boldText">B&amp;Q VOC Globe</span><br/><span class="subText">(Minimal, Low, Medium, High, Very<br/>High)</span></td>
+					<td colspan="4">{val.an_voc_globe}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div>
+		<h3><a href="#">R&amp;D / Technical text - Required for Product Data Sheet</a></h3>
+		<div>
+			<table border="1" cellpadding="3" cellspacing="0"width="100%">
+				<tr>
+					<td class="boldText">21</td>
+					<td class="boldText">Product Data Sheet Required</td>
+					<td>{val.an_prod_data}<br/><span class="subText">If yes, please supply the information requested below:</span></td>
+				</tr>
+				<tr>
+					<td class="boldText">22</td>
+					<td class="boldText">Composition(nominal)</td>
+					<td><span class="boldText">Pigment:</span>{val.an_comp_pigm}<br/>
+					<span class="boldText">Binder:</span>{val.an_comp_binder}<br/>
+					<span class="boldText">Solvent:</span>{val.an_comp_solvent}<br/>
+					</td>
+				</tr>
+				<tr>
+					<td class="boldText">23</td>
+					<td class="boldText">Volume Solids</td>
+					<td>{val.an_vol_solids}</td>
+				</tr>
+				<tr>
+					<td class="boldText">24</td>
+					<td class="boldText">Film Thickness if appropriate</td>
+					<td>
+						<span class="boldText">Wet:</span>{val.an_film_wet} microns<br/>
+						<span class="boldText">Dry:</span>{val.an_film_dry} microns<br/>
+					</td>
+				</tr>
+				<tr>
+					<td class="boldText">25</td>
+					<td class="boldText">Any additional usage<br/>clauses/warnings that are not<br/>on the BOP</td>
+					<td>{val.an_add_usage}</td>
+				</tr>
+        <tr>
+					<td class="nw">{bez.wec_prj_id}</td>
+					<td class="nw">{val.wec_prj_id}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- AJ End modifications -->
+
+
+<br />
+</div>
+<script type="text/javascript">
+    var jq = jQuery.noConflict();
+	jq(function(){
+		// Accordion
+		jq("#accordion").accordion({ header: "h3" ,collapsible:true,autoHeight:false});
+	});
+</script>

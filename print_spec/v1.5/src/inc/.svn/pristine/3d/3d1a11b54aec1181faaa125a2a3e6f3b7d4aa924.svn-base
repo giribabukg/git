@@ -1,0 +1,16 @@
+<?php
+/**
+ * Html-Bausteine: Fields - Registry
+ *
+ *  Description
+ *
+ * @package    HTM
+ * @subpackage   Fields
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CHtm_Fie_Reg extends CCust_Htm_Fie_Reg {
+
+}

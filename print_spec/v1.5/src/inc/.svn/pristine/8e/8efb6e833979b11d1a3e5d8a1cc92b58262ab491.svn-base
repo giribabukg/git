@@ -1,0 +1,17 @@
+<?php
+/**
+ * Jobs: Repro - Files - Controller
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    Repro
+ * @subpackage    Files
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJob_Rep_Fil_Cnt extends CCust_Job_Rep_Fil_Cnt {
+
+}

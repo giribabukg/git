@@ -1,0 +1,15 @@
+<?php
+/**
+ * Jobflags: Formular
+ *
+ *  Description
+ *
+ * @package    JFL
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CJfl_Form extends CCust_Jfl_Form {
+
+}

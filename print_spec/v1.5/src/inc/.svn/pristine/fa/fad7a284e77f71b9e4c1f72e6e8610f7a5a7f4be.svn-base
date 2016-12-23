@@ -1,0 +1,16 @@
+<?php
+/**
+ * Api: Pdf - Table
+ *
+ * Description
+ *
+ * @package    API
+ * @subpackage Pdf
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class Ext_Pdf_Table extends CCust_Ext_Pdf_Table {
+
+}

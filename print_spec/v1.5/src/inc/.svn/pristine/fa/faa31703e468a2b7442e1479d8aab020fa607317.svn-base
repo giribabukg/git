@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Jobs: Repro - Approval Loop - Loop - Form
+ *
+ * Description
+ *
+ * @package    JOB
+ * @subpackage    Repro
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Job_Rep_Apl_Loop_Form extends CInc_Job_Rep_Apl_Loop_Form {
+
+}

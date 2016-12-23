@@ -1,0 +1,16 @@
+<?php
+/**
+ * Mandantory Useradministration: Formular - Edit
+ *
+ * Description
+ *
+ * @package    USG
+ * @subpackage    Formular
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CUsg_Form_Edit extends CCust_Usg_Form_Edit {
+
+}

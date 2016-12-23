@@ -1,0 +1,16 @@
+<?php
+/**
+ * Core: Ressource - Deadlines
+ *
+ *  Description
+ *
+ * @package    COR
+ * @subpackage  Ressource
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCor_Res_Ddl extends CCust_Cor_Res_Ddl {
+
+}

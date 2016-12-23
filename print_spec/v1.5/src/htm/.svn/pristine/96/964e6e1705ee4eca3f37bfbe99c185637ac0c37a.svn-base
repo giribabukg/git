@@ -1,0 +1,12 @@
+<tr>
+  <td>{bez.src}</td>
+  <td>{val.src}</td>
+</tr>
+<tr>
+  <td>{bez.from}</td>
+  <td>{val.from}</td>
+</tr>
+<tr>
+  <td>{bez.to}</td>
+  <td>{val.to}</td>
+</tr>

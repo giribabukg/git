@@ -1,0 +1,16 @@
+<?php
+/**
+ * Customer - Jobs: View - List
+ *
+ *  Description
+ *
+ * @package    JOB
+ * @subpackage    View
+ * @copyright  Copyright (c) 2004-2010 QBF GmbH (http://www.qbf.de)
+ * @version $Rev$
+ * @date $Date$
+ * @author $Author$
+ */
+class CCust_Job_View_List extends CInc_Job_View_List {
+
+}
