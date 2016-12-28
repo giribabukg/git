@@ -14,7 +14,6 @@
  * @date $Date: 2016-05-23 17:41:21 +0800 (Mon, 23 May 2016) $
  * @author $Author: jschneider $
  */
-
 /**
  * Main Config Object
  *

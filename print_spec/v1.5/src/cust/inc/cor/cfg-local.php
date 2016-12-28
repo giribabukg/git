@@ -8,5 +8,4 @@
     $this -> mVal['db.user'] = 'root';
     $this -> mVal['db.pass'] = 'root';
     $this -> mVal['db.name'] = 'wave';
-
     $this -> mVal['job.writer.default'] = 'portal';
