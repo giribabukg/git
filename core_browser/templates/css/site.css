@@ -1,0 +1,150 @@
+td.swatch { color: #fff; text-shadow: 0px 0px 2px rgba(20, 20, 20, 1); font-weight: bold; }
+td { word-wrap: break-word; overflow-wrap: break-word; word-break: break-all; }
+.table > tbody > tr > td.spacer, td.spacer { background-color: #fff; border-top: 1px solid #fff;}
+body.subproject th { color: #666; text-transform: uppercase; }
+.page-header { border-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; }
+.page-header h3 { margin-top: 0px; }
+.page-header .pagination { margin: 0; }
+h6.section { color: #000; font-weight: bold; font-size: 12px; padding-left: 5px; }
+
+.panel-heading { padding: 8px 10px; }
+.panel-title { font-size: 16px; }
+.panel-title .glyphicon { font-size: 12px; }
+
+.panel-body th, .panel-body td, #barcodes td, .table-small th, .table-small td { font-size: 12px; }
+/*.panel-body th { color: #008cba; }*/
+.table.table-borderless { margin-bottom: 8px; }
+table.table-component th { background-color: #eee; }
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+    border: none;
+}
+
+#orderhead td, #colorrotation td { font-size: 12px; padding: 3px; }
+
+#cdiworksheet .table > thead > tr > th { vertical-align: top; }
+#cdiworksheet td { font-size: 13px; padding: 3px; }
+
+.table-borderless tbody tr td.underlined, .table tbody tr td.underlined { border-bottom: 1px solid black; }
+
+.table-bordered > tbody > tr > td.noborderright, .table-bordered { 
+	border-left: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	border-right: 2px solid #fff;
+	border-bottom: 1px solid #dddddd;
+}
+
+a.toggleCnf { text-decoration: none; }
+
+th.header, h4.section { 
+	font-weight: 400;
+	margin-bottom: 5px;
+	padding: 0;
+	font-size: 16px;
+}
+
+.navbar .divider-vertical {
+	height: 40px;
+	margin: 0 9px;
+}
+
+small.text-muted { font-size: 11px; }
+
+
+/* Scroll Up styles
+-------------------------------------------------- */
+.scrollup {
+    background: url("../images/icon_gototop.png") no-repeat scroll 0 0 transparent;
+    bottom: 50px;
+    display: none;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    text-indent: -9999px;
+    width: 40px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #333;
+  color: #999;
+  padding-top: 8px;
+}
+#footer a {
+	color: #999;
+}
+#footer a:hover {
+	color: #efefef;
+}
+
+
+/* Print styles
+-------------------------------------------------- */
+@page {
+	min-width: 768px;
+}
+
+@media print {
+	[class*="col-sm-"] {
+		float: left;
+	}
+	a[href]:after {
+		content: none;
+	}
+	.swatch {
+		background-color: #fff !important;
+	}
+	html, body {
+		margin: 0;
+		padding 0 !important;
+		min-width: 768px;
+	}
+	body {
+		font-size: 10px;
+		text-rendering: geometricPrecision;
+	}
+	.container {
+		width: auto;
+		min-width: 750px;
+	}
+	.collapse {
+		display: block !important;
+		height: auto !important;
+	}
+	
+	table, .panel { page-break-inside: avoid; }
+	table { font-size: 9px; }
+	
+	h3 { font-size: 18px; }
+	h4 { font-size: 14px; }
+	h5 { font-size: 12px; }
+	h6 { font-size: 10px; }
+	th.header, h4.section, #colorrotation th.header, #barcodes th.header { font-size: 12px; }
+	strong { font-weight: 600; }
+	.panel-title .glyphicon { display: none; }
+	h4.panel-title { font-size: 11px; font-weight: 400; }
+	h4#operationHeader { padding-bottom: 5px; }
+	#barcodes td, #barcodes th, .table-small th, .table-small td { font-size: 8px; }
+	#orderhead td, #colorrotation td, #colorrotation th { font-size: 10px; padding: 3px; }
+	.panel-body th, .panel-body td, small.text-muted { font-size: 10px; }
+	
+	.panel, .panel-group .panel-heading + .panel-collapse .panel-body { border: none; }
+	.panel-default > .panel-heading { border: none; background-color: #fff; padding: 0px; }
+	.panel-body .col-sm-4, .panel-heading .col-sm-1, .panel-heading .col-sm-2 { padding-left: 5px; padding-right: 5px; }
+	.panel-body { padding: 5px; }
+	
+	.table-condensed > tbody > tr > td { padding-top: 3px; padding-bottom: 3px; }
+}
