@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>QC Module :: QC Module</title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="htm/wave8/css/util.css?1464014174" />
+  <link rel="stylesheet" type="text/css" href="htm/wave8/css/style.css?1464014174" />
+  <script type="text/javascript" src="tmp/lang_en.js?1483443351"></script>
+  <script type="text/javascript" src="js/jquery/jquery.min.js?1464014193"></script>
+  <script type="text/javascript">if (typeof jQuery !== \'undefined\') {jQuery.noConflict();}</script> 
+  <script type="text/javascript" src="js/jquery/jquery-ui.min.js?1464014193"></script>
+  <script type="text/javascript" src="js/prototype.js?1464014193"></script>
+  <script type="text/javascript" src="cust/js/crpsteps.js?1464009384"></script>
+  <script type="text/javascript" src="js/scriptaculous.js?load=effects,controls"></script>
+  <script type="text/javascript" src="js/std.js?1464105349"></script>
+  <script type="text/javascript" src="js/flow.js?1464014193"></script>
+  <script type="text/javascript" src="js/json2.js?1464014195"></script>
+  <script type="text/javascript" src="js/flink.js?1464014193"></script> 
+  <script type="text/javascript" src="js/mce/tiny_mce.js?1464014194"></script>
+  
+  <script type="text/javascript" src="js/phrase.js?1464014194"></script>
+  <script type="text/javascript" src="js/highstock.js?1464014194"></script>
+  
+  <script type="text/javascript" src="js/jQuery File Upload/js/jquery.iframe-transport.js?1464014193"></script>
+  <script type="text/javascript" src="js/jQuery File Upload/js/jquery.fileupload.js?1464014193"></script>
+
+  <link rel="stylesheet" href="js/jquery/jquery-ui.css?1464014193" type="text/css" media="all" />
+  <link rel="stylesheet" href="js/jquery/jquery.ui.theme.css?1464014193" type="text/css" media="all" />  
+
+  <link rel="shortcut icon" type="image/png" href="img/pag/favicon.ico" />
+  
+</head>
+<body id="htm_body" onload="Flow.Std.doInit()" onunload="$(\'pag_progress\').show()" onclick="Flow.Std.hideMenus()">
+	<div id="pag_autocomplete" class="autocomplete"></div>
+	<div id="pag_tip"
+		style="position: absolute; display: none; z-index: 1000; top: 100px; left: 100px;"></div>
+	<iframe id="myIFrame" width="0px" height="0px" style="display: none"></iframe>
+
+	<!--  pgBody start -->
+	<div id="pgBody">
+
+		<table cellpadding="0" cellspacing="0" border="0"
+			style="border: none;" id="topNavigation">
+      
+      <!--Offline Message-->
+      <tr>
+        
+      </tr>
+      
+			<tr class="aboveMenu">
+				<td width="100%" class="pgTh w100p">QC Module ::
+					QC Module</td>
+				<td id="user_date" class="pgTh nw" style="text-align: right">&nbsp;Giri Babu,&nbsp;Tuesday Jan 03, 2017</td>
+			</tr>
+			<tr class="aboveMenu">
+				<td colspan="2" width="100%" style="padding: 0 10px;">
+					<div style="float: left; padding: 5px 0;">
+						<img src="img/wave8/pag/logo.png" id="mand_logo" alt="QC Module" />
+					</div>
+					<div style="float: left; width: 60%;">
+						<span class="captxt"></span><br />
+					</div>
+					<div style="text-align: right;">
+						<img src="img/wave8/pag/cust.png" alt="core" />
+					</div>
+				</td>
+			</tr>
+			<tr id="mainMenu">
+				<td colspan="4" class="menu">
+<!-- CHtm_Mainmenu start -->
+<table cellpadding="9" cellspacing="0" border="0" id="pgMenu" class="pgMenu" width="100%"><tr>
+<td class="mmLo mmHome" title="Home" onclick="go(\'index.php?act=hom-wel\')">Home</td>
+<td class="mmLo mmProj" title="All Projects" onclick="go(\'index.php?act=job-pro\')">All Projects</td>
+<td class="mmHi mmJobs orange" title="QC Module" onclick="go(\'index.php?act=job-sec\')">QC Module</td>
+<td class="mmLo mmArc" title="Archive" onclick="go(\'index.php?act=arc-sec\')">Archive</td>
+<td class="mmLo mmRecent" id="l27" title="Recent" onclick="Flow.Std.popMain(\'d26\',null,\'d37\')">Recent<div style="position:relative; top:9px; left:-8px;" id="d37"><div id="d26" class="smDiv" style="display:none;"><ul class="subMenuItms"><li><a href="index.php?act=job-sec.edt&amp;jobid=50661" class="nav db">50661</a></li>
+<li><a href="index.php?act=job-sec.edt&amp;jobid=50662" class="nav db">50662</a></li>
+<li><a href="index.php?act=job-sec.edt&amp;jobid=50663" class="nav db">50663</a></li>
+</ul></div></div></td>
+<td class="mmLo mmSearch" title="Search" onclick="go(\'index.php?act=job-ser\')">Search</td>
+<td class="mmLo mmReport" title="Reporting" onclick="go(\'index.php?act=rep\')">Reporting</td>
+<td class="mmLo mmUsr" id="l30" title="User" onclick="Flow.Std.popMain(\'d29\',null,\'d38\')">User<div style="position:relative; top:9px; left:-8px;" id="d38"><div id="d29" class="smDiv" style="display:none;"><ul class="subMenuItms"><li><a href="index.php?act=usr" class="nav db">User</a></li>
+<li><a href="index.php?act=gru" class="nav db">Groups</a></li>
+<li><a href="index.php?act=rol" class="nav db">Roles</a></li>
+<li><a href="index.php?act=prf" class="nav db">System Preferences</a></li>
+<li><a href="index.php?act=rig" class="nav db">Rights</a></li>
+</ul></div></div></td>
+<td class="mmLo mmOption" id="l33" title="Options" onclick="Flow.Std.popMain(\'d32\',null,\'d39\')">Options<div style="position:relative; top:9px; left:-8px;" id="d39"><div id="d32" class="smDiv" style="display:none;"><ul class="subMenuItms"><li><a href="index.php?act=fie" class="nav db">Job Fields</a></li>
+<li><a href="index.php?act=fie-learn" class="nav db">Value Lists</a></li>
+<li><a href="index.php?act=htb" class="nav db">Helptables</a></li>
+<li><a href="index.php?act=pck" class="nav db">Picklists</a></li>
+<li><a href="index.php?act=jfl" class="nav db">Job Flags</a></li>
+<li><a href="index.php?act=wiz" class="nav db">Wizards</a></li>
+<li><a href="index.php?act=crp" class="nav db">Critical Path</a></li>
+<li><a href="index.php?act=fla" class="nav db">Flags</a></li>
+<li><a href="index.php?act=apl-types" class="nav db">Approval Loop Types</a></li>
+<li><a href="index.php?act=eve-type" class="nav db">Event Types</a></li>
+<li><a href="index.php?act=cnd" class="nav db">User Conditions</a></li>
+<li><a href="index.php?act=eve" class="nav db">Events</a></li>
+<li><a href="index.php?act=conditions" class="nav db">Workflow Conditions</a></li>
+<li><a href="index.php?act=tpl" class="nav db">Email Templates</a></li>
+<li><a href="index.php?act=devtools" class="nav db">Devtools</a></li>
+<li><a href="index.php?act=sys-mail" class="nav db">E-Mail Log</a></li>
+<li><a href="index.php?act=sys-log" class="nav db">System Log</a></li>
+<li><a href="index.php?act=sys-msg" class="nav db">System messages</a></li>
+<li><a href="index.php?act=sys-svc" class="nav db">Services</a></li>
+<li><a href="index.php?act=xchange" class="nav db">Integrate</a></li>
+<li><a href="index.php?act=fie-map" class="nav db">Field Maps</a></li>
+<li><a href="index.php?act=sys-lang" class="nav db">Languages</a></li>
+<li><a href="index.php?act=mig-job" class="nav db">Job Migration</a></li>
+<li><a href="index.php?act=tab" class="nav db">Tabs</a></li>
+<li><a href="index.php?act=mnd" class="nav db">Client Config</a></li>
+<li><a href="index.php?act=wec" class="nav db">WebCenter (Preview) Images</a></li>
+<li><a href="index.php?act=job-fil-view" class="nav db">Filelist view</a></li>
+</ul></div></div></td>
+<td class="mmLo mmData" id="l36" title="Data" onclick="Flow.Std.popMain(\'d35\',null,\'d40\')">Data<div style="position:relative; top:9px; left:-8px;" id="d40"><div id="d35" class="smDiv" style="display:none;"><ul class="subMenuItms"><li><a href="index.php?act=usg" class="nav db">User</a></li>
+<li><a href="index.php?act=htg" class="nav db">Helptables</a></li>
+<li><a href="index.php?act=pck" class="nav db">Picklists</a></li>
+<li><a href="index.php?act=content" class="nav db">Text Content</a></li>
+<li><a href="index.php?act=chk" class="nav db">Checklists</a></li>
+</ul></div></div></td>
+<td class="mmLo mmSystem Doc" title="System Documentation" onclick="go(\'index.php?act=sys-doc\')">System Documentation</td>
+<td width="100%" class="mmPad">&nbsp;</td><td class="mmLo w16 p0"><img id="pag_ajx" src="img/d.gif" width="16" height="16" alt="" /></td><td class="mmBack mmLo" onclick="go(\'index.php?act=hom-wel.back\')">Back</td>
+<td class="mmLogout mmLo" style="border-right:0" onclick="go(\'index.php?act=log.out\')">Logout</td>
+</tr></table>
+
+<!-- CHtm_Mainmenu end -->
+</td>
+			</tr>
+			<tr id="subMenu">
+				<td colspan="4" id="submenu_inner" class="orange">&nbsp;</td>
+			</tr>
+		</table>
+		<div id="pgCont">
+			<input type="hidden" id="page_act" value="orange" />
+			<div>
+				
+				<div id="pgMsgJs"></div>
+				<br /> <table class="tbl" cellpadding="2" cellspacing="0" width="100%"><thead>
+<tr>
+<td class="cap2" colspan="3"><table cellpadding="0" cellspacing="0" border="0"><tr>
+<td class="captxt p8 orange">QC Module</td></tr></table>
+</td></tr>
+<tr>
+<td class="sub" colspan="3"><table cellpadding="2" border="0"><tr><td>
+<button class="btn" type="button" onclick="go(&quot;index.php?act=job-sec.new&quot;)">
+<div class="al">
+<table cellpadding="2" cellspacing="0" border="0" class="al w25p"><tr>
+<td><i class="ico-w16 ico-w16-plus"></i></td><td class="nw al" style="text-align:left">New Query</td></tr></table>
+</div>
+</button>
+</td>
+<td id="vie">
+<table cellpadding="0" cellspacing="0" border="0"><tr><td>
+
+<!-- CHtm_Menu start -->
+<div id="d4" class=""><a class="nav" id="l6" href="javascript:Flow.Std.popMen(\'d5\',\'l6\')">Options</a><div id="d5" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">View Options</td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-col"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.fpr" class="nav db">Select Columns</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-search"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.spr" class="nav db">Select search fields</a></td></tr>
+<tr><td class="th2 nw" colspan="3">Lines per page</td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/d.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=5" class="nav db">5 Lines</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/d.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=10" class="nav db">10 Lines</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-ok"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=25" class="nav db">25 Lines</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/d.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=50" class="nav db">50 Lines</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/d.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=100" class="nav db">100 Lines</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/d.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.lpp&amp;lpp=200" class="nav db">200 Lines</a></td></tr>
+<tr><td class="th2 nw" colspan="3">Saved Views</td></tr>
+<tr>
+<td class="td2 w16 ac"></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-view&amp;src=job-sec" class="nav db">Save View</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-save"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.allview" class="nav db">Save as Standard</a></td></tr>
+<tr><td class="th2 nw" colspan="3">Search presets</td></tr>
+<tr>
+<td class="td2 w16 ac"></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-view-search&amp;src=job-sec" class="nav db">Save Search</a></td></tr>
+</table></div></div>
+<!-- CHtm_Menu end -->
+</td></tr></table>
+</td>
+<td id="Sorting">
+<button class="btn w130" type="button" onclick="javascript:gIgn=1;Flow.Std.popMen(&#039;d2&#039;)" id="l3">
+<div class="al">
+<table cellpadding="2" cellspacing="0" border="0" class="al w25p"><tr>
+<td><i class="ico-w16 ico-w16-ord-asc-desc"></i></td><td class="nw al" style="text-align:left">Sorting</td></tr></table>
+</div>
+</button>
+<div id="d2" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">Last Status Change</td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-ord-asc"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.ord&amp;fie=last_status_change" class="nav db">Sorting ascending</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><i class="ico-w16 ico-w16-ord-desc"></i></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.ord&amp;fie=-last_status_change" class="nav db">Sorting descending</a></td></tr>
+</table></div></td>
+<td>
+<button class="btn" type="button" onclick="new Ajax.Request(&quot;index.php?act=job-sec.csvexp&amp;src=sec&amp;age=job&quot;,
+        {
+          onCreate: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/pag/ajx2.gif&quot;;
+          },
+          onComplete: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/d.gif&quot;;
+            alert(&quot;A file has been created and will be sent to your email address shortly.&quot;);
+          }
+        }
+      );">
+<div class="al">
+<table cellpadding="2" cellspacing="0" border="0" class="al w25p"><tr>
+<td><i class="ico-w16 ico-w16-excel"></i></td><td class="nw al" style="text-align:left">CSV Export</td></tr></table>
+</div>
+</button>
+</td>
+<td>
+<button class="btn" type="button" onclick="new Ajax.Request(&quot;index.php?act=job-sec.xlsexp&amp;src=sec&amp;age=job&quot;,
+        {
+          onCreate: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/pag/ajx2.gif&quot;;
+          },
+          onComplete: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/d.gif&quot;;
+            alert(&quot;A file has been created and will be sent to your email address shortly.&quot;);
+          }
+        }
+      );">
+<div class="al">
+<table cellpadding="2" cellspacing="0" border="0" class="al w25p"><tr>
+<td><i class="ico-w16 ico-w16-excel"></i></td><td class="nw al" style="text-align:left">Excel Export</td></tr></table>
+</div>
+</button>
+</td>
+<td>
+<button class="btn" type="button" onclick="new Ajax.Request(&quot;index.php?act=job-sec.repexp&amp;src=sec&amp;age=job&quot;,
+        {
+          onCreate: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/pag/ajx2.gif&quot;;
+          },
+          onComplete: function(response) {
+            $(&quot;pag_ajx&quot;).src = &quot;img/d.gif&quot;;
+            alert(&quot;A file has been created and will be sent to your email address shortly.&quot;);
+          }
+        }
+      );">
+<div class="al">
+<table cellpadding="2" cellspacing="0" border="0" class="al w25p"><tr>
+<td><i class="ico-w16 ico-w16-excel"></i></td><td class="nw al" style="text-align:left">Timing Export</td></tr></table>
+</div>
+</button>
+</td>
+</tr></table></td></tr>
+<tr>
+<td class="sub p0" colspan="3"><form action="index.php" method="post">
+<input type="hidden" name="act" value="job-sec.fil" />
+<table cellpadding="2" cellspacing="0" border="0"><tr>
+<td class="caption w50 p0">Filter</td><td><table cellpadding="2" cellspacing="0" border="0"><tr>
+<td><div id="d7"><a class="nav" id="l9" href="javascript:Flow.Std.popMen(\'w8\',\'l9\')"><b>Status&nbsp;&nbsp;</b><i class="ico-crp-wave8-orange ico-crp-1b"></i><i class="ico-crp-wave8-orange ico-crp-1b"></i><i class="ico-crp-wave8-orange ico-crp-1b"></i><i class="ico-crp-wave8-orange ico-crp-2b"></i><i class="ico-crp-wave8-orange ico-crp-2b"></i><i class="ico-crp-wave8-orange ico-crp-2b"></i><i class="ico-crp-wave8-orange ico-crp-3b"></i><i class="ico-crp-wave8-orange ico-crp-3b"></i><i class="ico-crp-wave8-orange ico-crp-3b"></i><i class="ico-crp-wave8-orange ico-crp-4b"></i><i class="ico-crp-wave8-orange ico-crp-4b"></i><i class="ico-crp-wave8-orange ico-crp-4b"></i><i class="ico-crp-wave8-orange ico-crp-5b"></i><i class="ico-crp-wave8-orange ico-crp-5b"></i><i class="ico-crp-wave8-orange ico-crp-5b"></i><i class="ico-crp-wave8-orange ico-crp-6b"></i><i class="ico-crp-wave8-orange ico-crp-6b"></i><i class="ico-crp-wave8-orange ico-crp-6b"></i><i class="ico-crp-wave8-orange ico-crp-7b"></i><i class="ico-crp-wave8-orange ico-crp-7b"></i><i class="ico-crp-wave8-orange ico-crp-7b"></i><i class="ico-crp-wave8-orange ico-crp-8b"></i><i class="ico-crp-wave8-orange ico-crp-8b"></i><i class="ico-crp-wave8-orange ico-crp-8b"></i><i class="ico-crp-wave8-orange ico-crp-9b"></i><i class="ico-crp-wave8-orange ico-crp-9b"></i><i class="ico-crp-wave8-orange ico-crp-10b"></i><i class="ico-crp-wave8-orange ico-crp-11b"></i><i class="ico-crp-wave8-orange ico-crp-12b"></i><i class="ico-crp-wave8-orange ico-crp-13b"></i><i class="ico-crp-wave8-orange ico-crp-14b"></i><i class="ico-crp-wave8-orange ico-crp-15b"></i><i class="ico-crp-wave8-orange ico-crp-9b"></i><i class="ico-crp-wave8-orange ico-crp-10b"></i></a><div id="w8" class="smDiv" style="display:none"><table border="0" cellspacing="0" cellpadding="2" class="tbl mw200"><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][0]" value="1" id="statecheckbox0" checked="checked" onclick="javascript:gIgn=1;checkAllStates(\'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">[All]</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][10]" value="1" id="statecheckbox10" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox10\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">1 - New Job</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][20]" value="1" id="statecheckbox20" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox20\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">2 - Production Art</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][30]" value="1" id="statecheckbox30" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox30\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">3 - Quality Control</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][40]" value="1" id="statecheckbox40" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox40\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">4 - Reopen</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][50]" value="1" id="statecheckbox50" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox50\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">5 - Analyze</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][60]" value="1" id="statecheckbox60" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox60\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">6 - Action Plan</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][70]" value="1" id="statecheckbox70" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox70\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">7 - Action Approval</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][80]" value="1" id="statecheckbox80" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox80\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">8 - Progress</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][90]" value="1" id="statecheckbox90" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox90\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">9 - Close</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][100]" value="1" id="statecheckbox100" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox100\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">10 - Stakeholder Approval</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][110]" value="1" id="statecheckbox110" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox110\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">11 - Final Approver Approval</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][120]" value="1" id="statecheckbox120" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox120\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">12 - Contract Proof</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][130]" value="1" id="statecheckbox130" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox130\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">13 - Approved</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][140]" value="1" id="statecheckbox140" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox140\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">14 - Data Delivered</td></tr><tr><td class="td1 nw"><input type="checkbox" name="val[webstatus][200]" value="1" id="statecheckbox200" checked="checked" onclick="javascript:gIgn=1;uncheckAllStates(\'statecheckbox200\', \'10,20,30,40,50,60,70,80,90,100,110,120,130,140,200\')">10 - Archive</td></tr></table></div></div></td><td></td>
+<td>
+  <div id="do10">
+    <a class="nav" id="l12" href="javascript:Flow.Std.popMen(\'di11\',\'l12\')">
+      <b>Flags&nbsp;&nbsp;</b>
+<i class="ico-jfl ico-jfl-1" title="On Hold"></i><i class="ico-jfl ico-jfl-2" title="Cancelled"></i><i class="ico-jfl ico-jfl-1024" title="Printer Order"></i><i class="ico-jfl ico-jfl-2048" title="Colour Approved"></i><i class="ico-jfl ico-jfl-4096" title="Printing"></i>    </a>
+<div id="di11" class="smDiv" style="display:none">  <table border="0" cellspacing="0" cellpadding="2" class="tbl mw200">    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][0]" value="0" id="flagcheckbox0" checked="checked" onclick="javascript:gIgn=1;checkAllFlags(\'1,2,1024,2048,4096\')">&nbsp;<i class="ico-jfl ico-jfl-0" title="[All]"></i>&nbsp;[All]</td>    </tr>    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][1]" value="1" id="flagcheckbox1" checked="checked" onclick="javascript:gIgn=1;uncheckAllFlags(\'flagcheckbox1\', \'1,2,1024,2048,4096\');">&nbsp;<i class="ico-jfl ico-jfl-1" title="On Hold"></i>&nbsp;On Hold</td>    </tr>    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][2]" value="2" id="flagcheckbox2" checked="checked" onclick="javascript:gIgn=1;uncheckAllFlags(\'flagcheckbox2\', \'1,2,1024,2048,4096\');">&nbsp;<i class="ico-jfl ico-jfl-2" title="Cancelled"></i>&nbsp;Cancelled</td>    </tr>    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][1024]" value="1024" id="flagcheckbox1024" checked="checked" onclick="javascript:gIgn=1;uncheckAllFlags(\'flagcheckbox1024\', \'1,2,1024,2048,4096\');">&nbsp;<i class="ico-jfl ico-jfl-1024" title="Printer Order"></i>&nbsp;Printer Order</td>    </tr>    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][2048]" value="2048" id="flagcheckbox2048" checked="checked" onclick="javascript:gIgn=1;uncheckAllFlags(\'flagcheckbox2048\', \'1,2,1024,2048,4096\');">&nbsp;<i class="ico-jfl ico-jfl-2048" title="Colour Approved"></i>&nbsp;Colour Approved</td>    </tr>    <tr>      <td class="td1 nw"><input type="checkbox" name="val[flags][4096]" value="4096" id="flagcheckbox4096" checked="checked" onclick="javascript:gIgn=1;uncheckAllFlags(\'flagcheckbox4096\', \'1,2,1024,2048,4096\');">&nbsp;<i class="ico-jfl ico-jfl-4096" title="Printing"></i>&nbsp;Printing</td>    </tr>  </table></div>  </div>
+</td>
+</tr></table></td><td><button class="btn" type="submit">
+Filter</button>
+</td></tr></table>
+</form></td></tr>
+<tr>
+<td class="th2 nw" width="16" id="ctr">&nbsp;</td><td class="th2 nw" width="16" id="cpy">&nbsp;</td><td class="th2 nw" width="16" id="del">&nbsp;</td></tr>
+</thead>
+<tbody>
+<tr class="hi" data-src="sec" data-jobid="50668"><td class="td1 ar w16">1.</td>
+<td class="td1 nw"   data-alias="cpy" >
+<!-- CHtm_Menu start -->
+<div id="d13" class=""><a class="nav" id="l15" href="javascript:Flow.Std.popMen(\'d14\',\'l15\')"><img src="img/wave8/ico/16/copy.gif" alt="" /></a><div id="d14" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">Copy to</td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-art.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-art.cpy&amp;jobid=50668&amp;src=sec&amp;target=art" class="nav db">Copy to Core Browser</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-rep.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-rep.cpy&amp;jobid=50668&amp;src=sec&amp;target=rep" class="nav db">Copy to Variant</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-com.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-com.cpy&amp;jobid=50668&amp;src=sec&amp;target=com" class="nav db">Copy to Amend</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-mis.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-mis.cpy&amp;jobid=50668&amp;src=sec&amp;target=mis" class="nav db">Copy to Product</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-adm.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-adm.cpy&amp;jobid=50668&amp;src=sec&amp;target=adm" class="nav db">Copy to Sales Samples</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-sec.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.cpy&amp;jobid=50668&amp;src=sec&amp;target=sec" class="nav db">Copy to QC Module</a></td></tr>
+</table></div></div>
+<!-- CHtm_Menu end -->
+</td>
+<td class="td1 nw w16 ac"><a class="nav" href="javascript:Flow.Std.cnfDel(\'index.php?act=job-sec.del&amp;id=50668\', \'en\')"><i class="ico-w16 ico-w16-del"></i></a></td>
+</tr>
+<tr class="hi" data-src="sec" data-jobid="50661"><td class="td2 ar w16">2.</td>
+<td class="td2 nw"   data-alias="cpy" >
+<!-- CHtm_Menu start -->
+<div id="d16" class=""><a class="nav" id="l18" href="javascript:Flow.Std.popMen(\'d17\',\'l18\')"><img src="img/wave8/ico/16/copy.gif" alt="" /></a><div id="d17" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">Copy to</td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-art.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-art.cpy&amp;jobid=50661&amp;src=sec&amp;target=art" class="nav db">Copy to Core Browser</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-rep.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-rep.cpy&amp;jobid=50661&amp;src=sec&amp;target=rep" class="nav db">Copy to Variant</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-com.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-com.cpy&amp;jobid=50661&amp;src=sec&amp;target=com" class="nav db">Copy to Amend</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-mis.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-mis.cpy&amp;jobid=50661&amp;src=sec&amp;target=mis" class="nav db">Copy to Product</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-adm.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-adm.cpy&amp;jobid=50661&amp;src=sec&amp;target=adm" class="nav db">Copy to Sales Samples</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-sec.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.cpy&amp;jobid=50661&amp;src=sec&amp;target=sec" class="nav db">Copy to QC Module</a></td></tr>
+</table></div></div>
+<!-- CHtm_Menu end -->
+</td>
+<td class="td2 nw w16 ac"><a class="nav" href="javascript:Flow.Std.cnfDel(\'index.php?act=job-sec.del&amp;id=50661\', \'en\')"><i class="ico-w16 ico-w16-del"></i></a></td>
+</tr>
+<tr class="hi" data-src="sec" data-jobid="50662"><td class="td1 ar w16">3.</td>
+<td class="td1 nw"   data-alias="cpy" >
+<!-- CHtm_Menu start -->
+<div id="d19" class=""><a class="nav" id="l21" href="javascript:Flow.Std.popMen(\'d20\',\'l21\')"><img src="img/wave8/ico/16/copy.gif" alt="" /></a><div id="d20" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">Copy to</td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-art.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-art.cpy&amp;jobid=50662&amp;src=sec&amp;target=art" class="nav db">Copy to Core Browser</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-rep.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-rep.cpy&amp;jobid=50662&amp;src=sec&amp;target=rep" class="nav db">Copy to Variant</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-com.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-com.cpy&amp;jobid=50662&amp;src=sec&amp;target=com" class="nav db">Copy to Amend</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-mis.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-mis.cpy&amp;jobid=50662&amp;src=sec&amp;target=mis" class="nav db">Copy to Product</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-adm.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-adm.cpy&amp;jobid=50662&amp;src=sec&amp;target=adm" class="nav db">Copy to Sales Samples</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-sec.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.cpy&amp;jobid=50662&amp;src=sec&amp;target=sec" class="nav db">Copy to QC Module</a></td></tr>
+</table></div></div>
+<!-- CHtm_Menu end -->
+</td>
+<td class="td1 nw w16 ac"><a class="nav" href="javascript:Flow.Std.cnfDel(\'index.php?act=job-sec.del&amp;id=50662\', \'en\')"><i class="ico-w16 ico-w16-del"></i></a></td>
+</tr>
+<tr class="hi" data-src="sec" data-jobid="50663"><td class="td2 ar w16">4.</td>
+<td class="td2 nw"   data-alias="cpy" >
+<!-- CHtm_Menu start -->
+<div id="d22" class=""><a class="nav" id="l24" href="javascript:Flow.Std.popMen(\'d23\',\'l24\')"><img src="img/wave8/ico/16/copy.gif" alt="" /></a><div id="d23" class="smDiv" style="display:none;"><table cellpadding="2" cellspacing="0" border="0" class="tbl mw200"><tr><td class="th2 nw" colspan="3">Copy to</td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-art.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-art.cpy&amp;jobid=50663&amp;src=sec&amp;target=art" class="nav db">Copy to Core Browser</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-rep.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-rep.cpy&amp;jobid=50663&amp;src=sec&amp;target=rep" class="nav db">Copy to Variant</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-com.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-com.cpy&amp;jobid=50663&amp;src=sec&amp;target=com" class="nav db">Copy to Amend</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-mis.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-mis.cpy&amp;jobid=50663&amp;src=sec&amp;target=mis" class="nav db">Copy to Product</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-adm.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-adm.cpy&amp;jobid=50663&amp;src=sec&amp;target=adm" class="nav db">Copy to Sales Samples</a></td></tr>
+<tr>
+<td class="td2 w16 ac"><img src="img/ico/16/en/job-sec.gif" alt="" /></td><td class="td1 nw" colspan="2"><a href="index.php?act=job-sec.cpy&amp;jobid=50663&amp;src=sec&amp;target=sec" class="nav db">Copy to QC Module</a></td></tr>
+</table></div></div>
+<!-- CHtm_Menu end -->
+</td>
+<td class="td2 nw w16 ac"><a class="nav" href="javascript:Flow.Std.cnfDel(\'index.php?act=job-sec.del&amp;id=50663\', \'en\')"><i class="ico-w16 ico-w16-del"></i></a></td>
+</tr>
+</tbody>
+</table><div class="dn" id="multipleedit" title="Edit multiple jobs">    <input type="hidden" name="mid" value="1030"/>    <input type="hidden" name="src" value="sec"/>    <input type="hidden" name="act" value="job-sec.sedts" />    <input type="hidden" name="fields" value="[]"/>    <input type="hidden" name="jobids"/>    <input type="hidden" name="values"/>    <table style="width: 100%">    </table>    <br>    <div style="color:red;">multiple.jobs.edit.l01</div>multiple.jobs.edit.l02    <br></div><div class="dn" id="multipleedit_progress">    <p>        <div style="text-align: center; vertical-align: middle;">job.multiple-edit.wait        </div>    </p>    <p>        <div id="multipleedit_progress_value">            <div id="multipleedit_progress_text">            </div>        </div>    </p>    <p>        <div id="multipleedit_messages_value">            <div id="multipleedit_messages_text" style="height: 90px; text-align: left; vertical-align: top; overflow: scroll;">            </div>        </div>    </p></div>
+			</div>
+			<br style="clear: both" /> <br style="clear: both" /> <br
+				style="clear: both" />
+		</div>
+		<!--  pgBody end -->
+
+		<!--  pgCont end -->
+		<div id="pgFoot">
+			<div class="pgFoot">
+				<a href="#">Back to top</a> | - sec | 25 Qry |
+				R9/Z6 Cache Hits | M- | <a href="http://www.5flow.eu" target="_BLANK">Developed
+					by 5Flow</a> | rev  845 from  2013-02-11
+			</div>
+		</div>
+	</div>
+	<div id="invoicePrepDialog" style="display: none;"
+		title="Invoice Prep Selection">&nbsp;</div>
+	<div id="overDiv"
+		style="position: absolute; visibility: hidden; z-index: 1000; top: -10000px; left: -10000px;"></div>
+	<div id="pag_progress" style="display: none">
+		<div class="pag_prog_area">
+			<img src="img/pag/ajx.gif" alt="" style="margin-top: 50px;" /><br />
+			Please wait...
+		</div>
+	</div>
+	<div id="pag_time_dlg" style="display: none"></div>
+</body>
+</html>

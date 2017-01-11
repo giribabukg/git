@@ -13,6 +13,7 @@ class CInc_Cor_Res_Fla extends CCor_Res_Plugin {
   protected function refresh($aParam = NULL) {
     $lCkey = 'cor_res_fla_'.MID;
     if ($lRet = $this -> getCache($lCkey)) {
+      error_log('.....CInc_Cor_Res_Fla.....refresh.....$lRet1.......'.var_export($lRet,true)."\n",3,'logggg.txt');
       return $lRet;
     }
     $lRet = array();
@@ -23,6 +24,7 @@ class CInc_Cor_Res_Fla extends CCor_Res_Plugin {
       $lRet[$lRow -> id] = $lRow -> toArray();
     }
     $this -> setCache($lCkey, $lRet);
+    error_log('.....CInc_Cor_Res_Fla.....refresh.....$lRet2.......'.var_export($lRet,true)."\n",3,'logggg.txt');
     return $lRet;
   }
 

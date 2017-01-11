@@ -139,6 +139,7 @@ class CInc_Utl_Fil_Cnt extends CCor_Cnt {
   }
 
   protected function actWecversion() {
+    error_log('.....I am in CInc_Utl_Fil_Cnt class.....'."\n",3,'logggg.txt');
     $lVerId = $this->getReq('dvi');
     $lSrc   = $this->getReq('src');
     $lJid   = $this->getReq('jobid');

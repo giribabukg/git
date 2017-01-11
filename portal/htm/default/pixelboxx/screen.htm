@@ -1,0 +1,279 @@
+<style>
+
+.pbox-tree2 { height:1000px; overflow:scroll}
+
+.pbox-bar { background-color:#eee; }
+
+.pbox-tree .tree li {
+    list-style-image: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.tree span {
+    margin-right: 0;
+}
+.d0 .pbox-tree .tree li.bc-has-children {
+    list-style-image: url(img/wave8/ico/16/next-hi.gif);
+}
+
+.d0 .pbox-tree .tree li { margin-left: 40px;}
+
+ul.tree { margin-top: 0; margin-bottom:0; border-right:1px solid black;}
+
+.cur-sel {
+    color:black;
+    font-weight:bold;
+    background2-color: rgba(255,255,255, .5);
+    border-right:8px solid rgba(255,255,255, .5);
+    border-radius:0;
+}
+
+.pbox-cap {
+    margin:0;
+    padding:0.5em;
+    font-weight:bold;
+    font-size:32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 32px;
+    border-bottom: 1px solid black;
+}
+.pbox-grid-item {
+	border: 1px solid #ccc;
+	padding:1em;
+	background-color:#eee;
+	margin:8px;
+	width: 132;
+	float:left;
+	height: 164px;
+	min-height: 164px;
+	border-radius: 8px;
+}
+.pbox-grid-thumb {
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:120px;
+	height: 120px;
+	min-height:120px;
+	background-color: white;
+}
+
+.pbox-cards-sec {
+	float:left;
+	margin-right: 2em;
+}
+
+.pbox-cards-item {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+.pbox-cards-thumb {
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	width:120px;
+	height: 120px;
+	min-height:120px;
+	background-color: white;
+}
+.pbox-cards-item dd {
+  display: inline;
+  margin: 2;
+}
+.pbox-cards-item dd:after {
+  display: block;
+  content: '';
+}
+.pbox-cards-item dt {
+  display: inline-block;
+  min2-width: 80px;
+  font-weight:bold;
+}
+
+.pbox-filename {
+  background-color:#768fad;
+  color: white;
+  border:1px solid #6a819c;
+  border-radius:3px;
+  padding-left:1em;
+  padding-right:1em;
+  width:124px; 
+  overflow:hidden;
+  box-sizing:border-box;
+}
+.pbox-crumbs {
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background-color:#eee;
+	padding: 16px;
+}
+
+
+/* Design 1 */
+.d1 .pbox-tree .tree li {
+    border-top:1px solid #ffac30;
+    border-left:1px solid #ffac30;
+}
+.d1 .pbox-tree  ul          { background-color:#ffba49;  padding-left:0 }
+.d1 .pbox-tree  ul ul ul    { background-color:#ffd679; }
+.d1 .pbox-tree  ul ul       { background-color:#ffc861; }
+.d1 .pbox-tree  ul ul ul ul { background-color:#ffe492; }
+.d1 .pbox-tree  ul ul ul ul ul { background-color:#fff2b9; }
+
+/* Design 2 */
+.d2 .pbox-tree .tree li {
+    border-top:1px solid #ffac30;
+    border-left:1px solid #ffac30;
+}
+.d2 .pbox-tree  ul          { background-color:#ffe492; padding-left:0}
+.d2 .pbox-tree  ul ul       { background-color:#ffd679; }
+.d2 .pbox-tree  ul ul ul    { background-color:#ffc861; }
+.d2 .pbox-tree  ul ul ul ul { background-color:#ffba49; }
+
+
+/* Design 3 */
+.d3 .pbox-tree .tree li {
+    border-top:1px solid #ffac30;
+    border-left:1px solid #ffac30;
+}
+.d3 .pbox-tree  ul          { background-color:#ffe492; padding-left:0}
+.d3 .pbox-tree  ul ul       { background-color:#ffd679; }
+.d3 .pbox-tree  ul ul ul    { background-color:#ffc861; }
+.d3 .pbox-tree  ul ul ul ul { background-color:#ffba49; }
+
+/* Design 4 */
+.d4 .pbox-tree .tree li {
+    border-top:1px solid #658596;
+    border-left:1px solid #658596;
+}
+.d4 .pbox-tree  ul          { background-color:#6fa2bd; padding-left:0}
+.d4 .pbox-tree  ul ul       { background-color:#9fc1d3; }
+.d4 .pbox-tree  ul ul ul    { background-color:#b7d1de; }
+.d4 .pbox-tree  ul ul ul ul { background-color:#cfe0e9; }
+
+.d4 .cur-sel { border-right-color:#131f36;}
+
+.flex { display:flex; display:-webkit-flex; }
+
+</style>
+
+<div class="pbox-main d4">
+  <div class="pbox-cap">Elements</div>
+  <div class="flex">
+  <div class="pbox-tree w350">{view.tree}</div>
+  <div class="pbox-right w100p box">
+      <div class="pbox-content" id="pbox-content">
+      {view.content}
+      </div>
+  </div>
+  </div>
+  <div class="clr"></div>
+</div>
+
+
+<script>
+var Flow = Flow || {};
+Flow.Pboxx = {
+       autoCollapse : true, 
+       current : "{preference.hash}",
+        
+       register : function() {
+           jQuery('.bc-node').click(function() {
+               Flow.Pboxx.onClick(this);
+           });
+           var collapse = "{preference.collapse}";
+           Flow.Pboxx.autoCollapse = (collapse == 1);
+           var node = jQuery('[data-hash="' + Flow.Pboxx.current + '"');
+           var ul = jQuery(node).parent('li').find('ul').first();
+           if (ul.length == 0) {
+               Flow.Pboxx.expand(node);
+           } else {
+               Flow.Pboxx.expand(ul);
+           }
+           jQuery(node).addClass('cur-sel');
+       },
+       
+       selectHash : function(aHash) {
+           var node = jQuery('[data-hash="' + aHash + '"');
+           //Flow.Pboxx.onClick(node, true);
+           if (!jQuery(node).hasClass('cur-sel')) {
+               jQuery('.cur-sel').removeClass('cur-sel');
+               jQuery(node).addClass('cur-sel');
+               Flow.Pboxx.load(node);
+           }
+           var ul = jQuery(aNode).parent('li').find('ul').first();
+           Flow.Pboxx.expand(ul);
+           //ul.show();
+       },
+       
+       onClick : function(aNode, aAlwaysExpand) {
+           if (!jQuery(aNode).hasClass('cur-sel')) {
+             jQuery('.cur-sel').removeClass('cur-sel');
+             jQuery(aNode).addClass('cur-sel');
+             Flow.Pboxx.load(aNode);
+           }
+           var ul = jQuery(aNode).parent('li').find('ul').first();
+           if (Flow.Pboxx.autoCollapse && (ul.length ==1) && !(ul.is(':visible'))) {
+               Flow.Pboxx.collapseAll()
+               Flow.Pboxx.expand(ul);
+           } else {
+               if (aAlwaysExpand) {
+                   ul.show();
+               } else {
+                   ul.toggle();
+               }
+           }
+       },
+       
+       load : function(aNode) {
+           var li = jQuery(aNode).parent('li');
+           var level = li.attr('data-level');
+           var arr = new Object();
+           arr['f['+level+']'] = jQuery(aNode).text();
+           
+           var lParents = jQuery(li).parents('li');
+           lParents.each(function() {
+               arr['f['+jQuery(this).attr('data-level')+']'] = jQuery(this).find('span').first().text();
+           });
+           arr['hash'] = jQuery(aNode).attr('data-hash');
+           Flow.Std.ajxImg('pbox-content');
+           jQuery('.pbox-content').load('index.php?act=pixelboxx.getcont', arr);
+       },
+       
+       collapseAll : function() {
+           jQuery('.pbox-main ul').hide();
+           jQuery('.pbox-main ul.tree').show();
+           
+       },
+       
+       expand : function(aNode) {
+           jQuery(aNode).show();
+           var lParents = jQuery(aNode).parents('ul');
+           lParents.each(function() {
+               jQuery(this).show();
+           });
+       },
+       
+       toggleAutoCollapse : function() {
+           Flow.Pboxx.autoCollapse = !Flow.Pboxx.autoCollapse;
+           if (Flow.Pboxx.autoCollapse) {
+               jQuery('#pref-collapse-img').show();
+               var lVal = 1;
+           } else {
+               jQuery('#pref-collapse-img').hide();
+               var lVal = 0;
+           }
+           jQuery.post('index.php?act=pixelboxx.setpref&pref=collapse&norender=1&val=' + lVal);
+       }
+        
+};
+
+jQuery(Flow.Pboxx.register);
+
+</script>

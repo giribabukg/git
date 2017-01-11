@@ -10,19 +10,24 @@ class CInc_Job_Sec_Cnt extends CJob_Cnt {
 
   protected function actStd() {
     $lVie = new CJob_Sec_List();
+    error_log('.....CInc_Job_Sec_Cnt.....actStd.....actStd.....'.var_export($lVie,true)."\n",3,'logggg.txt');
     $this -> render($lVie);
   }
 
   protected function actEdt() {
     $lJobId = $this -> getReq('jobid');
+    error_log('.....CInc_Job_Sec_Cnt.....actEdt.....$lJobId.....'.var_export($lJobId,true)."\n",3,'logggg.txt');
+    
     $lPag = $this -> getReq('page', 'job');
-
+    error_log('.....CInc_Job_Sec_Cnt.....actEdt.....$lPag.....'.var_export($lPag,true)."\n",3,'logggg.txt');
     $this -> checkComparison($this -> mSrc, $lJobId);
     $this -> checkArc($this -> mSrc, $lJobId);
 
     $lJob = new CJob_Sec_Dat();
     if ($lJob -> load($lJobId)) {
+      error_log('.....CInc_Job_Sec_Cnt.....actEdt.....in if.......'."\n",3,'logggg.txt');
       if ($lUrl = $lJob -> redirectUrl()) {
+        error_log('.....CInc_Job_Sec_Cnt.....actEdt.....in if2.......'."\n",3,'logggg.txt');
         $this -> msg('Note: The job '.jid($lJobId).' is a different job type', mtUser, mlWarn);
         $this -> redirect($lUrl);
       }
@@ -33,16 +38,28 @@ class CInc_Job_Sec_Cnt extends CJob_Cnt {
       $this -> redirect();
     }
 
-    $lVie = new CJob_Sec_Header($lJob);
+    //These following three contents are for content of the page only.  That is middle of the page only.
+
+    $lVie = new CJob_Sec_Header($lJob);   //Getting html for critical path like flow
     $lRet = $lVie -> getContent();
 
-    $lVie = new CJob_Sec_Tabs($lJobId, $lPag);
-    $lRet.= $lVie -> getContent();
+    $lVie = new CJob_Sec_Tabs($lJobId, $lPag);  //Getting Tab details of tabs. Like Details, History, and Files.
+    $lRet.= $lVie -> getContent();  
 
-    $lFrm = new CJob_Sec_Form('job-sec.sedt', $lJobId, $lJob, $lPag);
-    $lRet.= $lFrm -> getContent();
+    error_log('.....CInc_Job_Sec_Cnt.....actEdt1.....$lJobId.....'.var_export($lJobId,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Sec_Cnt.....actEdt1.....$lJob.....'.var_export($lJob,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Sec_Cnt.....actEdt1.....$lPag.....'.var_export($lPag,true)."\n",3,'logggg.txt');
 
-    $lRet.= $this -> getWecLogout();
+    $lFrm = new CJob_Sec_Form('job-sec.sedt', $lJobId, $lJob, $lPag);   //Then that three column table part which includes form, right side control
+    $lRet.= $lFrm -> getContent();  // inga content kedaikum bothea..... ella replace aagi direct html aaah thaa kedaikuthu....
+
+    //error_log('.....CInc_Job_Sec_Cnt.....actEdt.....$lRet.....'.var_export($lRet,true)."\n",3,'logggg.txt');
+
+    $lRet.= $this -> getWecLogout();  //NOTHING COMES HERE.
+
+    //error_log('.....CInc_Job_Sec_Cnt.....actEdt.....$this -> getWecLogout().....'.var_export($this -> getWecLogout(),true)."\n",3,'logggg.txt');
+    error_log('.....CJob_Sec_Form...actEdt...$this -> mDoc....at end of function......'.var_export($this -> mDoc,true)."\n",3,'logggg.txt');
+    error_log('.....CJob_Sec_Form...actEdt...$this -> mPat....at end of function......'.var_export($this -> mPat,true)."\n",3,'logggg.txt');    
     $this -> render($lRet);
   }
 

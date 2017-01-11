@@ -1,0 +1,199 @@
+<div class="th1">
+	<a href="javascript:cpl('frm.col','cpl.{src}.col')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.imageposition}</a>
+	<a href="javascript:cpl('frm.col','cpl.{src}.col')" class="db w800" style="display:inline-block;width:47%;">{lan.lib.configuration}</a>
+</div>
+<div id="frm.col" style="display:{display}" class="frm p8 w800">
+	<div id="topleft" style="width: calc(50% - 20px); float:left; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<div class="corr">
+			<table border="0" cellpadding="2" cellspacing="0">
+				<tr>
+					<td class="nw ar"><b>Bleed</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.bleedoutside}</td>
+					<td>{val.bleedoutside} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.bleedglue}</td>
+					<td>{val.bleedglue} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.creasetolerance}</td>
+					<td>{val.creasetolerance} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.overprinttop}</td>
+					<td>{val.overprinttop} mm</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.mindist}</td>
+					<td>{val.mindist} mm</td>
+				</tr>
+			</table>
+		</div>
+		<div class="diecut">
+			<table border="0" cellpadding="2" cellspacing="0">
+				<tr>
+					<td class="nw ar">{bez.ZLP_CAD_F_PRINT_HEIGHT}</td>
+					<td>{val.ZLP_CAD_F_PRINT_HEIGHT}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_CAD_F_PRINT_WIDTH}</td>
+					<td>{val.ZLP_CAD_F_PRINT_WIDTH}</td>
+				</tr>
+				<tr class="diecut">
+					<td class="nw ar">{bez.ZLP_CAD_F_PRINT_HEIGHT_TXT}</td>
+					<td>{val.ZLP_CAD_F_PRINT_HEIGHT_TXT}</td>
+				</tr>
+				<tr class="diecut">
+					<td class="nw ar">{bez.ZLP_CAD_F_PRINT_WIDTH_TXT}</td>
+					<td>{val.ZLP_CAD_F_PRINT_WIDTH_TXT}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_1UP_AXIAL}</td>
+					<td>{val.ZLP_GES_F_1UP_AXIAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_1UP_RADIAL}</td>
+					<td>{val.ZLP_GES_F_1UP_RADIAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_1UP_TOTAL}</td>
+					<td>{val.ZLP_GES_F_1UP_TOTAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_RAP_AXIAL}</td>
+					<td>{val.ZLP_GES_F_RAP_AXIAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_RAP_RADIAL}</td>
+					<td>{val.ZLP_GES_F_RAP_RADIAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_SPLIT_AXIAL}</td>
+					<td>{val.ZLP_GES_F_SPLIT_AXIAL}</td>
+				</tr>
+				<tr>
+					<td class="nw ar">{bez.ZLP_GES_F_SPLIT_RADIAL}</td>
+					<td>{val.ZLP_GES_F_SPLIT_RADIAL}</td>
+				</tr>
+			</table>		
+		</div>
+		<div class="flexo diecut offsetlitho gravure screenprint digital dryoffset">
+			<table border="0" cellpadding="2" cellspacing="0">
+				<tr class="flexo offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar w100">{bez.spacing_left}</td>
+					<td>{val.spacing_left} mm</td>
+				</tr>
+				<tr class="flexo offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar">{bez.spacing_right}</td>
+					<td>{val.spacing_right} mm</td>
+				</tr>
+				<tr class="flexo offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar">{bez.spacing_top}</td>
+					<td>{val.spacing_top} mm</td>
+				</tr>
+				<tr class="flexo offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar">{bez.spacing_bottom}</td>
+					<td>{val.spacing_bottom} mm</td>
+				</tr>
+				<tr class="flexo diecut offsetlitho gravure screenprint digital">
+					<td class="nw ar">{bez.min_dis_cutting}</td>
+					<td>{val.min_dis_cutting} mm</td>
+				</tr>
+				<tr class="flexo offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar">{bez.overprint_env_fla}</td>
+					<td>{val.overprint_env_fla} mm</td>
+				</tr>
+				<tr class="flexo diecut offsetlitho gravure screenprint digital dryoffset">
+					<td class="nw ar">{bez.overprint_bleed}</td>
+					<td>{val.overprint_bleed} mm</td>
+				</tr>
+				<tr class="flexo offsetlitho gravure screenprint digital">
+					<td class="nw ar">{bez.overprint_bottom_fold}</td>
+					<td>{val.overprint_bottom_fold} mm</td>
+				</tr>
+				<tr class="flexo diecut offsetlitho gravure screenprint digital">
+					<td class="nw ar">{bez.overprint_gusset}</td>
+					<td>{val.overprint_gusset} mm</td>
+				</tr>
+				<tr class="flexo diecut offsetlitho">
+					<td class="nw ar">{bez.gap}</td>
+					<td>{val.gap} mm</td>
+				</tr>
+				<tr class="flexo diecut offsetlitho gravure">
+					<td class="nw ar">{bez.offset}</td>
+					<td>{val.offset} mm</td>
+				</tr>
+			</table>
+		</div>
+			<table class="corr flexo offsetlitho gravure screenprint digital dryoffset" border="0" cellpadding="2" cellspacing="0">		
+				<tr>
+					<td>&nbsp;{val.imagenotes}</td>
+				</tr>
+			</table>
+	</div>
+	<div id="topright" style="width:calc(50% - 20px); float:right; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="nw ar">{bez.registermark}</td>
+				<td>{val.registermark}</td>
+				<td><div class="measure"><span></span></div></td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.registermarklocation}</td>
+				<td>{val.registermarklocation}</td>
+				<td><div class="measure"><span></span></div></td>
+			</tr>
+			<tr class="corr flexo diecut offsetlitho gravure digital">
+				<td class="nw ar">{bez.pullbands}</td>
+				<td>{val.pullbands}</td>
+			</tr>
+			<tr class="corr flexo diecut offsetlitho gravure digital">
+				<td class="nw ar">{bez.pullbands_width}</td>
+				<td>{val.pullbands_width} mm</td>
+			</tr>
+			<tr class="corr">
+				<td class="nw ar">{bez.pullbands_thickness}</td>
+				<td>{val.pullbands_thickness}</td>
+			</tr>		
+			<tr class="corr flexo diecut offsetlitho gravure digital">
+				<td class="nw ar">{bez.pullbandslocation}</td>
+				<td>{val.pullbandslocation}</td>
+			</tr>
+			<tr class="corr flexo diecut offsetlitho gravure digital">
+				<td class="nw ar">{bez.pullbands_type}</td>
+				<td>{val.pullbands_type}</td>
+			</tr>
+			<tr class="flexo offsetlitho gravure screenprint digital dryoffset diecut">
+				<td class="nw ar">{bez.die_cutting_mark_size}</td>
+				<td>{val.die_cutting_mark_size}</td>
+			</tr>
+			<tr class="flexo offsetlitho gravure screenprint digital dryoffset diecut">
+				<td class="nw ar">{bez.die_cutting_mark_position}</td>
+				<td>{val.die_cutting_mark_position}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.printscore}</td>
+				<td>{val.printscore}</td>
+			</tr>
+			<tr>
+				<td colspan="2">{val.prepressnotes}</td>
+			</tr>
+		</table>
+	</div>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0">
+			
+		</table>
+
+		</td>
+	</tr>
+</table>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>

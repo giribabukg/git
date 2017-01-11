@@ -394,9 +394,12 @@ function collectVal($aArr, $aKeyField, $aValField) {
  */
 
 function toStr($aContent) {
+//  error_log('....inc-htm-lip php....$aContent......'.var_export($aContent, true)."\n",3,'logggg.txt');
+  // error_log('....inc-htm-lip php....$aContent instanceof CCor_Ren......'.var_export($aContent instanceof CCor_Ren, true)."\n",3,'logggg.txt');
   if ($aContent instanceof CCor_Ren) {
     return $aContent -> getContent();
   }
+  // error_log('....inc-htm-lip php....$aContent....at...return....'.var_export($aContent, true)."\n",3,'logggg.txt');
   return $aContent;
 }
 

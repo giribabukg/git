@@ -184,6 +184,7 @@ class CInc_Svc_Wecpi extends CSvc_Base {
   }
 
   protected function updateWectnsDatasets($aClient) {
+    error_log('in ....... updateWectnsDatasets.....'."\n",3,'logggg.txt');
     if (0 == $this -> mWecTns && 1 == $this -> mWecPi) {
 //       $lClient = $aClient;
 
@@ -319,6 +320,7 @@ class CInc_Svc_Wecpi extends CSvc_Base {
   }
 
   protected function copy_to_portal($aClient) {
+    error_log('in ....... copy_to_portal.....'."\n",3,'logggg.txt');
     if (0 == $this -> mWecTns && 1 == $this -> mWecPi) {
       require_once 'cust/inc/cor/cfg.php';
 

@@ -147,27 +147,27 @@ class CCor_Cfg extends CCor_Obj {
 
 
     // Memo Feld Rows-Length
-    $this -> mVal['show_nr_rows'] = 25;  //Anzahl der Zeilen in textarea Zusatzabsprachen
+    $this -> mVal['show_nr_rows'] = 25;  // Number of lines in textarea additional agreements
 
     // Keywords
     $this -> mVal['job.keyw']     = array('marke','artikel','sorte','gewicht');
     $this -> mVal['job-pro.keyw'] = array('project_no','project_name');
 
-    // Falls es mehrere Jobtypen: Artwork gibt
-    $this -> mVal['code_artwork'] = 'art'; // es gibt nur einen "echten" ARTWORK-Workflow
+    // If there are several job types: Artwork
+    $this -> mVal['code_artwork'] = 'art'; // There is only one "real" ARTWORK workflow
 
     // Alle Jobformen == src:
-    $this -> mVal['all-jobs_ALINK'] = array('art','rep','sec','mis','adm'); //werden in Networker gespeichert
-    $this -> mVal['all-jobs_PDB']   = array('com','tra');  //werden in der PortalDatenBank gespeichert
-    $this -> mVal['all-jobs'] = array_merge($this -> mVal['all-jobs_ALINK'], $this -> mVal['all-jobs_PDB']); // gebraucht in MID=0
+    $this -> mVal['all-jobs_ALINK'] = array('art','rep','sec','mis','adm'); //Are stored in Networker
+    $this -> mVal['all-jobs_PDB']   = array('com','tra');  //Are stored in the PortalDataBank
+    $this -> mVal['all-jobs'] = array_merge($this -> mVal['all-jobs_ALINK'], $this -> mVal['all-jobs_PDB']); // Used in MID = 0
 
-    // Items fuer die Menus "Aktive Jobs", "Archiv", "Projekt Items" .
+    // Items for the menus "Active Jobs", "Archive", "Project Items" .
     $lAllJobs = $this -> mVal['all-jobs'];
     $this -> mVal['menu-projektitems'] = array();
     $this -> mVal['menu-aktivejobs'] = array('job-all');
     if (!empty($lAllJobs)) {
       foreach ($lAllJobs as $lTyp) {
-        $this -> mVal['menu-projektitems'][] = 'job_'.$lTyp; // Muss mit '_' definiert werden!
+        $this -> mVal['menu-projektitems'][] = 'job_'.$lTyp; // Must be defined with '_'!
         $this -> mVal['menu-aktivejobs'][] = 'job-'.$lTyp;
       }
     }
@@ -176,12 +176,12 @@ class CCor_Cfg extends CCor_Obj {
     $this -> mVal['menu-archivjobs'] = array_merge($this -> mVal['menu-archivjobs'], $this -> mVal['all-jobs']);
 
 
-    // Anzeige der Projekt-Items=False oder als Jobliste=True
+    // Display the project items = False or as a job list = True
     $this -> mVal['view.projekt.joblist'] = true;
 
-    // Projektfelder, die beim Projektzuordnen im Job geschrieben werden.
+    // Project fields that are written in the job during the project assignment
     $this -> mVal['job-pro.fields'] = array('project_name','project_no');
-    // Auftragsfelder, die beim Projekt in der Subliste (...) in den Links zum Job angezeigt werden.
+    // Order fields, which are displayed in the sublist (...) in the links to the job.
     $this -> mVal['job-pro.subfields'] = array('artikel','sorte','gewicht','warengruppe'); //Aliase
 
     // SKU
@@ -197,8 +197,8 @@ class CCor_Cfg extends CCor_Obj {
     }
 
     // Default Tabs in der Job-Maske:
-    $this -> mVal['job.mask.tabs'] = array('job','det'); // job:Identifikation, det: Details
-    $this -> mVal['arc.mask.tabs'] = $this -> mVal['job.mask.tabs']; // Archiv: Identifikation, det: Details
+    $this -> mVal['job.mask.tabs'] = array('job','det'); // Job: Identifying it: Details
+    $this -> mVal['arc.mask.tabs'] = $this -> mVal['job.mask.tabs']; // Archive: Identification, det: Details
 
     // Default APL-Buttons:
     $this -> mVal['show.form.apl'] = false; // true=View APL-Buttons in Jobmask
@@ -207,10 +207,10 @@ class CCor_Cfg extends CCor_Obj {
     $this -> mVal['buttons.apl'][2] = 'conditional';
     $this -> mVal['buttons.apl'][3] = 'approval';
 
-    // Auftragsfelder im MeineFreigabeliste
-    // Jobid ist MUSS.
-    // Alle Auftragsfelder in der Liste, muessen auch im al_job_shadow_MID agelegt sein
-    // und das Auftragsfeldflag "Reporting" aktiviert damit in der Tabelle "Shadow" gespeichert wird.
+    // Order fields in MyFreeList
+    // Jobid is MUST.
+    // All order fields in the list must also be set in al_job_shadow_MID
+    // and the order field flag "Reporting" will be saved in the "Shadow" table.
     $this -> mVal['job.apl.freigabe'] = array('jobid');
 
     //user in role of per_prj_verantwortlich is not invited to apl as an active member - per default
@@ -220,9 +220,9 @@ class CCor_Cfg extends CCor_Obj {
     //Invite to APL all of these groups can be invited to the apl on the right side as a whole group
     $this -> mVal['job.apl.parent.invitedgroups'] = array();
 
-    // APL welche Funktionalitaet man will => != oder <
-    //true: $lMinPos != $lIds[$lUid]['pos'] zeigt die Buttons nur an, solange man keinen Button bestaetigt hat!
-    //false: $lMinPos < $lIds[$lUid]['pos'] zeigt die Buttons, sobald man an der Reihe ist und auch weiter: Korrekturmoegl.
+    // APL what functionality you want =>! = Or <
+    // true: $ lMinPos! = $ LIds [$ lUid] ['pos'] shows the buttons only as long as you have not confirmed a button!
+    // false: $ lMinPos <$ lIds [$ lUid] ['pos'] shows the buttons as soon as you are in the line and continue:
     $this -> mVal['job.apl.show.btn.untilconfirm'] = false;
 
     // Domain names used in database table al_pck_master:

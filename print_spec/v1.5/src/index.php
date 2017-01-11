@@ -30,4 +30,5 @@ function dispatch() {
 
   CCor_Fct::getInstance() -> dispatch();
 }
+
 dispatch();

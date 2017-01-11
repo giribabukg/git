@@ -1,0 +1,38 @@
+<p>{lan.template_desc}</p>
+<div class="w100p dib">
+	<div class="p4 dib b">{lan.templates}</div>
+	<div class="w400 p4 dib">{templates}</div>
+</div>
+
+<div class="w100p">
+	<div class="w16 p4 dib">&nbsp;</div>
+	<div class="w200 p4 dib b">{lan.category}</div>
+	<div class="w200 p4 dib b">{lan.layout}</div>
+	<div class="p4 dib b">{lan.amount}</div>
+</div>
+
+<div class="content_item">
+	<div class="w16 p4 dib">{removebtn}</div>
+	<div class="w200 p4 dib">{categories}</div>
+	<div class="w200 p4 dib">{layout}</div>
+	<div class="p4 dib">{amount}</div>
+	<script>
+		jQuery("#category1").change( function() {
+			Flow.cmsTemplate.getLayouts("layout1","category1");
+			Flow.cmsForm.getAmount("category1", "amount1");
+		});
+	</script>
+</div>
+
+<div class="save_template" style="display:none;">
+	<div class="question hide">
+		<p>{lan.template_save}</p>
+		<b>{lan.name}</b>&nbsp;<input type="text" class="text ui-widget-content ui-corner-all" value="" id="template_name" name="template_name" />
+		<button type="button" id="saveName" class="btn btn-info" role="button">{lan.ok}</button>
+	</div>
+	<div class="result"></div>
+</div>
+
+<script>
+	jQuery(document).ready( function() { Flow.cmsTemplate.select(); });
+</script>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>{pg.mand.name} :: {pg.title}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="{pg.utilcss}" />
+  <link rel="stylesheet" type="text/css" href="{pg.stylecss}" />
+  
+  <script type="text/javascript" src="{pg.langjson}"></script>
+  
+  <script type="text/javascript" src="{pg.jqueryjs}"></script>
+  <script type="text/javascript">if (typeof jQuery !== 'undefined') {jQuery.noConflict();}</script> 
+  <script type="text/javascript" src="{pg.jqueryuijs}"></script>
+  <script type="text/javascript" src="{pg.prototypejs}"></script>
+  <script type="text/javascript" src="{pg.crpstepsjs}"></script>
+  <script type="text/javascript" src="{pg.stdjs}"></script>
+  <script type="text/javascript" src="{pg.flowjs}"></script>
+  <script type="text/javascript" src="{pg.json2js}"></script>
+  <script type="text/javascript" src="{pg.flinkjs}"></script> 
+  <script type="text/javascript" src="{pg.tinymcejs}"></script>
+  
+  <script type="text/javascript" src="{pg.phrasejs}"></script>
+  <script type="text/javascript" src="{pg.highstockjs}"></script>
+  
+  <script type="text/javascript" src="{pg.jqueryiframetransportjs}"></script>
+  <script type="text/javascript" src="{pg.jqueryfileuploadjs}"></script>
+
+  <link rel="stylesheet" href="{pg.jqueryuicss}" type="text/css" media="all" />
+  <link rel="stylesheet" href="{pg.jqueryuithemecss}" type="text/css" media="all" />  
+
+  <link rel="shortcut icon" type="image/png" href="{pg.favicon}" />
+  {pg.js}
+</head>
+<body id="htm_body" onload="Flow.Std.doInit()" onunload="jQuery('#pag_progress').show()" onclick="Flow.Std.hideMenus()">
+	<div id="pag_autocomplete" class="autocomplete"></div>
+	<div id="pag_tip"
+		style="position: absolute; display: none; z-index: 1000; top: 100px; left: 100px;"></div>
+	<iframe id="myIFrame" width="0px" height="0px" style="display: none"></iframe>
+
+	<!--  pgBody start -->
+	<div id="pgBody">
+		<table cellpadding="0" cellspacing="0" border="0"
+			style="border: none;" id="topNavigation">
+			<tr class="aboveMenu">
+				<td width="100%" class="pgTh w100p">{pg.mand.name} ::
+					{pg.title}</td>
+				<td id="user_date" class="pgTh nw" style="text-align: right">&nbsp;{pg.user},&nbsp;{pg.date}</td>
+			</tr>
+			<tr class="aboveMenu">
+				<td colspan="2" width="100%" style="padding: 0 10px;">
+					<div style="float: left; padding: 5px 0;">
+						<img src="{pg.mand.logo}" id="mand_logo" alt="{pg.mand.name}" />
+					</div>
+					<div style="float: left; width: 60%;">
+						<span class="captxt">{pg.versioninfo}</span><br />
+					</div>
+					<div style="text-align: right;">
+						<img src="{pg.mand.cust}" alt="{pg.cust.name}" />
+					</div>
+				</td>
+			</tr>
+			<tr id="mainMenu">
+				<td colspan="4" class="menu">{pg.menu}</td>
+			</tr>
+			<tr id="subMenu">
+				<td colspan="4" id="submenu_inner" class="{pg.act}">{pg.submenu}</td>
+			</tr>
+		</table>
+		<div id="pgCont">
+			<input type="hidden" id="page_act" value="{pg.act}" />
+			<div>
+				{pg.msg}
+				<div id="pgMsgJs"></div>
+				<br /> {pg.cont}
+			</div>
+			<br style="clear: both" /> <br style="clear: both" /> <br
+				style="clear: both" />
+		</div>
+		<!--  pgBody end -->
+
+		<!--  pgCont end -->
+		<div id="pgFoot">
+			<div class="pgFoot">
+				<a href="#">Back to top</a> | {pg.bench} sec | {pg.qry} Qry |
+				R{pg.rch}/Z{pg.zch} Cache Hits | M{pg.mem} | <a href="http://www.5flow.eu" target="_BLANK">Developed
+					by 5Flow</a> | {pg.revision_nr} {pg.revision_date}
+			</div>
+		</div>
+	</div>
+	<div id="invoicePrepDialog" style="display: none;"
+		title="Invoice Prep Selection">&nbsp;</div>
+	<div id="overDiv"
+		style="position: absolute; visibility: hidden; z-index: 1000; top: -10000px; left: -10000px;"></div>
+	<div id="pag_progress" style="display: none">
+		<div class="pag_prog_area">
+			<img src="img/pag/ajx.gif" alt="" style="margin-top: 50px;" /><br />
+			{pg.lib.wait}
+		</div>
+	</div>
+	<div id="pag_time_dlg" style="display: none"></div>
+</body>
+</html>

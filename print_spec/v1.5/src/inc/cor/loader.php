@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Core: Loader
  *
@@ -16,11 +17,11 @@ class CCor_Loader {
 
   private static $mCnt = 0;
 
-  public static function addDir($aDir) {
+  public static function addDir($aDir) {   //Ithus just kudukura directory path ahhhh array la first element ahaa insert pannum.
     array_unshift(self::$mDirs, $aDir);
   }
 
-  public static function injectDir($aDir) {
+  public static function injectDir($aDir) {  //this function already irukura directory path ku apparam kudukura directory path ahhh insert/inject pannum.
     $lOld = array_shift(self::$mDirs);
     array_unshift(self::$mDirs, $aDir);
     array_unshift(self::$mDirs, $lOld);
@@ -39,6 +40,21 @@ class CCor_Loader {
   }
 
   public static function loadClass($aClass, $aCustClass='' ,$aMandClass='') {
+    // error_log(
+    //     '.....aClass.........'.
+    //     $aClass.
+    //     "\n",3,'logggg.txt');
+
+    // error_log(
+    //     '.....aCustClass.....'.
+    //     $aCustClass.
+    //     "\n",3,'logggg.txt');
+
+    //  error_log(
+    //     '.....aMandClass.....'.
+    //     $aMandClass.
+    //     "\n",3,'logggg.txt');           
+
     self::$mCnt++;
     #echo $aClass.BR;
     if (!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/', 
@@ -49,6 +65,10 @@ $aClass)) {
       if (substr($aClass,0,5) == 'Zend_') {
         $lFil = str_replace('_', DS, $aClass).'.php';
         require_once $lFil;
+        // error_log(
+        //     '.....Zend return.....in loader php.....'.
+        //     $lFil.
+        //     "\n",3,'logggg.txt');        
         return $aClass;
       }
       if (substr($aClass,0,9) == 'PHPExcel_') {
@@ -67,10 +87,33 @@ $aClass)) {
         $lNam = str_replace('inc_', '', $lNam);
       }
       $lNam = DS.str_replace('_', DS, $lNam).'.php';
-      if (!empty($lDir)) {// Cust und Inc wird sofort abgefr�hst�ckt
+
+     // error_log(
+     //    date('Y-m-d h:i:s').
+     //    ':calFile-'.__FILE__.
+     //    ':phpSelf-'.$_SERVER['PHP_SELF'].
+     //    ':qryStr-'.$_SERVER['QUERY_STRING'].
+     //    '.....lDir.....in loader php.....'.
+     //    $lDir.
+     //    "\n",3,'logggg.txt');
+     // error_log(
+     //    date('Y-m-d h:i:s').
+     //    ':calFile-'.__FILE__.
+     //    ':phpSelf-'.$_SERVER['PHP_SELF'].
+     //    ':qryStr-'.$_SERVER['QUERY_STRING'].
+     //    '.....lNam.....in loader php.....'.
+     //    $lNam.
+     //    "\n",3,'logggg.txt');     
+
+
+      if (!empty($lDir)) {// Cust and Inc are instantly aborted
         $lFil = $lDir.$lNam;
         if (file_exists($lFil)) {
           require_once $lFil;
+            // error_log(
+            //   '.....Cust and Inc are instantly aborted.....'.
+            //   $lFil.
+            //   "\n",3,'logggg.txt');           
           #echo $lFil.BR;
           if (class_exists($aClass)) {
             self::echoDebug($lFil);
@@ -78,6 +121,8 @@ $aClass)) {
           }
         }
       }
+
+      //
       if (0 === strpos($lNam, '/mand')) {
         $lNam = str_replace('/mand', '', $lNam);
       }
@@ -88,10 +133,35 @@ $aClass)) {
 
       foreach (self::$mDirs as $lDir) {
         $lFil = $lDir.$lNam;
+        //error_log('.....lFil in mDir Loop.....'.$lFil."\n",3,'logggg.txt'); 
         #echo 'ite '.$lFil.BR;
+
+
+     // error_log(
+     //    date('Y-m-d h:i:s').
+     //    ':calFile-'.__FILE__.
+     //    ':phpSelf-'.$_SERVER['PHP_SELF'].
+     //    ':qryStr-'.$_SERVER['QUERY_STRING'].
+     //    '.....in loop...lDir.....in loader php.....'.
+     //    $lDir.
+     //    "\n",3,'logggg.txt');
+     // error_log(
+     //    date('Y-m-d h:i:s').
+     //    ':calFile-'.__FILE__.
+     //    ':phpSelf-'.$_SERVER['PHP_SELF'].
+     //    ':qryStr-'.$_SERVER['QUERY_STRING'].
+     //    '.....in loop....lNam.....in loader php.....'.
+     //    $lNam.
+     //    "\n",3,'logggg.txt'); 
+
+
 
         if (file_exists($lFil)) {
           require_once $lFil;
+            // error_log(
+            //   '.....in loop........'.
+            //   $lFil.
+            //   "\n",3,'logggg.txt');           
           self::echoDebug($lFil);
           #echo $lFil.BR;
           if     (!empty($aMandClass) AND class_exists($aMandClass)) return $aMandClass;

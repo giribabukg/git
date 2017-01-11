@@ -1,0 +1,72 @@
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	
+function displayKodak() {
+	if(jQuery("*[name='val[profile_kodak]']").is(':checked')){	
+		jQuery(".kodak").show();	
+	} else {
+		jQuery(".kodak").hide();	
+	}
+}
+
+displayKodak();
+jQuery('.field_profile_kodak').on('change', function() { displayKodak(); });
+
+});
+
+</script>
+
+<div class="th1 kodak">
+	<a href="javascript:cpl('frm.kodak','cpl.{src}.kodak')" class="db w800" style="display:inline-block;width:51%;">Profile Details Kodak Approval</a>
+	<a href="javascript:cpl('frm.kodak','cpl.{src}.kodak')" class="db w800" style="display:inline-block;width:47%;"></a>
+</div>
+<div id="frm.kodak" style="display:{display}" class="frm p8 w800 kodak">
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="ar nw w100">{bez.profile_proof_kodak}</td>
+				<td>{val.profile_proof_kodak}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_color_kodak}</td>
+				<td>{val.profile_color_kodak}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_pass_white}</td>
+				<td>{val.profile_pass_white}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_laminator_spec}</td>
+				<td>{val.profile_laminator_spec}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_donor_set}</td>
+				<td>{val.profile_donor_set}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_approval_type}</td>
+				<td>{val.profile_approval_type}</td>
+			</tr>
+			
+		</table>
+
+		</td>
+		<td class="w16">&nbsp;</td>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="nw ar w100"></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	<!--  </tr> -->
+</table>
+<br />
+</div>

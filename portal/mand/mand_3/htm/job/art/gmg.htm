@@ -1,0 +1,99 @@
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	
+function displayGMG() {
+	if(jQuery("*[name='val[profile_gmg]']").is(':checked')){	
+		jQuery(".gmg").show();	
+	} else {
+		jQuery(".gmg").hide();	
+	}
+}
+
+displayGMG();
+jQuery('.field_profile_gmg').on('change', function() { displayGMG(); });
+
+});
+
+</script>
+
+<div class="th1 gmg">
+	<a href="javascript:cpl('frm.gmg','cpl.{src}.gmg')" class="db w800" style="display:inline-block;width:51%;">Profile Details GMG</a>
+	<a href="javascript:cpl('frm.gmg','cpl.{src}.gmg')" class="db w800" style="display:inline-block;width:47%;"></a>
+</div>
+<div id="frm.gmg" style="display:{display}" class="frm p8 w800 gmg">
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="ar nw w100">{bez.profil_gmg_version}</td>
+				<td>{val.profil_gmg_version}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profil_epson_system}</td>
+				<td>{val.profil_epson_system}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profil_alt_printer}</td>
+				<td>{val.profil_alt_printer}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profil_proof_type}</td>
+				<td>{val.profil_proof_type}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profil_paper_substrate}</td>
+				<td>{val.profil_paper_substrate}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_gamut}</td>
+				<td>{val.profile_gamut}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_mesuring_template}</td>
+				<td>{val.profile_mesuring_template}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_mesuring_device}</td>
+				<td>{val.profile_mesuring_device}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_mesuring_condition}</td>
+				<td>{val.profile_mesuring_condition}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_degrees}</td>
+				<td>{val.profile_degrees}</td>
+			</tr>
+		</table>
+
+		</td>
+		<td class="w16">&nbsp;</td>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="nw ar w100">{bez.profile_cust_spotcolor}&nbsp;{val.profile_cust_spotcolor}</td>
+				<td>{val.profile_spotcolor_name}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_avail_softproof}&nbsp;{val.profile_avail_softproof}</td>
+				<td>{val.profile_name_softproof}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_notes}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="ar nw" colspan="2">{val.profile_notes}</td>
+			</tr>
+		</table>
+		</td>
+	<!--  </tr> -->
+</table>
+<br />
+</div>
+

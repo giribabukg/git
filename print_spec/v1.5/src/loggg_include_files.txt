@@ -1,0 +1,1145 @@
+.....aClass.........CCor_Log
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCor_Obj
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/obj.php
+
+
+
+.....aClass.........ICor_Obs
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/obs.php
+.....in loop........inc/cor/log.php
+
+
+
+.....aClass.........CCor_Cfg
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/_cust0/inc/cor/cfg.php
+.....in loop........inc/cor/cfg.php
+
+
+
+.....aClass.........CCor_Msg
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........ICor_Sub
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/sub.php
+.....in loop........inc/cor/msg.php
+
+
+
+.....aClass.........CCor_Sys
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCor_Dat
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/dat.php
+.....in loop........inc/cor/sys.php
+
+
+
+.....aClass.........CCor_Fct
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/fct.php
+
+
+
+.....aClass.........CCor_Req
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Req
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Req
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/req.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/req.php
+.....in loop........inc/_mand0/inc/cor/req.php
+
+
+
+
+.....aClass.........CCor_Usr
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/usr.php
+
+
+
+.....aClass.........CCor_Qry
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Qry
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Qry
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/qry.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/qry.php
+.....in loop........inc/_mand0/inc/cor/qry.php
+
+
+
+.....aClass.........CCor_Sql
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/sql.php
+
+
+
+.....aClass.........CCor_Usr_Pref
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Usr_Pref
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Usr_Pref
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/usr/pref.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/usr/pref.php
+.....in loop........inc/_mand0/inc/cor/usr/pref.php
+
+
+
+.....aClass.........CCor_Res
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/res.php
+
+
+
+.....aClass.........CCor_Res_Mand
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Mand
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CInc_Cor_Res_Mand
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCor_Res_Plugin
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/res/plugin.php
+.....Cust and Inc are instantly aborted.....inc/cor/res/mand.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/mand.php
+.....in loop........inc/_mand0/inc/cor/res/mand.php
+
+
+
+.....aClass.........CCor_QryIte
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_QryIte
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_QryIte
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/qryite.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/qryite.php
+.....in loop........inc/_mand0/inc/cor/qryite.php
+
+
+
+.....aClass.........Chom_wel_Cnt
+.....aCustClass.....CCust_hom_wel_Cnt
+.....aMandClass.....Chom_wel_Cnt
+
+
+
+.....aClass.........CCust_Hom_Wel_Cnt
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Wel_Cnt
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCor_Cnt
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Cnt
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Cnt
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/cnt.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/cnt.php
+.....in loop........inc/_mand0/inc/cor/cnt.php
+.....Cust and Inc are instantly aborted.....inc/hom/wel/cnt.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/cnt.php
+.....in loop........inc/_mand0/inc/hom/wel/cnt.php
+
+
+
+
+.....aClass.........CCor_Lang
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Lang
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Lang
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/lang.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/lang.php
+.....in loop........inc/_mand0/inc/cor/lang.php
+
+
+
+.....aClass.........CCor_Res_Lang
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Cor_Res_Lang
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Lang
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/lang.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/lang.php
+.....in loop........inc/_mand0/inc/cor/res/lang.php
+
+
+
+.....aClass.........CCor_Cache
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Cache
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Cache
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/cache.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/cache.php
+.....in loop........inc/_mand0/inc/cor/cache.php
+
+
+
+.....aClass.........Zend_Translate_Adapter_Array
+.....aCustClass.....
+.....aMandClass.....
+.....Zend return.....in loader php.....Zend/Translate/Adapter/Array.php
+
+
+
+
+.....aClass.........CCor_Tpl
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Tpl
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Tpl
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCor_Ren
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Ren
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Ren
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/ren.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/ren.php
+.....in loop........inc/_mand0/inc/cor/ren.php
+.....Cust and Inc are instantly aborted.....inc/cor/tpl.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/tpl.php
+.....in loop........inc/_mand0/inc/cor/tpl.php
+
+
+
+
+.....aClass.........CHom_Wel_Usrbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Hom_Wel_Usrbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Wel_Usrbox
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/hom/wel/usrbox.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/usrbox.php
+.....in loop........inc/_mand0/inc/hom/wel/usrbox.php
+
+
+
+
+.....aClass.........CCor_Res_Htb
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Cor_Res_Htb
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Htb
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/htb.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/htb.php
+.....in loop........inc/_mand0/inc/cor/res/htb.php
+
+
+
+.....aClass.........CCor_Usr_Priv
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Usr_Priv
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Usr_Priv
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/usr/priv.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/usr/priv.php
+.....in loop........inc/_mand0/inc/cor/usr/priv.php
+
+
+
+.....aClass.........CHom_Wel_Backupbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Hom_Wel_Backupbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Wel_Backupbox
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/hom/wel/backupbox.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/backupbox.php
+.....in loop........inc/_mand0/inc/hom/wel/backupbox.php
+
+
+
+.....aClass.........CHom_Wel_Myinbox_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Hom_Wel_Myinbox_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CInc_Hom_Wel_Myinbox_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CHtm_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Htm_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CHtm_Tag
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Htm_Tag
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Tag
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/tag.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/tag.php
+.....in loop........inc/_mand0/inc/htm/tag.php
+.....Cust and Inc are instantly aborted.....inc/htm/list.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/list.php
+.....in loop........inc/_mand0/inc/htm/list.php
+.....Cust and Inc are instantly aborted.....inc/hom/wel/myinbox/list.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/myinbox/list.php
+.....in loop........inc/_mand0/inc/hom/wel/myinbox/list.php
+
+
+
+.....aClass.........CHtm_Column
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Htm_Column
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Column
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/column.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/column.php
+.....in loop........inc/_mand0/inc/htm/column.php
+
+
+
+.....aClass.........CCor_TblIte
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_TblIte
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_TblIte
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/tblite.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/tblite.php
+.....in loop........inc/_mand0/inc/cor/tblite.php
+
+
+
+.....aClass.........CCor_Res_Cndmaster
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Cndmaster
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Cndmaster
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/cndmaster.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/cndmaster.php
+.....in loop........inc/_mand0/inc/cor/res/cndmaster.php
+
+
+
+.....aClass.........CHtm_NavBar
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Htm_NavBar
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_NavBar
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/navbar.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/navbar.php
+.....in loop........inc/_mand0/inc/htm/navbar.php
+
+
+.....aClass.........CHtm_Menu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Htm_Menu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Menu
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/menu.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/menu.php
+.....in loop........inc/_mand0/inc/htm/menu.php
+
+
+
+.....aClass.........CHom_Wel_Searchbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Hom_Wel_Searchbox
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CInc_Hom_Wel_Searchbox
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/hom/wel/searchbox.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/searchbox.php
+.....in loop........inc/_mand0/inc/hom/wel/searchbox.php
+
+
+
+.....aClass.........CHom_Wel_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Hom_Wel_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Wel_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/hom/wel/mytasks.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/mytasks.php
+.....in loop........inc/_mand0/inc/hom/wel/mytasks.php
+
+
+
+.....aClass.........CCor_Res_Fie
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Fie
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Fie
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/fie.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/fie.php
+.....in loop........inc/_mand0/inc/cor/res/fie.php
+
+
+
+
+.....aClass.........CCor_Usr_Mem
+.....aCustClass.....
+.....aMandClass.....
+
+
+.....aClass.........CCust_Cor_Usr_Mem
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Usr_Mem
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/usr/mem.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/usr/mem.php
+
+
+
+.....in loop........inc/_mand0/inc/cor/usr/mem.php
+.....aClass.........CCor_Anyusr
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Anyusr
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Anyusr
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/anyusr.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/anyusr.php
+.....in loop........inc/_mand0/inc/cor/anyusr.php
+
+
+
+.....aClass.........CCor_Res_Rolmytask
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Rolmytask
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Res_Rolmytask
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/rolmytask.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/rolmytask.php
+.....in loop........inc/_mand0/inc/cor/res/rolmytask.php
+
+
+
+
+.....aClass.........CCor_Res_Rol
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Cor_Res_Rol
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Rol
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/rol.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/rol.php
+.....in loop........inc/_mand0/inc/cor/res/rol.php
+
+
+
+.....aClass.........CCor_Res_Crpstep
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Cor_Res_Crpstep
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Crpstep
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/crpstep.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/crpstep.php
+.....in loop........inc/_mand0/inc/cor/res/crpstep.php
+
+
+
+.....aClass.........CCor_Res_Crpstatus
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Crpstatus
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Res_Crpstatus
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/crpstatus.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/crpstatus.php
+.....in loop........inc/_mand0/inc/cor/res/crpstatus.php
+
+
+
+
+.....aClass.........CCor_Res_Crpmaster
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Crpmaster
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Crpmaster
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/crpmaster.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/crpmaster.php
+.....in loop........inc/_mand0/inc/cor/res/crpmaster.php
+
+
+
+.....aClass.........CCor_Cond
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Cond
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Cond
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/cond.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/cond.php
+.....in loop........inc/_mand0/inc/cor/cond.php
+
+
+
+
+.....aClass.........CCor_Res_Fla
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Cor_Res_Fla
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Res_Fla
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/fla.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/fla.php
+.....in loop........inc/_mand0/inc/cor/res/fla.php
+
+
+
+.....aClass.........CCor_Res_Cnd
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Cnd
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Cnd
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/cnd.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/cnd.php
+.....in loop........inc/_mand0/inc/cor/res/cnd.php
+
+
+
+
+.....aClass.........CCor_Res_Mem
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Mem
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Mem
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/mem.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/mem.php
+.....in loop........inc/_mand0/inc/cor/res/mem.php
+
+
+
+
+.....aClass.........CHom_Wel_MyTasks_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Hom_Wel_MyTasks_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Wel_MyTasks_MyTasks
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CJob_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Job_List
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Job_List
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/job/list.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/job/list.php
+.....in loop........inc/_mand0/inc/job/list.php
+.....Cust and Inc are instantly aborted.....inc/hom/wel/mytasks/mytasks.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/wel/mytasks/mytasks.php
+.....in loop........inc/_mand0/inc/hom/wel/mytasks/mytasks.php
+
+
+
+.....aClass.........CCor_Res_Ddl
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Ddl
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Cor_Res_Ddl
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/ddl.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/ddl.php
+.....in loop........inc/_mand0/inc/cor/res/ddl.php
+
+
+
+.....aClass.........CCor_Res_Usr
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Cor_Res_Usr
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CInc_Cor_Res_Usr
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/cor/res/usr.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/cor/res/usr.php
+.....in loop........inc/_mand0/inc/cor/res/usr.php
+
+
+
+.....aClass.........CHtm_Fie_Fac
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Htm_Fie_Fac
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Fie_Fac
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/fie/fac.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/fie/fac.php
+.....in loop........inc/_mand0/inc/htm/fie/fac.php
+
+
+
+
+.....aClass.........CHom_Menu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Hom_Menu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Hom_Menu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CHtm_Vmenu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Htm_Vmenu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Vmenu
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/vmenu.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/vmenu.php
+.....in loop........inc/_mand0/inc/htm/vmenu.php
+.....Cust and Inc are instantly aborted.....inc/hom/menu.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/hom/menu.php
+.....in loop........inc/_mand0/inc/hom/menu.php
+
+
+
+.....aClass.........CHtm_Wrap
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Htm_Wrap
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Wrap
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/wrap.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/wrap.php
+.....in loop........inc/_mand0/inc/htm/wrap.php
+
+
+
+.....aClass.........CHtm_Page
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/htm/page.php
+
+
+
+.....aClass.........CInc_Sys_Msg_Cnt
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/sys/msg/cnt.php
+
+
+
+
+.....aClass.........CHtm_Mainmenu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+
+.....aClass.........CCust_Htm_Mainmenu
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_Mainmenu
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/mainmenu.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/mainmenu.php
+.....in loop........inc/_mand0/inc/htm/mainmenu.php
+
+
+
+.....aClass.........CCor_Licenses
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/licenses.php
+
+
+
+.....aClass.........CCor_Res_Sysrights
+.....aCustClass.....
+.....aMandClass.....
+.....in loop........inc/cor/res/sysrights.php
+
+
+
+.....aClass.........CHtm_MsgBox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CCust_Htm_MsgBox
+.....aCustClass.....
+.....aMandClass.....
+
+
+
+.....aClass.........CInc_Htm_MsgBox
+.....aCustClass.....
+.....aMandClass.....
+.....Cust and Inc are instantly aborted.....inc/htm/msgbox.php
+.....Cust and Inc are instantly aborted.....inc/_cust0/inc/htm/msgbox.php
+.....in loop........inc/_mand0/inc/htm/msgbox.php

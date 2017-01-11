@@ -21,7 +21,9 @@ class CInc_Job_Sec_Form extends CJob_Form {
     $this -> mJobId = $aJobId;
 
 
-    parent::__construct('sec', $aAct, $aPage, $this -> mJobId);
+    error_log('.....CInc_Job_Sec_Form...__construct...$this -> mJobIdddd.....'.var_export($this -> mJobId,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Sec_Form...__construct...$aAct....'.var_export($aAct,true)."\n",3,'logggg.txt');
+    parent::__construct('sec', $aAct, $aPage, $this -> mJobId);  //This will call loadTabs() and sets values in $this -> mTemplates and $this -> lDefaultTabs
 
 
     $lUsr = CCor_Usr::getInstance();
@@ -29,10 +31,14 @@ class CInc_Job_Sec_Form extends CJob_Form {
     $lCrp = CCor_Res::extract('code', 'id', 'crpmaster');
     $this -> mCrpId = $lCrp[$this -> mSrc];
     $this -> mFla = 0;
+  //  error_log('.....CInc_Job_Sec_Form...__construct...$aJob.....'.var_export($aJob,true)."\n",3,'logggg.txt');
+ //   error_log('.....CInc_Job_Sec_Form...__construct...$this -> mJobId.....'.var_export($this -> mJobId,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Sec_Form.....__construct......@start.....$this -> mDoc.....'.var_export($this -> mDoc,true)."\n",3,'logggg.txt');
     if (empty($aJob)) {
       if (!empty($this -> mJobId)) {
+//         error_log('.....CInc_Job_Sec_Form...__construct..in if123.....'."\n",3,'logggg.txt');
         $this -> mJob = new CJob_Sec_Dat();
-        $this -> mJob -> load($this -> mJobId);
+        $this -> mJob -> load($this -> mJobId); 
         $this -> mFla = $this -> mJob -> getFlags();
       } else {
         $this -> mJob = new CCor_Dat();
@@ -40,6 +46,7 @@ class CInc_Job_Sec_Form extends CJob_Form {
     } else {
       $this -> mJob = $aJob;
       if (!empty($this -> mJobId)) {
+        error_log('.....CInc_Job_Sec_Form...__construct...$this -> mJob -> getFlags().....'.var_export($this -> mJob -> getFlags(),true)."\n",3,'logggg.txt');
         $this -> mFla = $this -> mJob -> getFlags();
       }
     }
@@ -75,20 +82,30 @@ class CInc_Job_Sec_Form extends CJob_Form {
     if ($this -> mCanEdit) {
       $this -> addBtn('act', lan('lib.ok'), '', 'img/ico/16/ok.gif', 'submit', array('class' => 'btn w200' ));
     }
-    $this -> addBtn('act', lan('lib.cancel'), 'go("index.php?act=job-sec")', 'img/ico/16/cancel.gif', 'button', array('class' => 'btn w200' ));
+
+
+    $this -> addBtn('act', lan('lib.cancel'), 'go("index.php?act=job-sec")', 'img/ico/16/cancel.gif', 'button', array('class' => 'btn w200' ));  //This addBtn also sets $this -> mPnl
     if (!empty($this -> mJobId)) {
       $this -> addBtn('act', lan('lib.print'), 'pop("index.php?act=job-sec.prn&jobid='.$this -> mJobId.'")', 'img/ico/16/print.gif', 'button', array('class' => 'btn w200' ));
     }
+
+
     if ($this -> canAssign()) {
       $this -> addBtn('act', lan('job.assignprj'), 'go("index.php?act=job-sec.assignprj&jobid='.$this -> mJobId.'")', 'img/ico/16/next-hi.gif', 'button', array('class' => 'btn w200' ));
     }
+
+
     // Button Get Project Timing
     if (!empty($this -> mAssignedProId) AND $lUsr->canRead('job.timing-from-prj')){
       $this -> addBtn('act', lan('job.gettimingfrmprj'), 'go("index.php?act=job-'.$this -> mSrc.'.setassignedprodat&jobid='.$this -> mJobId.'&src='.$this -> mSrc.'&proid='.$this -> mAssignedProId.'")', 'img/ico/16/clock_refresh.gif', 'button', array('class' => 'btn w200' ));
     }
+
+
     if ($this -> canAssignSkuSub()) {
       $this -> addBtn('act', lan('job.assignskusub'), 'go("index.php?act=job-sec.assignskusub&jobid='.$this -> mJobId.'")', 'img/ico/16/next-hi.gif', 'button', array('class' => 'btn w200' ));
     }
+
+
     if (!empty($this -> mJobId) AND $lUsr->canInsert('email') ) {
       $this -> addBtn('act', lan('email.notif'), 'go("index.php?act=job-'.$this -> mSrc.'-his.newmail&jobid='.$this -> mJobId.'&src='.$this -> mSrc.'&frm=job")', 'img/ico/16/email.gif', 'button', array('class' => 'btn w200' ));
     }
@@ -151,6 +168,7 @@ class CInc_Job_Sec_Form extends CJob_Form {
     $this -> mTabs = new CJob_Sec_Tabs($this -> mJobId, $aPage);
 
     $lTemplate = $this -> getTemplates();
+    error_log('.....CInc_Job_Sec_Form...__construct...$lTemplate.....'.var_export($lTemplate,true)."\n",3,'logggg.txt');
 
     foreach($lTemplate as $lSite => $lTempl) {
       $this -> addPage($lSite);
@@ -162,53 +180,53 @@ class CInc_Job_Sec_Form extends CJob_Form {
         }
       }
     }
+    //error_log('.....CInc_Job_Sec_Form...__construct..$this -> mPag.....'.var_export($this -> mPag,true)."\n",3,'logggg.txt');
 
-
-    if (($lUsr -> canEdit('job-wec-id')) && ($this->mJobId) &&(substr($this->mJobId, 0, 1) != 'A')) {
-      #$this -> addPart('det', 'wec', $this -> mSrc); // kommt über $lMandClass
-      $lAtt = array();
-      $lAtt['class'] = 'btn w200';
-      $this -> addBtn('act', lan('wec.menu'), 'go("index.php?act=job-sec.wec&src='.$this -> mSrc.'&direct=1&jobid='.$this -> mJobId.'")', 'img/ico/16/wec.gif', 'button', $lAtt);
-    }
+    // if (($lUsr -> canEdit('job-wec-id')) && ($this->mJobId) &&(substr($this->mJobId, 0, 1) != 'A')) {
+    //   #$this -> addPart('det', 'wec', $this -> mSrc); // kommt über $lMandClass
+    //   $lAtt = array();
+    //   $lAtt['class'] = 'btn w200';
+    //   $this -> addBtn('act', lan('wec.menu'), 'go("index.php?act=job-sec.wec&src='.$this -> mSrc.'&direct=1&jobid='.$this -> mJobId.'")', 'img/ico/16/wec.gif', 'button', $lAtt);
+    // }
     //Der Button "Webcenter Viewer"
     //if ($lUsr -> canEdit('wec.view')) { // - Intouch
     // if ($this -> hasRole('per_prj_verantwortlich')){ // S+T
-    if ($this -> hasRole('per_prj_verantwortlich') OR $lUsr -> canEdit('wec.view')) {
-      if (!empty($this -> mJob['wec_prj_id'])) {
-        $lAtt = array();
-        $lAtt['class'] = 'btn w200';
-        $lRet = array();
-        $lWec = new CApi_Wec_Client();
-        $lWec -> loadConfig();
-        $lQry = new CApi_Wec_Query_Doclist($lWec);
-        //$lRes = $lQry -> getListByName($this -> mJob['jobnr']);
-        $lRes = $lQry -> getList($this -> mJob['wec_prj_id']);
-        if ($lRes) {
-          $lRet = array();
-          if (!empty($lRes)) {
-            $liwec = 0;
-            $lpid = '';
-            foreach ($lRes as $lRow) {
-              if ($lRow['viewer']) {
-                $liwec++;
-                $lRet[$lRow['wec_doc_id']] = $lRow['name'];
-                $lpid = $lRow['projectid'];
-                $lUrl = 'index.php?act=utl-wec.open';
-                $lUrl.= '&pid='.$lpid;
-                $lUrl.= '&doc='.urlencode($lRow['name']);
-                $lUrl.= '&docid='.urlencode($lRow['wec_ver_id']);
-              }
-            }
+    // if ($this -> hasRole('per_prj_verantwortlich') OR $lUsr -> canEdit('wec.view')) {
+    //   if (!empty($this -> mJob['wec_prj_id'])) {
+    //     $lAtt = array();
+    //     $lAtt['class'] = 'btn w200';
+    //     $lRet = array();
+    //     $lWec = new CApi_Wec_Client();
+    //     $lWec -> loadConfig();
+    //     $lQry = new CApi_Wec_Query_Doclist($lWec);
+    //     //$lRes = $lQry -> getListByName($this -> mJob['jobnr']);
+    //     $lRes = $lQry -> getList($this -> mJob['wec_prj_id']);
+    //     if ($lRes) {
+    //       $lRet = array();
+    //       if (!empty($lRes)) {
+    //         $liwec = 0;
+    //         $lpid = '';
+    //         foreach ($lRes as $lRow) {
+    //           if ($lRow['viewer']) {
+    //             $liwec++;
+    //             $lRet[$lRow['wec_doc_id']] = $lRow['name'];
+    //             $lpid = $lRow['projectid'];
+    //             $lUrl = 'index.php?act=utl-wec.open';
+    //             $lUrl.= '&pid='.$lpid;
+    //             $lUrl.= '&doc='.urlencode($lRow['name']);
+    //             $lUrl.= '&docid='.urlencode($lRow['wec_ver_id']);
+    //           }
+    //         }
 
-            if ($liwec == 1) {
-              $this -> addBtn('act', lan('wec.view'), 'go("'.$lUrl.'&src='.$this -> mSrc.'&jid='.$this -> mJobId.'","'.CCor_Cfg::get('wec.view', '').'")', 'img/ico/16/wecview.gif', 'button', $lAtt);
-            } else if ($liwec > 1) {
-              $this -> addBtn('act', lan('wec.view'), 'go("index.php?act=job-'.$this -> mSrc.'-fil&sub=wec&src='.$this -> mSrc.'&jobid='.$this -> mJobId.'")', 'img/ico/16/wecview.gif', 'button', $lAtt);
-            }
-          }
-        }
-      }
-    }
+    //         if ($liwec == 1) {
+    //           $this -> addBtn('act', lan('wec.view'), 'go("'.$lUrl.'&src='.$this -> mSrc.'&jid='.$this -> mJobId.'","'.CCor_Cfg::get('wec.view', '').'")', 'img/ico/16/wecview.gif', 'button', $lAtt);
+    //         } else if ($liwec > 1) {
+    //           $this -> addBtn('act', lan('wec.view'), 'go("index.php?act=job-'.$this -> mSrc.'-fil&sub=wec&src='.$this -> mSrc.'&jobid='.$this -> mJobId.'")', 'img/ico/16/wecview.gif', 'button', $lAtt);
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   public function setJob($aJob) {

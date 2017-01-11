@@ -32,7 +32,7 @@ define('rdAll',    15);
 // Message types
 define('mtNone',  0);
 define('mtUser',  1);
-define('mtDebug', 2);
+define('mtDebug', 2);	//I think debugging mode.
 define('mtPhp',   4);
 define('mtSql',   8);
 define('mtApi',   16);
@@ -41,7 +41,7 @@ define('mtAll',   63);
 
 // Message levels
 define('mlNone',  0);
-define('mlInfo',  1);
+define('mlInfo',  1);		//We are passing this value for dbg method. 
 define('mlWarn',  2);
 define('mlError', 4);
 define('mlFatal', 8);
@@ -174,7 +174,7 @@ define('FLAG_STATE_ACTIVATE', 1);
 define('FLAG_STATE_CONFIRMED', 2);
 define('FLAG_STATE_CLOSED', 4);
 
-define('FLAG_TYP' , 'XXX_FLAG_TYP_XXX');// wird genutzt als Alias! & in mytask: protected function getTdXXX_FLAG_TYP_XXX()
+define('FLAG_TYP' , 'XXX_FLAG_TYP_XXX'); // Is used as an alias! & In mytask: protected function getTdXXX_FLAG_TYP_XXX ()  
 define('FLAG_STATE_AMENDMENT', 1);
 define('FLAG_STATE_CONDITIONAL', 2);
 define('FLAG_STATE_APPROVED', 3);

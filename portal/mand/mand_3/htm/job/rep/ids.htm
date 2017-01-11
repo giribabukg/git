@@ -1,0 +1,234 @@
+<script type="text/javascript" src="mand/mand_3/scripts/3_functions.js"></script>
+<div class="th1">
+	<a href="javascript:cpl('frm.project','cpl.{src}.project')" class="db w800" style="display:inline-block;width:51%;">General Printer Details</a>
+	<a href="javascript:cpl('frm.project','cpl.{src}.project')" class="db w800" style="display:inline-block;width:47%;">Legacy Printer Information</a>
+</div>
+<div id="frm.project" style="display:{display}" class="frm p8 w800">
+	<div id="topleft" style="width: calc(50% - 20px); float:left; height: 320px; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">	
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="ar nw w100">{bez.jobnr}</td>
+				<td>{txt.jobnr}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.corecusid}</td>
+				<td>{val.corecusid}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.pro_printer}</td>
+				<td>{val.pro_printer}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.pro_address}</td>
+				<td>{val.pro_address}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.house_no}</td>
+				<td>{val.house_no}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.zip_code}</td>
+				<td>{val.zip_code}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.city}</td>
+				<td>{val.city}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.country}</td>
+				<td>{val.country}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.pro_contact}</td>
+				<td>{val.pro_contact}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.email}</td>
+				<td>{val.email}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.pro_telephone}</td>
+				<td>{val.pro_telephone}</td>
+			</tr>
+		</table>
+	</div>
+	<div id="topright" style="width:calc(50% - 20px); float:right; height: 320px; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">	
+		<table border="0" cellpadding="2" cellspacing="0" width="100%">
+			<tr>
+				<td class="nw ar">{bez.cusgroup1}</td>
+				<td>{val.cusgroup1}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.printerno}</td>
+				<td>{val.printerno}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.customername}</td>
+				<td>{val.customername}</td>
+			</tr>
+			<tr>
+				<td class="ar nw w100">{bez.customerresponsible}</td>
+				<td>{val.customerresponsible}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.corporate_code}</td>
+				<td>{val.corporate_code}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_search_term}</td>
+				<td>{val.profile_search_term}</td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>
+
+
+
+<div class="th1">
+	<a href="javascript:cpl('frm.ids','cpl.{src}.ids')" class="db w800" style="display:inline-block;width:51%;">{lan.lib.spec}</a>
+	<a href="javascript:cpl('frm.ids','cpl.{src}.ids')" class="db w800" style="display:inline-block;width:47%;">{lan.lib.suscription}</a>
+</div>
+<div id="frm.ids" style="display:{display}" class="frm p8 w800">
+	<div id="topleft" style="width: calc(50% - 20px); float:left; height: 450px; margin-right: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="ar nw w100">{bez.creationdate}</td>
+				<td>{val.creationdate}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.sitespec}</td>
+				<td>{val.sitespec}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.plant_spec}</td>
+				<td>{val.plant_spec}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.spec}</td>
+				<td>{val.spec}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="nw ar"><b>{lan.lib.approval_by}</b></td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.printerresponsible}</td>
+				<td>{val.printerresponsible}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.validityexpiring}</td>
+				<td>{val.validityexpiring}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div id="topright" style="width:48%; float:right; height: 450px; margin-left: 5px; padding: 5px; border: 1px solid #455560; border-radius: 5px;">
+		<table border="0" cellpadding="2" cellspacing="0">
+			<tr>
+				<td class="ar nw w60"></td>
+				<td>{val.number_sub}</td>
+			</tr>
+			<tr>
+				<td class="nw ar w60 sub01">{bez.matthewssite01}</td>
+				<td class="sub01">{val.matthewssite01} <button class="btn barbutton" style="position: relative; top: 4px;" onclick="subAdd();" type="button"><img alt="" src="img/wave8/ico/16/new-hi.gif"></button></td>
+				<td class="nw ar sub01">{bez.plantno01}</td>
+				<td class="sub01">{val.plantno01}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub02">{bez.matthewssite02}</td>
+				<td class="sub02">{val.matthewssite02}</td>
+				<td class="nw ar sub02">{bez.plantno02}</td>
+				<td class="sub02">{val.plantno02}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub03">{bez.matthewssite03}</td>
+				<td class="sub03">{val.matthewssite03}</td>
+				<td class="nw ar sub03">{bez.plantno03}</td>
+				<td class="sub03">{val.plantno03}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub04">{bez.matthewssite04}</td>
+				<td class="sub04">{val.matthewssite04}</td>
+				<td class="nw ar sub04">{bez.plantno04}</td>
+				<td class="sub04">{val.plantno04}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub05">{bez.matthewssite05}</td>
+				<td class="sub05">{val.matthewssite05}</td>
+				<td class="nw ar sub05">{bez.plantno05}</td>
+				<td class="sub05">{val.plantno05}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub06">{bez.matthewssite06}</td>
+				<td class="sub06">{val.matthewssite06}</td>
+				<td class="nw ar sub06">{bez.plantno06}</td>
+				<td class="sub06">{val.plantno06}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub07">{bez.matthewssite07}</td>
+				<td class="sub07">{val.matthewssite07}</td>
+				<td class="nw ar sub07">{bez.plantno07}</td>
+				<td class="sub07">{val.plantno07}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub08">{bez.matthewssite08}</td>
+				<td class="sub08">{val.matthewssite08}</td>
+				<td class="nw ar sub08">{bez.plantno08}</td>
+				<td class="sub08">{val.plantno08}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub09">{bez.matthewssite09}</td>
+				<td class="sub09">{val.matthewssite09}</td>
+				<td class="nw ar sub09">{bez.plantno09}</td>
+				<td class="sub09">{val.plantno09}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub10">{bez.matthewssite10}</td>
+				<td class="sub10">{val.matthewssite10}</td>
+				<td class="nw ar sub10">{bez.plantno10}</td>
+				<td class="sub10">{val.plantno10}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub11">{bez.matthewssite11}</td>
+				<td class="sub11">{val.matthewssite11}</td>
+				<td class="nw ar sub11">{bez.plantno11}</td>
+				<td class="sub11">{val.plantno11}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub12">{bez.matthewssite12}</td>
+				<td class="sub12">{val.matthewssite12}</td>
+				<td class="nw ar sub12">{bez.plantno12}</td>
+				<td class="sub12">{val.plantno12}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub13">{bez.matthewssite13}</td>
+				<td class="sub13">{val.matthewssite13}</td>
+				<td class="nw ar sub13">{bez.plantno13}</td>
+				<td class="sub13">{val.plantno13}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub14">{bez.matthewssite14}</td>
+				<td class="sub14">{val.matthewssite14}</td>
+				<td class="nw ar sub14">{bez.plantno14}</td>
+				<td class="sub14">{val.plantno14}</td>
+			</tr>
+			<tr>
+				<td class="nw ar sub15">{bez.matthewssite15}</td>
+				<td class="sub15">{val.matthewssite15}</td>
+				<td class="nw ar sub15">{bez.plantno15}</td>
+				<td class="sub15">{val.plantno15}</td>
+			</tr>
+		</table>
+	</div>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+</table>
+</div>

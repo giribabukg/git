@@ -49,18 +49,17 @@ class CInc_Cor_TblIte extends CCor_Qry implements IteratorAggregate {
       } elseif (in_array($this -> mTyp, $lJob)) {
       $this -> mAddUserCondition = TRUE;
         $this -> mAddGroupCondition = TRUE;
+      }
     }
-  }
-  if ($aTbl == 'all') {
-    $this -> mUsr = CCor_Usr::getInstance();
-    $lJobTypes = $this -> getJobtypes();
-    $lCountJobTypes = count($lJobTypes);
-    $lSrc = ($lCountJobTypes == 0) ? 'rep' : $lJobTypes;
-    $this -> mMultiTbls = $lSrc;
-    $this -> mAddUserCondition = TRUE;
-    $this -> mAddGroupCondition = TRUE;
-  }
-
+    if ($aTbl == 'all') {
+      $this -> mUsr = CCor_Usr::getInstance();
+      $lJobTypes = $this -> getJobtypes();
+      $lCountJobTypes = count($lJobTypes);
+      $lSrc = ($lCountJobTypes == 0) ? 'rep' : $lJobTypes;
+      $this -> mMultiTbls = $lSrc;
+      $this -> mAddUserCondition = TRUE;
+      $this -> mAddGroupCondition = TRUE;
+    }
   }
 
   public function addUserConditions($aUId = null) {
@@ -292,6 +291,7 @@ class CInc_Cor_TblIte extends CCor_Qry implements IteratorAggregate {
     $lSql.= $this -> getCondSql();
     $lSql.= $this -> getGroupBy();
     $lSql.= $this -> getOrderSql();
+    error_log('.....CInc_Cor_TblIte......getIterator()....$lSql.....'.var_export($lSql,true)."\n",3,'logggg.txt');
     if(!$this -> mWithoutLimit){
       if (!empty($this -> mLimit)) {
         $lSql.= ' LIMIT '.$this -> mLimit;

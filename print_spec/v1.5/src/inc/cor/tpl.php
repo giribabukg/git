@@ -46,6 +46,7 @@ class CInc_Cor_Tpl extends CCor_Ren {
       $lRetDefault = 'img/default/'.$aFilename;
       $lRet = 'img/'.$aFilename;
     }
+
     if ($lMandIsDefined && file_exists($lRetMand)) {
       $lRet = $lRetMand;
     } elseif (file_exists($lRetCust)) {
@@ -55,6 +56,7 @@ class CInc_Cor_Tpl extends CCor_Ren {
     } elseif (file_exists($lRetDefault)) {
       $lRet = $lRetDefault;
     }
+    error_log('.....CInc_Cor_Tpl.....getProjectFilename().....$lRet....'.var_export($lRet,true)."\n",3,'logggg.txt');
     return $lRet;
   }
 
@@ -63,6 +65,7 @@ class CInc_Cor_Tpl extends CCor_Ren {
   }
 
   public function setDoc($aCnt) {
+    //error_log('.....Cor Log Cnt..$aCnt...'.$aCnt."\n",3,'logggg.txt');
     $this -> mDoc = $aCnt;
     $this -> mLoaded = TRUE;
   }
@@ -102,6 +105,10 @@ class CInc_Cor_Tpl extends CCor_Ren {
   }
 
   protected function getCont() {
+    // error_log('.....CInc_Cor_Tpl.....getCont.....'.var_export($lMandArr,true)."\n",3,'logggg.txt');
+    // error_log('.....CInc_Cor_Tpl...getCont()....$this -> mFpa.....'.var_export($this -> mFpa,true)."\n",3,'logggg.txt');
+    //error_log('.....CInc_Cor_Tpl....getCont()....$this -> mDoc.....'.var_export($this -> mDoc,true)."\n",3,'logggg.txt');
+    //error_log('.....CInc_Cor_Tpl...getCont()......$this -> mPat.....'.var_export($this -> mPat,true)."\n",3,'logggg.txt');
     if (!empty($this -> mFpa)) {
       foreach($this -> mFpa as $lVal) {
         if (!isset($this -> mPat[$this -> addTags($lVal)]))

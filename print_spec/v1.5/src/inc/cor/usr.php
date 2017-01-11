@@ -82,6 +82,7 @@ class CCor_Usr extends CCor_Obj {
    */
   public static function getAuthId() {
     $lSys = CCor_Sys::getInstance();
+//     error_log('.....$lSys at sys class.....'.var_export($lSys,true)."\n",3,'logggg.txt');
     $lUid = intval($lSys['usr.id']);
     if (0 === $lUid) {
       return FALSE;

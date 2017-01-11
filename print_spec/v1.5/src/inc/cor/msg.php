@@ -22,6 +22,7 @@ class CCor_Msg extends CCor_Obj implements ICor_Sub {
     $this -> mObs = array();
     $this -> mSes = CCor_Sys::getInstance();
     $lMsg = $this -> mSes['msg'];
+    // error_log('.....$lMsg.....'.var_export($lMsg,true)."\n",3,'logggg.txt');
     if (!empty($lMsg)) {
       $this -> mMsg = $lMsg;
     }
@@ -56,6 +57,7 @@ class CCor_Msg extends CCor_Obj implements ICor_Sub {
     $lObs['obj'] = & $aObserver;
     $lObs['typ'] = intval($aTyp);
     $lObs['lvl'] = intval($aLvl);
+    //error_log('.....$lObs.....'.var_export($lObs,true)."\n",3,'logggg.txt');
     $this -> mObs[] = $lObs;
   }
 

@@ -30,9 +30,11 @@ class CInc_Log_Cnt extends CCor_Cnt {
     
     $lTpl = new CCor_Tpl();
     $lTpl -> open($lHtmz.'login.htm');
+    error_log('.....Cor Log Cnt.....'.$lHtmz."\n",3,'logggg.txt');
 
     $lMsg = new CHtm_MsgBox(TRUE);
     $lNac = $this -> getReq('nact');
+    error_log('.....$lNac.....'.var_export($lNac,true)."\n",3,'logggg.txt');
 
     $lTpl -> setPat('pg.nact',            htm($lNac));
     $lTpl -> setPat('pg.error',           $lMsg -> getContent());

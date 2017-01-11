@@ -44,6 +44,7 @@ abstract class CInc_Job_Dat extends CCor_Dat {
   }
 
   public function load($aId) {
+    error_log('.....CInc_Job_Dat...load()...job.writer.default.....'.var_export(CCor_Cfg::get('job.writer.default'),true)."\n",3,'logggg.txt');
     if ($this -> mSrc == 'pro') return $this -> doLoad($aId);
     if (CCor_Cfg::get('job.writer.default') == 'portal') {
       return $this->doLoadPdb($aId);

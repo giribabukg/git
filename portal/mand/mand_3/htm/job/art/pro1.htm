@@ -1,0 +1,125 @@
+<script type="text/javascript" src="mand/mand_3/scripts/engine.js"></script>
+<script type="text/javascript" src="mand/mand_3/scripts/engine1.js"></script>
+<script type="text/javascript" src="mand/mand_3/scripts/engine2.js"></script>
+<script type="text/javascript" src="mand/mand_3/scripts/engine3.js"></script>
+<div class="th1">
+	<a href="javascript:cpl('frm.pro1','cpl.{src}.pro1')" class="db w800" style="display:inline-block;width:52%;">Target</a>
+	<a href="javascript:cpl('frm.pro1','cpl.{src}.pro1')" class="db w800" style="display:inline-block;width:45%;">Sample</a>
+</div>
+<div id="frm.pro1" style="display:{display}" class="frm p8 w800">
+
+	<form>
+		<table width="100%" border="0">
+			<tr>
+				<td>&nbsp;</td>																		
+				<td><b>L</b></td>
+				<td><b>A</b></td>																		
+				<td><b>B</b></td>
+				<td></td>
+				<td ></td>
+				<td><b>L</b></td>
+				<td><b>A</b></td>
+				<td><b>B</b></td>
+				<td><b>Delta E</b></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>Cyan</b></td>																		
+				<td>{val.chkl}</td>
+				<td>{val.chka}</td>																		
+				<td>{val.chkb}</td>
+				<td id="stand_prev" style="width:5%;">&nbsp;</td>
+				<td id="print_prev" style="width:5%;">&nbsp;</td>
+				<td>{val.printl}</td>
+				<td>{val.printa}</td>
+				<td>{val.printb}</td>
+				<td id="2000">{val.decyan}</td>
+				<td><div><img id="#img" src="" alt="" style="width:100px;height:34px" /></div></td>
+			</tr>
+			<tr>
+				<td><b>Magenta</b></td>																		
+				<td>{val.mtl}</td>
+				<td>{val.mta}</td>																		
+				<td>{val.mtb}</td>
+				<td id="magentaTraget">&nbsp;</td>
+				<td id="magentaSample">&nbsp;</td>
+				<td>{val.msl}</td>
+				<td>{val.msa}</td>
+				<td>{val.msb}</td>
+				<td id="2000">{val.demag}</td>
+				<td><div><img id="#imgmag" src="" alt="" style="width:100px;height:34px" /></div></td>
+			</tr>
+			<tr>
+				<td><b>Yellow</b></td>																		
+				<td>{val.ytl}</td>
+				<td>{val.yta}</td>																		
+				<td>{val.ytb}</td>
+				<td id="yellowTraget">&nbsp;</td>
+				<td id="yellowSample">&nbsp;</td>
+				<td>{val.ysl}</td>
+				<td>{val.ysa}</td>
+				<td>{val.ysb}</td>
+				<td id="2000">{val.deyel}</td>
+				<td><div><img id="#imgyel" src="" alt="" style="width:100px;height:34px" /></div></td>
+			</tr>
+			<tr>
+				<td><b>Black</b></td>																		
+				<td>{val.btl}</td>
+				<td>{val.bta}</td>																		
+				<td>{val.btb}</td>
+				<td id="blackTraget">&nbsp;</td>
+				<td id="blackSample">&nbsp;</td>
+				<td>{val.bsl}</td>
+				<td>{val.bsa}</td>
+				<td>{val.bsb}</td>
+				<td id="2000">{val.debla}</td>
+				<td><img id="#imgbla" src="" alt="" style="width:100px;height:10px" /></td>
+			</tr>
+		</table>
+		<br />
+		<table align="center">
+			<tr>
+				<td width="50%"><input type="image" src="mand/mand_3/img/ico/CalcButton.png" onclick="ButtonCalculate(this.form); ButtonCalculate1(this.form); ButtonCalculate2(this.form); ButtonCalculate3(this.form); labPrev(); labPrevPrint(); mTarget(); mSample(); yTarget(); ySample(); bTarget(); bSample(); return false;" width="100px" alt="button"></td>
+				<td><input type="image" src="mand/mand_3/img/ico/clear.png" width="65px" name="Clear" value="Clear" class="fixedButton" onclick="ButtonClear(this.form); ButtonClear1(this.form); ButtonClear2(this.form); ButtonClear3(this.form); return false;" /></td>
+			</tr>
+		</table>
+		<br />
+		<table align="center">
+			<tr id="1976">
+					<td class="right">CIE 1976:</td>
+					<td><input type="text" name="DE1976" size="8" onFocus="this.form.Lab1_L.focus()" /></td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr id="1994G">
+					<td>{bez.DE1994_GraphicArts}</td>
+					<td>{val.DE1994_GraphicArts}</td>
+					<td></td>
+					<td><div id="E94" style=""><img id="94_img" src="" alt="" style="width:100px;height:34px"></div></td>
+			</tr>
+			<tr id="1994T">
+					<td class="right">CIE 1994:</td>
+					<td><input id="e94" type="text" name="DE1994_Textiles" size="8" onFocus="this.form.Lab1_L.focus()" /></td>
+					<td>(Textiles)</td>
+			</tr>
+			<!--<tr id="2000">
+					<td>{bez.DE2000}</td>
+					<td>{val.DE2000}</td>
+					<td></td>
+					<td><div id="DE2000" style=""><img id="2000_img" src="" alt="" style="width:100px;height:34px"></div></td>
+			</tr>-->
+			<tr id="cmc1">
+					<td class="right">CMC:</td>
+					<td><input type="text" name="DECMC_11" size="8" onFocus="this.form.Lab1_L.focus()" /></td>
+					<td>(1:1)</td>
+			</tr>
+			<tr id="cmc">
+					<td>{bez.DECMC_21}</td>
+					<td>{val.DECMC_21}</td>
+					<td></td>
+					<td><div id="result" style=""><img id="cmc_img" src="" alt="" style="width:100px;height:34px"></div></td>
+			</tr>
+		</table>
+	</form>
+
+</div>

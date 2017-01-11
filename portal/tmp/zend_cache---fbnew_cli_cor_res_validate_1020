@@ -1,0 +1,90 @@
+a:65:{i:62;a:6:{s:2:"id";s:2:"62";s:4:"mand";s:2:"-2";s:5:"alias";s:9:"g.float10";s:4:"name";s:11:"Cust.Number";s:13:"validate_type";s:5:"float";s:7:"options";a:1:{s:6:"digits";s:2:"10";}}i:56;a:6:{s:2:"id";s:2:"56";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.float.5/3+MAX9";s:4:"name";s:12:"General: BWR";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:3:"max";s:1:"9";s:6:"digits";s:1:"5";s:8:"decimals";s:1:"3";}}i:3;a:5:{s:2:"id";s:1:"3";s:4:"mand";s:2:"-2";s:5:"alias";s:6:"g.date";s:4:"name";s:13:"General: Date";s:13:"validate_type";s:4:"date";}i:51;a:6:{s:2:"id";s:2:"51";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.10/2";s:4:"name";s:37:"General: Float, 10 digits, 2 decimals";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:6:"digits";s:2:"10";s:3:"min";s:1:"0";s:8:"decimals";s:1:"2";}}i:50;a:6:{s:2:"id";s:2:"50";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.float.10/2+";s:4:"name";s:47:"General: Float, 10 digits, 2 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"2";s:6:"digits";s:2:"10";s:3:"min";s:1:"0";}}i:52;a:6:{s:2:"id";s:2:"52";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.float.10/3+";s:4:"name";s:47:"General: Float, 10 digits, 3 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"3";s:6:"digits";s:2:"10";s:3:"min";s:1:"0";}}i:53;a:6:{s:2:"id";s:2:"53";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.float.12/2+";s:4:"name";s:47:"General: Float, 12 digits, 2 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"2";s:6:"digits";s:2:"12";s:3:"min";s:1:"0";}}i:54;a:6:{s:2:"id";s:2:"54";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.float.13/3+";s:4:"name";s:47:"General: Float, 13 digits, 3 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"3";s:6:"digits";s:2:"13";s:3:"min";s:1:"0";}}i:55;a:6:{s:2:"id";s:2:"55";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.float.15/3+";s:4:"name";s:47:"General: Float, 15 digits, 3 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"3";s:6:"digits";s:2:"15";s:3:"min";s:1:"0";}}i:14;a:6:{s:2:"id";s:2:"14";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.float.4/2";s:4:"name";s:36:"General: Float, 4 digits, 2 decimals";s:13:"validate_type";s:5:"float";s:7:"options";a:2:{s:8:"decimals";s:1:"2";s:6:"digits";s:1:"4";}}i:47;a:6:{s:2:"id";s:2:"47";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.4/2+";s:4:"name";s:46:"General: Float, 4 digits, 2 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"2";s:6:"digits";s:1:"4";s:3:"min";s:1:"0";}}i:15;a:6:{s:2:"id";s:2:"15";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.5/2+";s:4:"name";s:46:"General: Float, 5 digits, 2 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"2";s:6:"digits";s:1:"5";s:3:"min";s:1:"0";}}i:49;a:6:{s:2:"id";s:2:"49";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.5/3+";s:4:"name";s:46:"General: Float, 5 digits, 3 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:6:"digits";s:1:"5";s:3:"min";s:1:"0";s:8:"decimals";s:1:"3";}}i:17;a:6:{s:2:"id";s:2:"17";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.float.6/2";s:4:"name";s:36:"General: Float, 6 digits, 2 decimals";s:13:"validate_type";s:5:"float";s:7:"options";a:4:{s:3:"max";s:4:"9999";s:3:"min";s:1:"0";s:6:"digits";s:1:"6";s:8:"decimals";s:1:"2";}}i:48;a:6:{s:2:"id";s:2:"48";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.6/2+";s:4:"name";s:46:"General: Float, 6 digits, 2 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"2";s:6:"digits";s:1:"6";s:3:"min";s:1:"0";}}i:18;a:6:{s:2:"id";s:2:"18";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.7/3+";s:4:"name";s:46:"General: Float, 7 digits, 3 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:4:{s:6:"digits";s:1:"7";s:3:"max";s:4:"9999";s:3:"min";s:1:"0";s:8:"decimals";s:1:"3";}}i:19;a:6:{s:2:"id";s:2:"19";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.float.8/6+";s:4:"name";s:46:"General: Float, 8 digits, 6 decimals, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:4:{s:6:"digits";s:1:"8";s:3:"max";s:2:"99";s:3:"min";s:1:"0";s:8:"decimals";s:1:"6";}}i:2;a:6:{s:2:"id";s:1:"2";s:4:"mand";s:2:"-2";s:5:"alias";s:9:"g.float.+";s:4:"name";s:24:"General: Float, positive";s:13:"validate_type";s:5:"float";s:7:"options";a:1:{s:3:"min";s:1:"0";}}i:11;a:6:{s:2:"id";s:2:"11";s:4:"mand";s:2:"-2";s:5:"alias";s:8:"g.int.99";s:4:"name";s:22:"General: Integer, 0-99";s:13:"validate_type";s:3:"int";s:7:"options";a:2:{s:3:"max";s:2:"99";s:3:"min";s:1:"0";}}i:12;a:6:{s:2:"id";s:2:"12";s:4:"mand";s:2:"-2";s:5:"alias";s:9:"g.int.999";s:4:"name";s:23:"General: Integer, 0-999";s:13:"validate_type";s:3:"int";s:7:"options";a:2:{s:3:"max";s:3:"999";s:3:"min";s:1:"0";}}i:13;a:6:{s:2:"id";s:2:"13";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.int.9999";s:4:"name";s:24:"General: Integer, 0-9999";s:13:"validate_type";s:3:"int";s:7:"options";a:2:{s:3:"max";s:4:"9999";s:3:"min";s:1:"0";}}i:45;a:6:{s:2:"id";s:2:"45";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.int.99999";s:4:"name";s:25:"General: Integer, 0-99999";s:13:"validate_type";s:3:"int";s:7:"options";a:2:{s:3:"max";s:5:"99999";s:3:"min";s:1:"0";}}i:46;a:6:{s:2:"id";s:2:"46";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.int.999999";s:4:"name";s:26:"General: Integer, 0-999999";s:13:"validate_type";s:3:"int";s:7:"options";a:2:{s:3:"max";s:6:"999999";s:3:"min";s:1:"0";}}i:1;a:6:{s:2:"id";s:1:"1";s:4:"mand";s:2:"-2";s:5:"alias";s:7:"g.int.+";s:4:"name";s:26:"General: Integer, positive";s:13:"validate_type";s:3:"int";s:7:"options";a:1:{s:3:"min";s:1:"0";}}i:61;a:6:{s:2:"id";s:2:"61";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.string.min1";s:4:"name";s:25:"General: non-empty String";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"minlen";s:1:"1";}}i:39;a:6:{s:2:"id";s:2:"39";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.1";s:4:"name";s:29:"General: String, 01 character";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"1";}}i:65;a:6:{s:2:"id";s:2:"65";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.2";s:4:"name";s:30:"General: String, 02 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"2";}}i:4;a:6:{s:2:"id";s:1:"4";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.3";s:4:"name";s:30:"General: String, 03 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"3";}}i:5;a:6:{s:2:"id";s:1:"5";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.4";s:4:"name";s:30:"General: String, 04 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"4";}}i:6;a:6:{s:2:"id";s:1:"6";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.5";s:4:"name";s:30:"General: String, 05 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"5";}}i:7;a:6:{s:2:"id";s:1:"7";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.8";s:4:"name";s:30:"General: String, 08 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"8";}}i:40;a:6:{s:2:"id";s:2:"40";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.string.9";s:4:"name";s:30:"General: String, 09 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:1:"9";}}i:8;a:6:{s:2:"id";s:1:"8";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.10";s:4:"name";s:30:"General: String, 10 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"10";}}i:58;a:6:{s:2:"id";s:2:"58";s:4:"mand";s:2:"-2";s:5:"alias";s:12:"g.string.120";s:4:"name";s:31:"General: String, 120 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:3:"120";}}i:41;a:6:{s:2:"id";s:2:"41";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.13";s:4:"name";s:30:"General: String, 13 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"13";}}i:9;a:6:{s:2:"id";s:1:"9";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.15";s:4:"name";s:30:"General: String, 15 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"15";}}i:42;a:6:{s:2:"id";s:2:"42";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.18";s:4:"name";s:30:"General: String, 18 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"18";}}i:43;a:6:{s:2:"id";s:2:"43";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.20";s:4:"name";s:30:"General: String, 20 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"20";}}i:44;a:6:{s:2:"id";s:2:"44";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.25";s:4:"name";s:30:"General: String, 25 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"25";}}i:10;a:6:{s:2:"id";s:2:"10";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.30";s:4:"name";s:30:"General: String, 30 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"30";}}i:57;a:6:{s:2:"id";s:2:"57";s:4:"mand";s:2:"-2";s:5:"alias";s:11:"g.string.40";s:4:"name";s:30:"General: String, 40 characters";s:13:"validate_type";s:6:"string";s:7:"options";a:1:{s:6:"maxlen";s:2:"40";}}i:38;a:6:{s:2:"id";s:2:"38";s:4:"mand";s:2:"-2";s:5:"alias";s:15:"g.magnification";s:4:"name";s:13:"Magnification";s:13:"validate_type";s:5:"float";s:7:"options";a:3:{s:8:"decimals";s:1:"6";s:6:"digits";s:1:"8";s:3:"max";s:1:"9";}}i:36;a:6:{s:2:"id";s:2:"36";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.angletype";s:4:"name";s:16:"Value: AngleType";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:27:"7.5
+-7.5
+Standard
+offset";}}i:29;a:6:{s:2:"id";s:2:"29";s:4:"mand";s:2:"-2";s:5:"alias";s:14:"g.enum.cadline";s:4:"name";s:14:"Value: CadLine";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:30:"ACCORDING DRAWING
+LEFT
+RIGHT";}}i:37;a:6:{s:2:"id";s:2:"37";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.cadsource";s:4:"name";s:16:"Value: CadSource";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:49:"CUSTOMER PORTAL
+DATA MEDIUM
+DRAWING
+EMAIL
+FTP";}}i:25;a:6:{s:2:"id";s:2:"25";s:4:"mand";s:2:"-2";s:5:"alias";s:14:"g.enum.cadview";s:4:"name";s:14:"Value: CadView";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:15:"inside
+outside";}}i:60;a:6:{s:2:"id";s:2:"60";s:4:"mand";s:2:"-2";s:5:"alias";s:15:"g.enum.datatype";s:4:"name";s:15:"Value: Datatype";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:19:"LEN
+TIF
+PDF
+FILM";}}i:23;a:6:{s:2:"id";s:2:"23";s:4:"mand";s:2:"-2";s:5:"alias";s:18:"g.enum.digi/analog";s:4:"name";s:18:"Value: Digi/Analog";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:17:"Digital
+Analogue";}}i:28;a:6:{s:2:"id";s:2:"28";s:4:"mand";s:2:"-2";s:5:"alias";s:18:"g.enum.filesformat";s:4:"name";s:18:"Value: FilesFormat";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:63:"PRINT PDF
+ESKO DATA
+ARTPRO
+ILLUSTRATOR
+OPEN FILES
+TIF
+LEN";}}i:30;a:6:{s:2:"id";s:2:"30";s:4:"mand";s:2:"-2";s:5:"alias";s:19:"g.enum.filetransfer";s:4:"name";s:19:"Value: FileTransfer";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:47:"FTP LINK
+EXTERNAL UPLOAD
+DATA CARRIER
+E-MAIL";}}i:27;a:6:{s:2:"id";s:2:"27";s:4:"mand";s:2:"-2";s:5:"alias";s:13:"g.enum.legend";s:4:"name";s:13:"Value: Legend";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:65:"PRINTER LEGEND
+BRAND OWNER LEGEND
+CUSTOMER LEGEND
+PHARMA
+NONE";}}i:64;a:6:{s:2:"id";s:2:"64";s:4:"mand";s:2:"-2";s:5:"alias";s:17:"g.enum.linescreen";s:4:"name";s:18:"Value: Line-Screen";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:34:"LINE
+SCREEN
+LINE/SCREEN
+OVERALL";}}i:63;a:6:{s:2:"id";s:2:"63";s:4:"mand";s:2:"-2";s:5:"alias";s:10:"g.enum.new";s:4:"name";s:17:"Value: New/Repeat";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:11:"NEW
+REPEAT";}}i:34;a:6:{s:2:"id";s:2:"34";s:4:"mand";s:2:"-2";s:5:"alias";s:21:"g.enum.platethickness";s:4:"name";s:21:"Value: PlateThickness";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:94:"0.76
+1.14
+1.70
+2.29
+2.54
+2.72
+2.84
+3.18
+3.94
+4.70
+5.00
+5.50
+6.00
+6.35
+6.85
+7.11";}}i:32;a:6:{s:2:"id";s:2:"32";s:4:"mand";s:2:"-2";s:5:"alias";s:19:"g.enum.platetypefor";s:4:"name";s:19:"Value: PlatetypeFor";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:41:"line
+line/screen
+screen
+varnish
+white";}}i:22;a:6:{s:2:"id";s:2:"22";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.printcard";s:4:"name";s:16:"Value: PrintCard";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:14:"PDF A4
+PDF A3";}}i:66;a:6:{s:2:"id";s:2:"66";s:4:"mand";s:2:"-2";s:5:"alias";s:18:"g.enum.printmethod";s:4:"name";s:18:"Value: PrintMethod";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:38:"01
+02
+03
+04
+05
+06
+07
+08
+09
+10";}}i:31;a:6:{s:2:"id";s:2:"31";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.printtype";s:4:"name";s:16:"Value: PrintType";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:49:"FACE PRINTING
+REVERSE PRINTING
+FACE AND REVERSE";}}i:24;a:6:{s:2:"id";s:2:"24";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.printview";s:4:"name";s:16:"Value: PrintView";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:15:"INSIDE
+OUTSIDE";}}i:26;a:6:{s:2:"id";s:2:"26";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.proofship";s:4:"name";s:20:"Value: ProofShipping";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:22:"Mail
+Portal
+Shipment";}}i:21;a:6:{s:2:"id";s:2:"21";s:4:"mand";s:2:"-2";s:5:"alias";s:16:"g.enum.proofsize";s:4:"name";s:16:"Value: Proofsize";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:17:"A4
+A3
+100%
+50%";}}i:33;a:6:{s:2:"id";s:2:"33";s:4:"mand";s:2:"-2";s:5:"alias";s:17:"g.enum.prooftypes";s:4:"name";s:17:"Value: Prooftypes";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:268:"Contractproof GMG/Epson
+Contractproof Kodak
+Contractproof Roland Solvent
+Contractproof Roland UV
+Contractproof WT/Epson
+Layoutproof Druckastralon
+Layoutproof HP
+Layoutproof Laserprinter
+Softproof K-Flow
+Softproof PDF
+Softproof PDF Separated
+Softproof PDF 4C";}}i:35;a:6:{s:2:"id";s:2:"35";s:4:"mand";s:2:"-2";s:5:"alias";s:17:"g.enum.resolution";s:4:"name";s:17:"Value: Resolution";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:46:"1800
+1954
+2105
+2300
+2400
+2540
+2800
+4000";}}i:59;a:6:{s:2:"id";s:2:"59";s:4:"mand";s:2:"-2";s:5:"alias";s:18:"g.enum.platesleeve";s:4:"name";s:19:"Value: Sleeve/Plate";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:13:"PLATE
+SLEEVE";}}i:20;a:6:{s:2:"id";s:2:"20";s:4:"mand";s:2:"-2";s:5:"alias";s:9:"g.enum.yn";s:4:"name";s:13:"Value: yes/no";s:13:"validate_type";s:4:"enum";s:7:"options";a:1:{s:5:"items";s:9:"YES
+NO
+";}}}

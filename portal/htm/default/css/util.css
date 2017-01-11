@@ -1,0 +1,171 @@
+@CHARSET "utf-8";
+* {font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size:11px; color:#333;}
+img {border:0px;}
+a {text-decoration:none;}
+:focus {outline:0px;}
+ol, ul {list-style:none;}
+table {border-collapse:separate; border-spacing:0px;}
+caption, th, td {text-align:left; font-weight:normal;}
+
+/* special */
+.nw {white-space:nowrap;}
+
+/* display */
+.db {display:block;}
+.di {display:inline;}
+.dib {display:inline-block;}
+.dn {display:none;}
+
+/* text */
+.bld {font-weight:bold;}
+
+/* text alignment */
+.ac {text-align:center;}
+.al {text-align:left;}
+.ar {text-align:right;}
+.tac {text-align:center;}
+.tar {text-align:right;}
+.tal {text-align:left;}
+
+/* vertical alignment */
+.vam {vertical-align:middle;}
+.vat {vertical-align:top;}
+
+/* padding */
+.p0 {padding:0px;}
+.p2 {padding:2px;}
+.p4 {padding:4px;}
+.p8 {padding:8px;}
+.p16 {padding:16px;}
+.ptb7 {padding:7px 0px;}
+.ptb4 {padding:4px 0px;}
+.pt3 {padding:3px 0px 0px 0px;}
+.pt9 {padding:9px 0px 0px 0px;}
+
+/* width by pixels */
+.tableInline {display: inline-block !important; vertical-align: top !important; }
+.w1 {display:none;}
+.w8 {width:8px;}
+.w10 {width:10px;}
+.w16 {width:16px;}
+.w20 {width:20px;}
+.w22 {width:22px;}
+.w30 {width:30px;}
+.w35 {width:35px;}
+.w40 {width:40px;}
+.w50 {width:50px;}
+.w65 {width:65px;}
+.w70 {width:70px;}
+.w75 {width:75px;}
+.w90 {width:90px;}
+.w93 {width:93px;}
+.w95 {width:95px;}
+.w100 {width:100px;}
+.w105 {width:105px;}
+.w110 {width:110px;}
+.w115 {width:115px;}
+.w120 {width:120px;}
+.w125 {width:125px;}
+.w130 {width:130px;}
+.w140 {width:140px;}
+.w150 {width:150px;}
+.w155 {width:155px;}
+.w160 {width:160px;}
+.w165 {width:165px;}
+.w170 {width:170px;}
+.w175 {width:175px;}
+.w180 {width:180px;}
+.w190 {width:190px;}
+.w200 {width:200px;}
+.w215 {width:215px;}
+.w225 {width:225px;}
+.w245 {width:245px;}
+.w250 {width:250px;}
+.w255 {width:255px;}
+.w300 {width:300px;}
+.w325 {width:325px;}
+.w330 {width:330px;}
+.w345 {width:345px;}
+.w350 {width:350px;}
+.w375 {width:375px;}
+.w390 {width:390px;}
+.w400 {width:400px;}
+.w416 {width:416px;}
+.w450 {width:450px;}
+.w444 {width:444px;}
+.w480 {width:480px;}
+.w500 {width:500px;}
+.w507 {width:507px;}
+.w514 {width:514px;}
+.w520 {width:520px;}
+.w531 {width:531px;}
+.w550 {width:550px;}
+.w600 {width:600px;}
+.w670 {width:670px;}
+.w700 {width:700px;}
+.w800 {width:800px;}
+.w900 {width:900px;}
+
+/* margins */
+.mt5 {margin-top:5px;}
+.m5 {margin:5px;}
+
+/* height by pixels */
+.h20 {height:20px;}
+.h25 {height:25px;}
+.h30 {height:30px;}
+.h150 {height:150px;}
+.h250 {height:250px;}
+
+/* height by percent */
+.h100p {height:100%;}
+
+/* width by percent */
+.w25p {width:25%;}
+.w50p {width:50%;}
+.w100p {width:100%;}
+
+/* min width */
+.mw1 {min-width:1px;}
+.mw50 {min-width:50px;}
+.mw100 {min-width:100px;}
+.mw200 {min-width:200px;}
+.mw300 {min-width:300px;}
+.mw400 {min-width:400px;}
+
+/* cursor */
+.cp {cursor:pointer;}
+
+/* resize */
+.resb {resize:both;}
+.resh {resize:horizontal;}
+.resn {resize:none;}
+.resv {resize:vertical;}
+
+/* box-sizing */
+.bsbb {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+.bscb {-webkit-box-sizing:content-box; -moz-box-sizing:content-box; box-sizing:content-box;}
+
+/* others */
+.info_button {float:right; margin-bottom:-3px;}
+.spl {font-weight:bold; text-decoration:underline;}
+.br {background-color:#FF9999 !important;}
+.co {background-color:#2ECCFA !important;}
+
+/* width/height of formfields */
+.formw30 input, .formw30 select, .formw30 textarea {width:30px;}
+.formw50 input, .formw50 select, .formw50 textarea {width:50px;}
+.formw80 input, .formw80 select, .formw80 textarea {width:80px;}
+.formw100 input, .formw100 select, .formw100 textarea {width:100px;}
+.formw130 input, .formw130 select, .formw130 textarea {width:130px;}
+.formw150 input, .formw150 select, .formw150 textarea {width:150px;}
+.formw460 input, .formw460 select, .formw460 textarea {width:460px;}
+.formw568 input, .formw568 select, .formw568 textarea {width:568px;}
+.formh130 textarea {min-height:130px !Important;}
+
+.clr { clear: both; }
+.indent {	margin-left: 2em; }
+
+.ui-tooltip {
+  max-width: 700px !important;
+}

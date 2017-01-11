@@ -1,0 +1,94 @@
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	
+function displayRoland() {
+	if(jQuery("*[name='val[profile_roland]']").is(':checked')){	
+		jQuery(".roland").show();	
+	} else {
+		jQuery(".roland").hide();	
+	}
+}
+
+displayRoland();
+jQuery('.field_profile_roland').on('change', function() { displayRoland(); });
+
+});
+
+</script>
+
+<div class="th1 roland">
+	<a href="javascript:cpl('frm.roland','cpl.{src}.roland')" class="db w800" style="display:inline-block;width:51%;">Profile Details Roland Proofer / CGS</a>
+	<a href="javascript:cpl('frm.roland','cpl.{src}.roland')" class="db w800" style="display:inline-block;width:47%;"></a>
+</div>
+<div id="frm.roland" style="display:{display}" class="frm p8 w800 roland">
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="ar nw w100">{bez.profile_proof_roland}</td>
+				<td>{val.profile_proof_roland}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_color_roland}</td>
+				<td>{val.profile_color_roland}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_cgs}</td>
+				<td>{val.profile_cgs}</td>
+			</tr>
+			<tr>
+				<td class="ar nw">{bez.profile_roland_system}</td>
+				<td>{val.profile_roland_system}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_alt_roland}</td>
+				<td>{val.profile_alt_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_type_roland}</td>
+				<td>{val.profile_type_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_gamut_roland}</td>
+				<td>{val.profile_gamut_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profil_measuring_roland}</td>
+				<td>{val.profil_measuring_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_mesuring_device_roland}</td>
+				<td>{val.profile_mesuring_device_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_mesuring_condition_roland}</td>
+				<td>{val.profile_mesuring_condition_roland}</td>
+			</tr>
+			<tr>
+				<td class="nw ar">{bez.profile_degrees_roland}</td>
+				<td>{val.profile_degrees_roland}</td>
+			</tr>
+			
+			
+		</table>
+
+		</td>
+		<td class="w16">&nbsp;</td>
+		<td valign="top">
+
+		<table border="0" cellpadding="2" cellspacing="0" style="width:100%">
+			<tr>
+				<td class="nw ar w100"></td>
+				<td></td>
+			</tr>
+
+		</table>
+		</td>
+	<!--  </tr> -->
+</table>
+<br />
+</div>

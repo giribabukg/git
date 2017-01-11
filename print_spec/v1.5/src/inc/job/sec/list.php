@@ -10,6 +10,8 @@ class CInc_Job_Sec_List extends CJob_List {
     $this -> mWithoutLimit = $aWithoutLimit;
 
     $lCrp = CCor_Res::extract('code', 'id', 'crpmaster');
+    // error_log('.....CInc_Job_Sec_List.....lCrp.....'.var_export($lCrp,true)."\n",3,'logggg.txt');
+    // error_log('.....CInc_Job_Sec_List.....$this -> mSrc.....'.var_export($this -> mSrc,true)."\n",3,'logggg.txt');
     $this -> mCrpId = $lCrp[$this -> mSrc];
 
     $lUsr = CCor_Usr::getInstance();
@@ -25,16 +27,21 @@ class CInc_Job_Sec_List extends CJob_List {
     $this -> mIdField = 'jobid';
 
     $this -> lAplstatus = array();
+    // error_log('.....CInc_Job_Sec_List.....$this -> mCrpId.....'.var_export($this -> mCrpId,true)."\n",3,'logggg.txt');
     $lQry = new CCor_Qry('SELECT status FROM al_crp_status WHERE mand='.MID.' AND crp_id='.$this -> mCrpId.' AND apl=1');
     foreach ($lQry as $lRow) {
       $this -> lAplstatus[] = $lRow['status'];
     }
+    // error_log('.....CInc_Job_Sec_List.....$this -> lAplstatus.....'.var_export($this -> lAplstatus,true)."\n",3,'logggg.txt');
 
     $this -> addFilter('webstatus', lan('lib.status'), $this -> mCrpId);
     if(!CCor_Cfg::get('job-fil.combined', FALSE)) {
       $this -> addFilter('flags', lan('lib.flags'));
     }
     $this -> getFilterbyAlias(); // default: per_prj_verantwortlich
+
+    // error_log('.....CInc_Job_Sec_List.....$this -> mMod.....'.var_export($this -> mMod,true)."\n",3,'logggg.txt');
+    // error_log('.....CInc_Job_Sec_List.....$lUsr -> canInsert($this -> mMod).....'.var_export($lUsr -> canInsert($this -> mMod),true)."\n",3,'logggg.txt');
 
     if ($lUsr -> canInsert($this -> mMod)) {
       $this -> addBtn(lan($this -> mMod.'.new'), 'go("index.php?act='.$this -> mMod.'.new")', '<i class="ico-w16 ico-w16-plus"></i>');

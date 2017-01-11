@@ -46,6 +46,10 @@ class CCor_Sys extends CCor_Dat {
     $this -> mKeyPrefix = $lPfx.$this -> mKeyPrefix;
 
     $lSiz = strlen($this -> mKeyPrefix);
+    // error_log('.....count.....lSiz...'.var_export($lSiz,true)."\n",3,'logggg.txt');
+    // error_log('.....this-mKeyPrefix.....'.var_export($this -> mKeyPrefix,true)."\n",3,'logggg.txt');
+    // error_log('....._SESSION.....'.var_export($_SESSION,true)."\n",3,'logggg.txt');
+    // error_log('.....this -> mVal.....'.var_export($this -> mVal,true)."\n",3,'logggg.txt');
     if (isset($_SESSION)) {
       foreach ($_SESSION as $lKey => $lVal) {
         if (substr($lKey, 0, $lSiz) == $this -> mKeyPrefix) {
@@ -53,6 +57,7 @@ class CCor_Sys extends CCor_Dat {
         }
       }
     }
+    //error_log('.....this -> mVal. after loop....'.var_export($this -> mVal,true)."\n",3,'logggg.txt');
 #    echo '<pre>---sys.php---';var_dump($_SESSION,'#############');echo '</pre>';
   }
 

@@ -1,0 +1,126 @@
+code;mand;grp;name_de;name_en;desc_en;desc_de;level
+wec.view;0;jod;Webcenter Vergleich;Webcenter Compare;Webcenter Compare function;;15
+mnd;0;adm;Mandantenverwaltung;Mandator management;Users/Groups have than the ability to create a new Client on Portal, they can also edit existing clients.;;15
+arc;0;app;Archiv;Archiv;Users or groups can have the right to see/edit/delete Archive jobs;;11
+mand;0;adm;Mandant;Mandator;"User can switch to a different clients from ""Home"", as long as he member of the the other client.";;1
+csv-exp;0;app;CSV Export;CSV Export;User can see the CSV Export Button in the Job lists, so that they can export the jobs into CSV file.;;1
+view-std;0;app;Standart Ansicht;Default View;This will allow the users to save jobs/Archive/Project lists views as standard view. The Standard/Default view will be shown for new users that didn't create there own view yet.;;15
+app-fil;0;dat;Application Files;Application Files;"This rights allow users to upload/delete files under ""General Files"" at the home page";;12
+tpl;0;crp;E-Mail Vorlagen;Email-Templates;This right is for manage the email templates that used from portal to send out e.g when some event is triggered through a status change.;;15
+tab-itm;0;app;Tab;Tab items;"This right give the user the ability to see/manage the Tabs Items under the ""Options/Tabs"" menu";;15
+tab;0;app;Tabtyp;Tab types;"This right give the user the ability to see/manage the ""Tabs"" under the ""Options"" menu";;15
+htg;0;dat;Hilfstabellen (Daten);Helptables (Data);This right allow users to see/manage the a limited amount of helptables and helptables items. Under [user]/Rights/Helptables can you define whic helptables can this user see/manage.;;1
+dbg;0;adm;Debugging;Debugging;This right allow users to see the Debugging messages. Is useful for developers.;;15
+rep-exp;0;app;Berichterstattung Export;Reporting Export;This right allow users to see the button on a joblist (job/arc) to export the reporting table.;;1
+job-his;0;jod;History;History;"This right allow users to see the ""History"" tab in job form.";;15
+sys-svc;0;adm;Services;Services;This right allow users to manage the portal services. This right should be given only for system administrators.;;15
+rig;0;adm;Right Definitions;Right Definitions;This right allow users to manage the portal rights. This right should be given only for system administrators.;;15
+log;0;adm;System Logs;System Logs;This right allow users to manage the portal Logs. This right should be given only for system administrators.;;9
+eve-type;0;crp;Ereignis-Arten;Event Types;This right allow users to manage the Event types that used in the workflow. Usually only unlimited administrators should have this right.;;15
+crp;0;crp;Critical Path;Critical Path;This right allow users to manage the Critical Path/Workflow. Usually only unlimited administrators should have this right.  ;;15
+conditions;0;dat;;Conditions;"This right allow users to manage the ""Conditions"" under the options menu. These conditions could be Simple, AND, OR, APL conditions, and could be used in the workflow to show a certain Status change button or to change a value of an job field according to a certain condition.";;15
+rcv-email;0;usr;Receive APL Emails;Receive APL Emails;This right allow users to activate or deactivate receiving apl invitation Emails.;;1
+cnd;0;adm;Bedingungen;Bedingungen;This is the user-conditions right. With these conditions can you define for some groups/users to see only jobs where they are selected as a group/user in an user-group selection field in jobs. ;;15
+job-download-xfdf;-1;jod;Xfdf Download Link;Xfdf Download Link;"This give the user the ability to see and download the XFDF from WC via SDK. The XFDF file contains the WC comments.
+This Right is connected also to the >job-download-pdf< right. If you do not have the right to see the pdf download link, you will not be able to see the xfdf link too.";"Gibt den Benutzer die M�glichkeit den XFDF download Link zu sehen.
+XFDF ist die Datei die WC Anmerkungen enth�lt.
+Das Recht ist nat�rlich mit dem >job-download-pdf< Recht verbunden, wer nicht den PDF Download link nicht sehen kann, kann die XFDF nicht sehen.";1
+job-download-pdf;-1;jod;Pdf Download Link;Pdf Download Link;This give the user the ability to see and download the PDF from WC via SDK;Gibt den Benutzer die M�glichkeit den PDF download Link zu sehen.;1
+eve;0;crp;Events;Events;The right to manage events, that be could used in the workflow when status change is fired.;;15
+strgru;-1;usr;Strukturgruppen;Structuregroups;Structuregroup administration for Approval Workflows;Strukturgruppen f�r Korrekturuml�ufe administrieren;15
+ast;0;app;Assets;Assets;Right to see the Canto Cumulus / Assets page on Home. This page is mainly used by Intouch UK.;Right to see the Canto Cumulus / Assets page on Home. This page is mainly used by Intouch UK.;15
+fie;0;adm;Job Fields;Job Fields;Right to manage the portal job fields. This right should be given only for unlimited System Administrators.;;15
+chk;0;dat;Checklisten;Checklists;Right to manage the checklists that used for Users/Groups in APL.;;15
+chk-itm;0;dat;Checklisten Items;Checklists Items;Right to manage the Checklists Items;;15
+apl-types;0;crp;Korrekturumlauf Arten;Approval Loop Types;Maintain a list of available Approval Loop Types. Set options for Approval Loops.;Die Liste der verf�gbaren Korrekturumlauf-Arten administrieren. Optionen f�r Korrekturuml�ufe setzen.;15
+job-fil-doc;-1;jod;Job Dokumente;Job documents;Jobs -> Files Tab + Upload Button(Insert);Jobs -> Dateien Reiter + Upload Button(Einf�gen);15
+viewer-annot;-1;dat;WC/Dalim Annotieren;WC/Dalim Annotate;gives the users the privilege to annotate WC or Dalim even if they are not active Revisor, but they will not be able to annotate if annotations mode is prohibited in the web status;Benutzer k�nnen annotieren, selbst wenn die nicht aktive im Umlauf eingeladen sind. Die k�nnen aber trotzdem nicht annotieren wenn es in der Webstatus verboten istl.;4
+rep;0;app;Reports;Reports;"Allow users/groups to see/generate reporting from ""Reporting"" Tab";;15
+arc-fil-doc;-1;jod;Archiv Dokumente;Archive documents;Allow Users to upload documents under files-Documents;;15
+sys-lang;0;adm;Languages;Languages;Allow users to switch between the available portal languages.;;15
+htb;0;dat;Helptables;Helptables;Allow users to see/manage the complete list of the Helptables and Helptables items.;;15
+vie;0;app;Globale Ansichten;Global Views;Allow users to see/edit/delete the global views by the job/project list;;15
+job-his-mails.list;-1;jod;Mails History in Status Change;Mails History in Status Change;Allow users to see the generated email by an status change.;Erlaube die Nutzer, die emails und deren Inhalte zu sehen, die bei einem Status change generiert wurden.;1
+service.portal.link;0;adm;Link zu 5Flow Service Portal;Link zu 5Flow Service Portal;Allow users to see a direct Link to the 5Flow Service Portal in the menu at the homepage.;Allow users to see a direct Link to the 5Flow Service Portal in the menu at the homepage.;1
+prf;0;adm;Preferences Setup;Preferences Setup;Allow users to manage the portal preferences. This right should be given only for system administrators.;;15
+sys-admin;0;adm;Neue Sprache ...;New Language ...;"Allow users to create a new language in the portal. Allow also the users to switch to the independent mand (mand 0).
+
+This should be only given to system administrators.";;15
+opt;0;app;Options;Options;Allow user to see the Option Tab. This right must be given only for Admins.;;1
+apl;0;app;Freigabe Umlauf;Freigabe Umlauf;Allow the users to see the APL block(New Email Button) under the Approval Workflow Tab in the job sheet.;;15
+home-aplfor.filter;-1;app;Apl-Usr Tasks Filter;Apl-Usr Tasks Filter;Allow the user to see an group selection field on the apl tasks header. This allow than the user to the Apl tasks of a certain user. The group selection filter should be defined in the cfg file.;Allow the user to see an group selection field on the apl tasks header. This allow than the user to the Apl tasks of a certain user. The group selection filter should be defined in the cfg file.;1
+usr;0;usr;User;User;;;15
+gru;0;usr;Groups;Groups;;;15
+ser;-1;job;Search;Search;;;1
+img;0;dat;Image Lists;Image Lists;;;15
+job-pro;-1;job;Projects;Projects;;;15
+hol;0;dat;Holidays;Holidays;;;3
+job-fil;0;jod;Files;Files;;;15
+pck;0;dat;Picklists;Picklists;;;15
+gpm;1;jod;Griesson XML Liste;Griesson XML Liste;;;15
+job-pdf;-1;jod;PDF;PDF;;;13
+job-art;-1;job;Artwork;Artwork;;;15
+job-rep;-1;job;Prepress;Prepress;;;15
+job-gpm;1;jod;Griesson XML Job Daten;Griesson XML Job Daten;;;15
+job-sec;-1;job;Master Text;Master Text;;;15
+job-adm;-1;job;Sales Samples;Sales Samples;;;15
+job-mis;-1;job;Miscallaneous;Miscallaneous;;;15
+rol;0;usr;Roles;Roles;;;15
+job-pro-sub;-1;job;Project Items;Project Items;;;15
+job-all;-1;job;Alle Auftr�ge;All Jobs;;;15
+job-apl;-1;jod;Approval Loop;Approval Loop;;;15
+wiz;0;app;Wizards;Wizards;;;15
+usg;0;usr;User-Admin;User-Admin;;;15
+job-wec;-1;dat;Webcenter;Webcenter;;;1
+job-wec-id;-1;dat;Webcenter ID;Webcenter ID;;;2
+usr-info;-1;dat;Benutzerinfos;user infos;;;1
+usr-wecusr;-1;dat;Webcenter Benutzer anlegen;Create Webcenter user;;;1
+anf;0;app;Anfragen;Anfragen;;;15
+ann;0;rtf;Annotationen;Annotationen;;;15
+cho;0;app;Auswahllisten;Auswahllisten;;;8
+usg-info;-1;dat;Useradmin: Benutzerinfos;Useradmin: user infos;;;1
+usg-wecusr;-1;dat;Useradmin: Webcenter Benutzer anlegen;Useradmin: Create Webcenter user;;;1
+job.crp.chg;0;jod;Statuswechsel Sonderfall;Exception Status Change;;;15
+job-wec-pdf;-1;jod;PDF zu WebCenter;PDF to WebCenter;;;1
+usr.lang;-1;usr;Sprache wechseln;Change Language;;;1
+hom;0;app;Startseite;Welcome Page;;;1
+wec.revice.annotation;-1;dat;WebCenter Kommentare bearbeiten;Revice Webcenter comments;;;2
+job-sku;0;job;Shelf Keeping Unit;Shelf Keeping Unit;;;15
+job-sku-sub;0;job;Shelf Keeping Unit Items;Shelf Keeping Unit Items;;;15
+job-flags;0;job;Job Flags;Job Flags;;;15
+usr-crp;-1;usr;User Critical Path;User Critical Path;;;15
+usr-fil;-1;usr;User Job Filter;User Job Filter;;;15
+usr-his;-1;usr;User History;User History;;;15
+usr-mem;-1;usr;User Mitgliedschaft;User Membership;;;15
+usr-opt;-1;usr;User Optionen;User Options;;;15
+wec-dir.st-intern;0;dat;Webcenter Ordner ST-Intern;Webcenter Folder ST-Intern;;;1
+mig;0;adm;Migration;Migration;;;1
+job-pro-status.actualize;0;jod;Projektstatus aktualisieren;Refresh projectstatus;;;1
+arc-not;0;job;Archiv Notizen;Archive notices;;;15
+email;0;dat;Email;Email;;;4
+job-flags-use;0;job;Job Flags Anzeigen;Use Job Flags;;;1
+apl.user;0;jod;Apl User hinzuf�gen;Add User APL;;;12
+job.timing-from-prj;0;jod;Projektsdatum �bernehmen;Get Project Time;;;1
+arc-reuse;0;job;Auftrag wiederbenutzen;Re-use job;;;3
+usr-chmand;0;usr;Can give rights to change Mand;Can give rights to change Mand;;;1
+wec-pi;0;adm;WebCenter Preview Images;WebCenter Preview Images;;;15
+cnt;0;dat;Laendervariante;Country Variation;;;15
+tab.mainmenu.one2edit;1;app;Tabs (Main menu): o2e;Tabs (Main menu): o2e;;;1
+apl;2;;;;;;0
+lang;0;adm;Sprachverwaltung;Admin Language;;;7
+job-dms;0;jod;DMS Files;DMS Files;;;15
+hom-wel.backup;-1;app;Home > Welcome > Backup user;Home > Welcome > Backup user;;;1
+hom-wel.opt;-1;job;Home > Welcome > Options;Home > Welcome > Options;;;1
+job-fil-view;0;jod;Dateilisten-Ansicht;Filelist view;;;3
+job-act;-1;job;Aktive Jobs l�schen;Delete Active Jobs;;;8
+usr-agent;0;usr;User Agent;User Agent;;;1
+cms;-1; phr;Inhalt Konzernlage;Content Management;;;15
+job-cms;-1; phr;Auftragsinhalt;Job Content;;;15
+job-cms.build;-1; phr;Baue Artwork;Build Artwork;;;1
+job-cms.job.master;-1; phr;Job Inhalt Master;Job Content Master;;;2
+job-cms.job.translation;-1; phr;Job Inhalt Translation;Job Content Translation;;;2
+job-cms.product;-1; phr;Produkt Inhalt;Product Content;;;15
+job-cms.product.master;-1; phr;Produkt Inhalt Master;Product Content Master;;;2
+job-cms.product.translation;-1; phr;Produkt Inhalt Translation;Product Content Translation;;;2
+job-cms.template;-1; phr;Vorlagen;Templates;;;15
+This right allow users to see the notification center (my inbox) section on the home-task page.\r\nThis right allow users as well to see the (Need Response) field in the job notification mask.;;;;;;;

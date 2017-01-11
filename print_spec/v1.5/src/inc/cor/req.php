@@ -14,8 +14,8 @@ class CInc_Cor_Req extends CCor_Obj implements ICor_Req {
   }
 
   public function loadRequest() {
-    $this -> assign($_GET);
-    $this -> assign($_POST);
+    $this -> assign($_GET);     //loads CCor Obj's $lKey and $lVal property. So this class(CInc_Cor_Req) extends CCor_Obj class. then this assign() method present in CCor_Obj class.
+    $this -> assign($_POST);    //loads CCor Obj's $lKey and $lVal property. So this class(CInc_Cor_Req) extends CCor_Obj class.
   }
 
   public function loadArgv() {
@@ -40,6 +40,7 @@ class CInc_Cor_Req extends CCor_Obj implements ICor_Req {
   }
 
   public function __get($aName) {
+//    error_log('.....I am in __get inc cor req ....'.var_export($this -> mVal, true)."\n",3,'logggg.txt');
     return (isset($this -> mVal[$aName])) ? $this -> mVal[$aName] : NULL;
   }
 

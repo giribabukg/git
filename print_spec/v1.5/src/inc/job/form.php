@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * Jobs: Formular
  *
@@ -44,15 +44,20 @@ class CInc_Job_Form extends CCor_Tpl {
     $this -> mJob = array();
     $this -> mUsr = CCor_Usr::getInstance();
     $this -> mCanEdit = $this -> mUsr -> canEdit('job-'.$aSrc);
+    error_log('.....CInc_Job_Form.....__construct.....before.....$this -> mAllFlags.....'.var_export($this -> mAllFlags,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Form.....__construct.....before.....$this -> mAllActions.....'.var_export($this -> mAllActions,true)."\n",3,'logggg.txt');
+    
     $this -> mAllFlags = CCor_Res::get('fla');
     $this -> mAllActions = CCor_Res::get('action');
+    error_log('.....CInc_Job_Form.....__construct.....after.....$this -> mAllFlags.....'.var_export($this -> mAllFlags,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Job_Form.....__construct.....after.....$this -> mAllActions.....'.var_export($this -> mAllActions,true)."\n",3,'logggg.txt');
     #$this -> mCancel = substr($aAct, 0 , $lPos);
 
     $this -> getFac();
     $this -> mPnl = new CJob_Btnpanel();
-    $this -> addPanel('act', 'Actions');
+    $this -> addPanel('act', 'Actions');      //This method just setting $this -> mPnl array
 
-    $this -> openProjectFile('job/main.htm');
+    $this -> openProjectFile('job/main.htm');  //middle part html is being loaded here.
     $this -> mRole = array();
     $this -> mFie = CCor_Res::getByKey('alias', 'fie');
     #$this -> isMandatory();
@@ -91,22 +96,29 @@ class CInc_Job_Form extends CCor_Tpl {
   protected function loadTabs() {
     // get default tabs
     $lCfg = CCor_Cfg::getInstance();
+    error_log('.....CInc_Job_Form.....loadTabs()...cfg val.....job.mask.tabs...'.var_export($lCfg -> get('job.mask.tabs'),true)."\n",3,'logggg.txt');
     $this -> lDefaultTabs = $lCfg -> get('job.mask.tabs');
 
-    // Angabe der Jobmasken in mand/mand_Nr/mand/inc/job/formtpl.php - OHNE Beschr�nkung, OHNE Funktionen!
+    // Specify the job masks in mand / mand_nr / mand / inc / job / formtpl.php - WITHOUT constraints, WITHOUT functions!
     $FormTpl = new CJob_Formtpl();
+    error_log('.....CInc_Job_Form.....loadTabs()...$FormTpl...'.var_export($FormTpl -> mTemplates,true)."\n",3,'logggg.txt');
     $this -> mTemplates = $FormTpl -> mTemplates;
-
-    // Webcenter ProjektId nur f�r Jobs "art, rep" und mit dem Recht "job-wec-id" verkn�pft.
-    // Falls es in der Job-Maske keine Reiter "Details (det)" gibt, soll es unter "Identifikation (job)" angezeigt werden.
-    $lUsr = CCor_Usr::getInstance();
+    error_log('.....CInc_Job_Form.....loadTabs()...$this -> mSrc...'.var_export($this -> mSrc,true)."\n",3,'logggg.txt');
+    //error_log('.....CInc_Job_Form.....loadTabs()..usr can edit...job-wec-id...'.var_export($lUsr -> canEdit('job-wec-id'),true)."\n",3,'logggg.txt');
+   
+   // Webcenter ProjectId only for jobs "art, rep" and linked with the right "job-wec-id".
+    // If there are no tabs "Details (det)" in the job mask, it should be displayed under "Identification (job)". $lUsr = CCor_Usr::getInstance();
     if(in_array($this -> mSrc, array('rep','art')) AND $lUsr -> canEdit('job-wec-id')) {
+      error_log('.....CInc_Job_Form.....loadTabs().......in if...'."\n",3,'logggg.txt');
       if (in_array('det',$this -> lDefaultTabs)) {
+        error_log('.....CInc_Job_Form.....loadTabs().......in if2...'."\n",3,'logggg.txt');
         $this -> mTemplates['rep']['det']['wec'] = 'rep';
       } else {
+        error_log('.....CInc_Job_Form.....loadTabs().......in else2...'."\n",3,'logggg.txt');
         $this -> mTemplates['rep']['job']['wec'] = 'rep';
       }
     } else {
+      error_log('.....CInc_Job_Form.....loadTabs().......in else1...'."\n",3,'logggg.txt');
       unset($this -> mTemplates['rep']['job']['wec']);
     }
 
@@ -1231,13 +1243,15 @@ class CInc_Job_Form extends CCor_Tpl {
     return $_ret;
   }
 
-  public function getTemplates() {
+  public function getTemplates() {  
+    error_log('.....CInc_Job_Form......getTemplates......$this -> mSrc...'.var_export($this -> mSrc,true)."\n",3,'logggg.txt');
     $lSub = explode('-',$this -> mSrc);
     if (2 == count($lSub)) {
       $lSrc = $lSub[1];
     } else {
       $lSrc = $this -> mSrc;
     }
+    error_log('.....CInc_Job_Form......getTemplates......lSrc...'.var_export($lSrc,true)."\n",3,'logggg.txt');
     if (isset($this -> mTemplates[$lSrc])) {
       return $this -> mTemplates[$lSrc];
     } else {

@@ -66,6 +66,9 @@ final class CCor_Res extends CCor_Obj {
    * @return array
    */
   public function getResult($aDom, $aParam = NULL) {
+    error_log('.....CCor_Res.....getResult.....$aDom.......'.var_export($aDom,true)."\n",3,'logggg.txt');
+    error_log('.....CCor_Res.....getResult.....$this -> mPlugins[$aDom]......'.var_export($this -> mPlugins[$aDom],true)."\n",3,'logggg.txt');
+    error_log('.....CCor_Res.....getResult.....$aParam.......'.var_export($aParam,true)."\n",3,'logggg.txt');
     if (!isset($this -> mPlugins[$aDom])) {
       $lCls = 'CCor_Res_'.ucfirst($aDom);
       if (!class_exists($lCls, true)) {
@@ -75,6 +78,7 @@ final class CCor_Res extends CCor_Obj {
       $lPlug = new $lCls();
       $this -> mPlugins[$aDom] = & $lPlug;
     }
+    error_log('.....CCor_Res.....getResult.....Return value.......'.var_export($this -> mPlugins[$aDom] -> get($aParam),true)."\n",3,'logggg.txt');
     return $this -> mPlugins[$aDom] -> get($aParam);
   }
 

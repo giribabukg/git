@@ -114,6 +114,7 @@ class CInc_Cor_Cnt extends CCor_Obj {
   }
 
   protected function denyAccess($aMsg = NULL) {
+   // error_log('.....in denyAccess.....'."\n",3,'logggg.txt');
     $lMsg = (NULL === $aMsg) ? lan('lib.perm') : $aMsg;
     CCor_Msg::add($lMsg, mtUser, mlError);
     $this -> redirect('index.php?act=hom-wel');
@@ -165,13 +166,21 @@ class CInc_Cor_Cnt extends CCor_Obj {
       $this -> addToHistory($_SERVER['REQUEST_URI']);
     }
     $lPag = $this -> getPage();
+    error_log('.....CInc_Cor_Cnt...render()...at....start...$lPag.....'.var_export($lPag,true)."\n",3,'logggg.txt');
     $lPag -> setMmKey($this -> mMmKey);
+    //$aaaaaaa = toStr($aCont);
+    error_log('.....CInc_Cor_Cnt...render..$this -> mMmKey.....'.var_export($this -> mMmKey,true)."\n",3,'logggg.txt');
+    //error_log('.....CInc_Cor_Cnt...render..$aCont....to...string.....'.var_export($aaaaaaa,true)."\n",3,'logggg.txt');
+
     $lPag -> setPat('pg.cont', toStr($aCont));
     $lPag -> setPat('pg.title', htm($this -> mTitle));
 
     if(strpos($this->mMod, 'job') !== FALSE || strpos($this->mMod, 'arc') !== FALSE){
       $lSrc = substr($this -> mMod, 4, 3);
       $lAvailSrc = CCor_Cfg::get('all-jobs_ALINK');
+      error_log('.....CInc_Cor_Cnt...render..$this -> mMod.....'.var_export($this -> mMod,true)."\n",3,'logggg.txt');
+      error_log('.....CInc_Cor_Cnt...render..$lSrc.....'.var_export($lSrc,true)."\n",3,'logggg.txt');
+      error_log('.....CInc_Cor_Cnt...render..$lAvailSrc.....'.var_export($lSrc,true)."\n",3,'logggg.txt');
       if(!in_array($lSrc, $lAvailSrc)){
         $lSrc = $_GET['src'];
       }
@@ -179,11 +188,16 @@ class CInc_Cor_Cnt extends CCor_Obj {
     } else {
       $lCls = '';
     }
+    error_log('.....CInc_Cor_Cnt...render..$lSrc.....'.var_export($lSrc,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Cor_Cnt...render..$lCls.....'.var_export($lCls,true)."\n",3,'logggg.txt');
+    error_log('.....CInc_Cor_Cnt.....CInc_Sys_Msg_Cnt::getMessages().....'.var_export(CInc_Sys_Msg_Cnt::getMessages(),true)."\n",3,'logggg.txt');
 
     $lPag -> setPat('pg.sysMsg', CInc_Sys_Msg_Cnt::getMessages());
 
     $lPag -> setPat('pg.act', $lCls);
     $lPag -> setPat('pg.lib.wait', htm(lan('lib.wait')));
+
+    error_log('.....CInc_Cor_Cnt...render()...at....end...$lPag.....'.var_export($lPag,true)."\n",3,'logggg.txt');
     $lPag -> render();
     $lMsg = CCor_Msg::getInstance();
     $lMsg -> clear();

@@ -29,7 +29,7 @@ abstract class CInc_Job_Tabs extends CHtm_Tabs {
     $lJobMaskTabs = $lCfg -> get('job.mask.tabs');
     $this -> lDefaultTabs = $lCfg -> get($this -> m2Act.'.mask.tabs', $lJobMaskTabs);
 
-    // bei Projekten gilt: Tab "Details" heisst "Briefing"
+   // for projects: "Details" tab is called "Briefing"
     $lTitel_det = $this -> mSrc == 'job-pro' ? lan('job.tab.brf') : lan('job.tab.det') ;
 
     if ($this -> inForm()) {

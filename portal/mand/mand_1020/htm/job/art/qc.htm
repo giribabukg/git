@@ -1,0 +1,632 @@
+<div class="th1"><a href="javascript:cpl('frm.ids2','cpl.{src}.ids')" class="db w700">1. Pre-Flight</a></div>
+<div id="frm.ids2" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200"></td>
+		<td class="w100">Production</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">QC</td>
+		<td rowspan="5" >{inst.preflight}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Read &amp; Understood Instructions</td>
+		<td class="w100">{val.read_understood_instructions_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.read_understood_instructions_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Ticket versus Client System</td>
+		<td class="w100">{val.ticket_versus_cs_opt}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.ticket_versus_cs_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Review Job Feedback</td>
+		<td class="w100">{val.review_job_feedback_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.review_job_feedback_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Correct Base File Used</td>
+		<td class="w100">{val.correct_base_file_used_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.correct_base_file_used_qc}</td>
+		</tr>
+</table>	  
+<br />
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids2','cpl.{src}.ids')" class="db w700">2. Legend</a></div>
+<div id="frm.ids2" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Legend Content</td>
+		<td class="w100">{val.legend_content_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.legend_content_qc}</td>
+		<td rowspan="2">{inst.legend}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Colour Swatches</td>
+		<td class="w100">{val.colour_swatches_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.colour_swatches_qc}</td>
+		</tr>
+</table>	  
+<br />
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">3. Profile</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Correct Profile used / Profile Legend</td>
+		<td class="w100">{val.correct_profile_opt}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.correct_profile_qc}</td>
+		<td rowspan="11">{inst.correct_profile_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Is a Master Profile Available?</td>
+		<td class="w100">{val.master_profile_available_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.master_profile_available_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">PDF Compare versus Master Profile.</td>
+		<td class="w100">{val.pdf_compare_vs_master_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.pdf_compare_vs_master_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">PDF Compare versus Signed off Master Profile</td>
+		<td class="w100">{val.pdf_compare_vs_signed_master_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.pdf_compare_vs_signed_master_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Measure Panels & Overall Dimensions</td>
+		<td class="w100">{val.measure_panels_overall_dim_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td>{val.measure_panels_overall_dim_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Print Free & Text Free Areas</td>
+		<td class="w100">{val.print_free_text_free_areas_op}</td>
+		<td>&nbsp;</td>
+		<td class="w100">{val.print_free_text_free_areas_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Text Tolerance</td>
+		<td class="w100">{val.text_tolerance_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.text_tolerance_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Panel Orientation</td>
+		<td class="w100">{val.panel_orientation_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.panel_orientation_qc}</td>
+		</tr>
+								
+		<tr>
+		<td class="w200">Bleed</td>
+		<td class="w100">{val.bleed_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.bleed_qc}</td>
+		</tr>
+								
+		<tr>
+		<td class="w200">Eyemark / Edge Code</td>
+		<td class="w100">{val.eyemark_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.eyemark_qc}</td>
+		</tr>
+										
+		<tr>
+		<td class="w200">Variable Data</td>
+		<td class="w100">{val.variable_data_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.variable_data_qc}</td>
+		</tr>
+
+</table>
+
+<table>
+
+
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">4. Codes</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Product Code</td>
+		<td class="w100">{val.product_code_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.product_code_qc}</td>
+		<td rowspan="2">{inst.product_code_qc}</td>
+		</tr>
+												
+		<tr>
+		<td class="w200">How many barcodes are present on job?</td>
+		<td class="w100">{val.barcode_count}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+</table>
+
+<table class="bar1"  border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr class="barcode1" style="display:none;">
+		<td class="w50">{bez.barcode_type1}</td>
+		<td class="w50">{bez.human_readable_number1}</td>
+		<td class="w100">{bez.bar_width_reduction1}</td>
+		<td class="w100">{bez.barcode_size1}</td>
+		<td class="w100">{bez.quiet_zone1}</td>
+		<td class="w100">{bez.position_profile1}</td>
+		<td class="w100">{bez.anti_counterfeiting_features_applied1}</td>
+		</tr>
+		
+		<tr class="barcode1" style="display:none;">
+		<td class="w50">{val.barcode_type1}</td>
+		<td class="w50">{val.human_readable_number1}</td>
+		<td class="w100">{val.bar_width_reduction1}</td>
+		<td class="w100">{val.barcode_size1}</td>
+		<td class="w100">{val.quiet_zone1}</td>
+		<td class="w100">{val.position_profile1}</td>
+		<td class="w100">{val.anti_counterfeiting_features_applied1}</td>
+		</tr>
+		
+		
+		<tr class="barcode2" style="display:none;">
+		<td class="w100">{val.barcode_type2}</td>
+		<td class="w100">{val.human_readable_number2}</td>
+		<td class="w100">{val.bar_width_reduction2}</td>
+		<td class="w100">{val.barcode_size2}</td>
+		<td class="w100">{val.quiet_zone2}</td>
+		<td class="w100">{val.position_profile2}</td>
+		<td class="w100">{val.anti_counterfeiting_features_applied2}</td>
+		</tr>
+		
+		<tr class="barcode3" style="display:none;">
+		<td class="w100">{val.barcode_type3}</td>
+		<td class="w100">{val.human_readable_number3}</td>
+		<td class="w100">{val.bar_width_reduction3}</td>
+		<td class="w100">{val.barcode_size3}</td>
+		<td class="w100">{val.quiet_zone3}</td>
+		<td class="w100">{val.position_profile3}</td>
+		<td class="w100">{val.anti_counterfeiting_features_applied3}</td>
+		</tr>
+		
+		<tr class="barcode4" style="display:none;">
+		<td class="w100">{val.barcode_type4}</td>
+		<td class="w100">{val.human_readable_number4}</td>
+		<td class="w100">{val.bar_width_reduction4}</td>
+		<td class="w100">{val.barcode_size4}</td>
+		<td class="w100">{val.quiet_zone4}</td>
+		<td class="w100">{val.position_profile4}</td>
+		<td class="w100">{val.anti_counterfeiting_features_applied4}</td>
+		</tr>
+											
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">5. Graphics</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Compare (How many? Drop down to be added)</td>
+		<td class="w100">{val.compare_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.compare_qc}</td>
+		<td rowspan="3">{inst.compare_qc}</td>
+		</tr>
+												
+		<tr>
+		<td class="w200">Range Consistency</td>
+		<td class="w100">{val.range_consistency_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.range_consistency_qc}</td>
+		</tr>
+														
+		<tr>
+		<td class="w200">Separation Check</td>
+		<td class="w100">{val.separation_check_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.separation_check_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">6. Copy</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Annotated Requests Completed</td>
+		<td class="w100">{val.annotated_requests_completed_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.annotated_requests_completed_qc}</td>
+		<td rowspan="10">{inst.annotated_requests_completed_qc}</td>
+		</tr>
+														
+		<tr>
+		<td class="w200">Proofread Copy vs. Supplied</td>
+		<td class="w100">{val.proofread_copy_vs_supplied_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.proofread_copy_vs_supplied_qc}</td>
+		</tr>
+																
+		<tr>
+		<td class="w200">Ingredients</td>
+		<td class="w100">{val.ingredients_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.ingredients_qc}</td>
+		</tr>
+																
+		<tr>
+		<td class="w200">Weight / Strength</td>
+		<td class="w100">{val.weight_strength_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.weight_strength_qc}</td>
+		</tr>
+																
+		<tr>
+		<td class="w200">Language Order</td>
+		<td class="w100">{val.language_order_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.language_order_qc}</td>
+		</tr>
+																		
+		<tr>
+		<td class="w200">Country Symbols</td>
+		<td class="w100">{val.country_symbols_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.country_symbols_qc}</td>
+		</tr>
+																
+		<tr>
+		<td class="w200">Icons / Symbols</td>
+		<td class="w100">{val.icons_symbols_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.icons_symbols_qc}</td>
+		</tr>
+																		
+		<tr>
+		<td class="w200">Font Usage / Font Size</td>
+		<td class="w100">{val.font_usage_font_size_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.font_usage_font_size_qc}</td>
+		</tr>
+																
+		<tr>
+		<td class="w200">Text Style</td>
+		<td class="w100">{val.text_style_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.text_style_qc}</td>
+		</tr>
+																		
+		<tr>
+		<td class="w200">Variable Data</td>
+		<td class="w100">{val.copy_variable_data_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.copy_variable_data_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">7. Client Specific Guidelines</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Guidelines Applied</td>
+		<td class="w100">{val.guidelines_applied_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.guidelines_applied_qc}</td>
+		<td rowspan="1">{inst.guidelines_applied_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">8. Braille</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Should Braille be applied to the artwork?</td>
+		<td class="w100">{val.braille_required_op}</td>
+		<td>&nbsp;</td>
+		<td class="w100">{val.braille_required_qc}</td>
+		<td rowspan="6">{inst.guidelines_applied_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Content versus Brief (Artwork & Legend)</td>
+		<td class="w100">{val.content_vs_brief_op}</td>
+		<td>&nbsp;</td>
+		<td class="w100">{val.content_vs_brief_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Translation versus Braille Alphabet</td>
+		<td class="w100">{val.translation_vs_braille_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.translation_vs_braille_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Position versus Technical Drawing</td>
+		<td class="w100">{val.position_vs_td_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.position_vs_td_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200"># before numbers</td>
+		<td class="w100">{val.before_numbers_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.before_numbers_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Space after numbers</td>
+		<td class="w100">{val.space_after_numbers_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.space_after_numbers_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">9. Technical</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Layering Structure</td>
+		<td class="w100">{val.layering_structure_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.layering_structure_qc}</td>
+		<td rowspan="3">{inst.layering_structure_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">PDF Name</td>
+		<td class="w100">{val.pdf_name_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.pdf_name_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">PDF Size</td>
+		<td class="w100">{val.pdf_size_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.pdf_size_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">10. Colour Separation</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Printer Specification Applied</td>
+		<td class="w100">{val.printer_specification_applied_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.printer_specification_applied_qc}</td>
+		<td rowspan="8">{inst.printer_specification_applied_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Printer Code</td>
+		<td class="w100">{val.printer_code_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.printer_code_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Grips / Cutbacks</td>
+		<td class="w100">{val.grips_cutbacks_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.grips_cutbacks_qc}</td>
+		</tr>
+								
+		<tr>
+		<td class="w200">Minimum Dot (Viewer Check)</td>
+		<td class="w100">{val.minimum_dot_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.minimum_dot_qc}</td>
+		</tr>
+								
+		<tr>
+		<td class="w200">Whites</td>
+		<td class="w100">{val.whites_opt}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.whites_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Varnishes</td>
+		<td class="w100">{val.varnishes_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.varnishes_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Hot Foil / Emboss</td>
+		<td class="w100">{val.hot_foil_emboss_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.hot_foil_emboss_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Dispro / Distortion</td>
+		<td class="w100">{val.dispro_distortion_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.dispro_distortion_qc}</td>
+		</tr>
+
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">11. Outer Case Specific</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Is this artwork an Outer Case?</td>
+		<td class="w100">{val.outer_case_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.outer_case_qc}</td>
+		<td rowspan="6">{inst.outer_case_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Case Count</td>
+		<td class="w100">{val.case_count_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.case_count_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Stack Icon Check</td>
+		<td class="w100">{val.stack_icon_check_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.stack_icon_check_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Line Thickness</td>
+		<td class="w100">{val.line_thickness_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.line_thickness_qc}</td>
+		</tr>
+								
+		<tr>
+		<td class="w200">Slur Check</td>
+		<td class="w100">{val.slur_check_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.slur_check_qc}</td>
+		</tr>
+										
+		<tr>
+		<td class="w200">Glue Areas</td>
+		<td class="w100">{val.glue_areas_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.glue_areas_qc}</td>
+		</tr>
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">12. Foil Specific</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td class="w200">Is this artwork a Foil?</td>
+		<td class="w100">{val.folic_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.folic_qc}</td>
+		<td rowspan="4">{inst.folic_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Step & Repeat</td>
+		<td class="w100">{val.step_repeat_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.step_repeat_qc}</td>
+		</tr>
+		
+				
+		<tr>
+		<td class="w200">Min Line Width</td>
+		<td class="w100">{val.min_line_width_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.min_line_width_qc}</td>
+		</tr>
+			
+		<tr>
+		<td class="w200">Registration / PEC Marks</td>
+		<td class="w100">{val.registration_pec_marks_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.registration_pec_marks_qc}</td>
+		</tr>
+		
+</table>
+</div>
+
+<div class="th1"><a href="javascript:cpl('frm.ids3','cpl.{src}.ids3')" class="db w700">13. Leaflet Specific</a></div>
+<div id="frm.ids3" style="display:{display}" class="frm p8">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+		<td>Is this artwork a Leaflet?</td>
+		<td>{val.leaflet_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td>{val.leaflet_qc}</td>
+		<td rowspan="8">{inst.leaflet_qc}</td>
+		</tr>
+		
+		<tr>
+		<td class="w200">Leaflet Style</td>
+		<td class="w100">{val.leaflet_style_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.leaflet_style_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Line Endings</td>
+		<td class="w100">{val.line_endings_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.line_endings_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Widows</td>
+		<td class="w100">{val.widows_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.widows_qc}</td>
+		</tr>
+				
+		<tr>
+		<td class="w200">Spacing</td>
+		<td class="w100">{val.spacing_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.spacing_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Paragraph Headers / Floating Headers</td>
+		<td class="w100">{val.headers_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.headers_qc}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Leaflet Images/Graphics</td>
+		<td class="w100">{val.leaflet_images_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.leaflet_images_c}</td>
+		</tr>
+						
+		<tr>
+		<td class="w200">Leaflet Tables</td>
+		<td class="w100">{val.leaflet_tables_op}</td>
+		<td class="w16">&nbsp;</td>
+		<td class="w100">{val.leaflet_tables_qc}</td>
+		</tr>
+</table>
+</div>
+
